@@ -195,10 +195,15 @@ h2.section-header {
     max-width: 1168px;
     display: flex;
     justify-content: space-between;
+    margin:0 auto;
 }
 
 .header_left {
     width: 100%;
+    display: flex;
+    justify-items: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 .header-right {
