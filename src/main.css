@@ -186,31 +186,4 @@ h2.section-header {
     color: red;
 }
 
-.header {
-    background: linear-gradient(to right, #fff 50%, #008dc9 50%);
-}
-
-.header .spacer {
-    max-width: 1168px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.header_left {
-    width: 100%;
-}
-
-.header-right {
-    width: 100%;
-}
-
-@media (min-width:768px) {
-    .header_left {
-        width: 50%;
-    }
-    .header-right {
-        width: 50%;
-    }
-}
-
 @tailwind utilities;
