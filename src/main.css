@@ -186,7 +186,6 @@ h2.section-header {
     color: red;
 }
 
-@tailwind utilities;
 .header {
     background: linear-gradient(to right, #fff 50%, #008dc9 50%);
 }
@@ -213,3 +212,5 @@ h2.section-header {
         width: 50%;
     }
 }
+
+@tailwind utilities;
