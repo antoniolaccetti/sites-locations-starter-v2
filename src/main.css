@@ -94,11 +94,6 @@
     margin-left: 0.5rem;
 }
 
-.header {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
 
 .full-width-locator {
     width: 100%;
@@ -189,13 +184,16 @@ h2.section-header {
 
 .header {
     background: linear-gradient(to right, #fff 50%, #008dc9 50%);
+    height: 72px;
 }
 
 .header .spacer {
-    max-width: 1168px;
+    max-width: 1110px;
+    padding: 0 15px;
     display: flex;
     justify-content: space-between;
     margin:0 auto;
+    background: #008dc9;
 }
 
 .header_left {
@@ -204,6 +202,74 @@ h2.section-header {
     justify-items: flex-start;
     flex-wrap: nowrap;
     align-items: center;
+    background: #008dc9;
+    height: 72px;
+}
+.logo_gvm{
+    height:72px;
+    position: relative;
+    padding: 10px 0 14px;
+    margin-right: 20px;
+    display: block;
+    margin-left: 0;
+}
+.logo_gvm:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: -20px;
+    bottom: 0;
+    left: -20px;
+    right: -30px;
+    transform: skewX(20deg);
+    transform-origin: bottom left;
+    background-color: #fff;
+}
+.header .tagline{
+    color: #fff;
+    white-space: nowrap;
+    z-index: 1;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: .25rem 0;
+    font-family: pt-sans-narrow,sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.header .tagline>svg,.header .tagline>.fas{
+    color: #ffce00;
+}
+.header .fa-2x {
+    font-size: 2em;
+}
+
+.header .svg-inline--fa.fa-w-6 {
+    width: .375em;
+}
+
+.header .mr-1, .header .mx-1 {
+    margin-right: .25rem!important;
+}
+
+@media (min-width: 768px){
+    .header .mr-md-2, .header .mx-md-2 {
+        margin-right: .5rem!important;
+    }
+}
+
+.header .tagline .facility-name{
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+}
+.logo_gvm img{
+    height: 48px;
+    z-index: 1;
+    position: relative;
 }
 
 .header-right {
@@ -212,10 +278,10 @@ h2.section-header {
 
 @media (min-width:768px) {
     .header_left {
-        width: 50%;
+        width: 60%;
     }
     .header-right {
-        width: 50%;
+        width: 40%;
     }
 }
 
