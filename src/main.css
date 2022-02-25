@@ -193,6 +193,7 @@ h2.section-header {
     display: flex;
     justify-content: space-between;
     margin:0 auto;
+    flex-wrap: wrap; 
     background: #008dc9;
 }
 
@@ -203,16 +204,24 @@ h2.section-header {
     flex-wrap: nowrap;
     align-items: center;
     background: #008dc9;
-    height: 72px;
+    /* height: 72px; */
 }
 .logo_gvm{
-    height:72px;
     position: relative;
-    padding: 10px 0 14px;
+    padding: 10px 0;
     margin-right: 1rem;
     display: block;
     margin-left: 0;
 }
+.logo_gvm img{
+    height: 28px;
+    z-index: 1;
+        position: relative;
+    width: auto;
+}
+
+
+
 .logo_gvm:before{
     content: "";
     display: block;
@@ -255,7 +264,22 @@ h2.section-header {
     margin-right: .25rem!important;
 }
 
+.main_banner_container .spacer{
+    max-width: 1110px;
+    padding: 0 15px;
+    margin: 0 auto;
+    width: calc(100% - 30px);
+}
+
 @media (min-width: 768px){
+
+    .logo_gvm img{
+        height: 48px;
+    }
+
+    .header_right {
+        width: 40%;
+    }
     .header .mr-md-2, .header .mx-md-2 {
         margin-right: .5rem!important;
     }
@@ -265,15 +289,12 @@ h2.section-header {
     font-weight: 700;
     line-height: 1;
     margin: 0;
-}
-.logo_gvm img{
-    height: 48px;
-    z-index: 1;
-    position: relative;
+    font-size: .875rem;
 }
 
+
 .header_right {
-    width: 40%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -325,8 +346,14 @@ h2.section-header {
 }
 
 @media (min-width:768px) {
+    .logo_gvm{
+        height:72px;
+    }
     .tagline{
         letter-spacing: -0.1px;
+    }
+    .header{
+        height: 72px;
     }
     .header_left {
         width: 60%;
