@@ -10,13 +10,13 @@
             ]
         },
         "fields": [
-            "id", 
-            "uid", 
+            "id",
+            "uid",
             "meta",
-            "name", 
-            "address", 
+            "name",
+            "address",
             "mainPhone",
-            "description", 
+            "description",
             "hours",
             "photoGallery",
             "slug",
@@ -24,7 +24,7 @@
             "geocodedCoordinate",
             "services",
             "c_baseURL",
-            "websiteUrl", 
+            "websiteUrl",
             "neighborhood",
             "paymentOptions"
         ],
@@ -37,26 +37,30 @@
 ---
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        {{>head }}
-        <title>{{name}} - {{neighborhood}}</title>
-        {{>schema}}
-        <link rel="shortcut icon" type="image/jpg" href="/images/yext-favicon.png"/>
-    </head>
-    <body class="relative">      
-            {{>header_elogic}}
-            <div class="w-full">
-                {{>main_banner}} 
-                <div class="centered-container">
-                    <div class="section">{{>locationdetails}} </div>
-                    <div class="section">{{>aboutmap}} </div>
-                    <div class="section">{{>nearby geocodedCoordinate}}</div>                    
-                </div>
-                <div class="w-full bg-gray-100">
-                    <div class="centered-container">
-                        {{>footer}}
-                    </div>
-                </div>
+<head>
+    {{>head }}
+    <title>{{name}} - {{neighborhood}}</title>
+    {{>schema}}
+    <link rel="shortcut icon" type="image/jpg" href="/images/yext-favicon.png" />
+</head>
+<body class="relative">
+    {{>header_elogic}}
+    <div class="w-full">
+        {{>main_banner}}
+        <div class="centered-container">
+            <div class="section">{{>locationdetails}} </div>
+            <div class="section">{{>aboutmap}} </div>
+            <div class="section">{{>nearby geocodedCoordinate}}</div>
+        </div>
+        <div class="w-full bg-gray-100">
+            <div class="centered-container">
+                {{>footer}}
             </div>
-    </body> 
+        </div>
+    </div>
+   
+</body>
+
 </html>
+
+
