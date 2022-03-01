@@ -2,7 +2,7 @@ import './main.css';
 import './js/fontawesome/brands.min.js';
 import './js/fontawesome/solid.min.js';
 import './js/fontawesome/fontawesome.min.js';
-import 'jquery.js';
+import '/node_modules/jquery/dist/jquery.js';
 
 function importAll(r) {
     let images = {};
