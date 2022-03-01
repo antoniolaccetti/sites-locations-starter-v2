@@ -201,8 +201,7 @@ h2.section-header {
 }
 
 .header .spacer {
-    max-width: 1110px;
-    padding: 0 15px;
+    max-width: 1110px;   
     display: flex;
     justify-content: space-between;
     margin:0 auto;
@@ -215,6 +214,7 @@ h2.section-header {
 .header_left {
     display: flex;
     flex-grow: 1;
+    padding: 0 15px;
 }
 
 .logo_gvm{
@@ -230,8 +230,6 @@ h2.section-header {
         position: relative;
     width: auto;
 }
-
-
 
 .logo_gvm:before{
     content: "";
@@ -275,40 +273,29 @@ h2.section-header {
     margin-right: .25rem!important;
 }
 
+/*
 .main_banner_container .spacer{
     max-width: 1110px;
-    padding: 0 15px;
     margin: 0 auto;
     width: calc(100% - 30px);
-}
+}*/
 
-@media (min-width: 768px){
-
-    .logo_gvm img{
-        height: 48px;
-    }
-
-    .header_right {
-       /* width: 40%;*/
-    }
-    .header .mr-md-2, .header .mx-md-2 {
-        margin-right: .5rem!important;
-    }
+.header .spacer {
+    margin: 0 auto;
+    width:100%;
 }
 
 .header .tagline .facility-name {
     font-weight: 700;
     line-height: 1;
     margin: 0;
-    font-size: 1.625rem;
 }
-
 
 .header_right {
     display: flex;
-    flex-shrink: 0;
-    padding: .875rem 0;
-    padding-left: .25rem;
+    position: static;
+    width: 991px;
+    background: linear-gradient(to bottom,#0d384b,#00405c 30%,#165e93);
 }
 
 .trigger_struttura{
@@ -343,12 +330,16 @@ h2.section-header {
 }
 
 .svg-inline--fa {
-    display: inline-block;
+/*    display: inline-block;
     font-size: inherit;
     height: 1em;
     overflow: visible;
-    vertical-align: -.125em;
+    vertical-align: -.125em;*/
 }
+
+
+
+/* Media Queries */
 
 @media (min-width:360px) {
     .tagline .facility-name, .tagline .facility-location {
@@ -357,42 +348,90 @@ h2.section-header {
 }
 
 @media (min-width:768px) {
-    .logo_gvm{
-        height:72px;
-    }
-    .tagline{
-        letter-spacing: -0.1px;
-    }
-    .header{
+
+    .logo_gvm {
         height: 72px;
     }
-    .header_left {
+
+        .logo_gvm img {
+            height: 48px;
+        }
+
+    .header {
+        height: 72px;
+    }
+
+ /*   .header_left {
         width: 60%;
+    }*/
+
+    .header_right {
+        /* width: 40%;*/
     }
-    .header-right {
-       /* width: 40%;*/
+
+    .header .mr-md-2, .header .mx-md-2 {
+        margin-right: .5rem !important;
     }
-    .tagline .facility-location{
-        font-size: 1.25rem;
+
+    .tagline {
+        letter-spacing: -0.1px;
     }
+
+        .tagline .facility-name {
+            font-size: 1.16rem;
+        }
+
+        .tagline .facility-location {
+            font-size: 1.25rem;
+        }
+
     .mr-md-2, .mx-md-2 {
-        margin-right: .5rem!important;
+        margin-right: .5rem !important;
     }
 }
 
-@media (min-width:992px){
-    .tagline .facility-location{
+@media (min-width:992px) {
+
+    .header .spacer {
+        max-width: 1110px;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;      
+        background: #008dc9;
+        align-items: center;
+        max-height: 72px;
+    }
+
+    .header_left {
+        padding: 0;
+    }
+
+    .header_right {
+        flex-shrink: 0;
+        padding: .875rem 0;
+        padding-left: .25rem;
+        width: auto;
+        position: initial;
+        background: transparent;
+    }
+
+    .tagline .facility-location {
         font-size: 1.125rem;
     }
-    .tagline .facility-name{
+
+    .tagline .facility-name {
         font-size: 1.1875rem;
     }
+
+    
 }
+
 @media (min-width:1200px) {
-    .tagline .facility-location{
+    .tagline .facility-location {
         font-size: 1.25rem;
     }
-    .tagline .facility-name{
+
+    .tagline .facility-name {
         font-size: 1.625rem;
     }
 }
