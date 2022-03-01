@@ -300,25 +300,8 @@ h2.section-header {
     background: linear-gradient(to bottom,#0d384b,#00405c 30%,#165e93);
 }
 
-.trigger_struttura {
+.trigger {
     font-family: proxima-nova,sans-serif;
-    font-size: 1rem;
-    text-transform: none;
-    background-color: transparent;
-    box-shadow: 0 0 10px 0 rgba(19,72,95,.3);
-    padding: .5rem 1rem;
-    letter-spacing: .5px;
-    /* padding: .375rem 1.25rem; */
-    border-color: #FFF;
-    border-width: 2px;
-    border-radius: 2.5rem;
-    color: #FFF;
-    margin-left: 20px;
-}
-
-.trigger_prenota {
-    font-family: proxima-nova,sans-serif;
-    background-color: #0ea80e;
     color: #FFF;
     display: flex;
     flex-direction: column;
@@ -327,6 +310,19 @@ h2.section-header {
     padding: .5rem;
     font-size: .75rem;
     text-align: center;
+    text-transform: uppercase;
+}
+
+    .trigger .menu-label {
+        font-size: .625rem;
+        letter-spacing: 1px;
+        margin-top: .25rem;
+        font-weight:300;
+    }
+
+
+.trigger_prenota {
+    background-color: #0ea80e;   
 }
 
 .svg-inline--fa {
@@ -448,8 +444,8 @@ h2.section-header {
         font-size: 1.1875rem;
     }
 
-    .trigger_prenota {
-        flex-direction:row;
+    .trigger {
+        flex-direction: row;
         font-size: 1rem;
         text-transform: none;
         box-shadow: 0 0 10px 0 rgba(19,72,95,.3);
@@ -459,6 +455,16 @@ h2.section-header {
         border-color: transparent;
         border-width: 2px;
         border-radius: 2.5rem;
+    }
+
+
+
+    .trigger_prenota {
+    }
+
+    .trigger_struttura {
+        border-color: #fff;
+        margin-left: 20px;
     }
 
     
