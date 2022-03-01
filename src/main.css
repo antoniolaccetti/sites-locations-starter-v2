@@ -2,6 +2,12 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+html {
+    font-size: 16px;
+    font-family: sans-serif;
+    line-height: 1.15;
+}
+
 /* Header Styline */
 
 .topnav #myLinks {
@@ -121,7 +127,14 @@
 /* Body Styling */
 
 body {
-    @apply bg-gray-50 text-ll-blue;
+    @apply bg-white text-ll-blue;
+    font-family: proxima-nova,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+    color: #555;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
 }
 
 h1 {
@@ -194,18 +207,16 @@ h2.section-header {
     justify-content: space-between;
     margin:0 auto;
     flex-wrap: wrap; 
-    background: #008dc9;
+    background: #008dc9;  
+    align-items: center;
+    max-height: 72px;
 }
 
 .header_left {
-    width: 100%;
     display: flex;
-    justify-items: flex-start;
-    flex-wrap: nowrap;
-    align-items: center;
-    background: #008dc9;
-    /* height: 72px; */
+    flex-grow: 1;
 }
+
 .logo_gvm{
     position: relative;
     padding: 10px 0;
@@ -278,26 +289,26 @@ h2.section-header {
     }
 
     .header_right {
-        width: 40%;
+       /* width: 40%;*/
     }
     .header .mr-md-2, .header .mx-md-2 {
         margin-right: .5rem!important;
     }
 }
 
-.header .tagline .facility-name{
+.header .tagline .facility-name {
     font-weight: 700;
     line-height: 1;
     margin: 0;
-    font-size: .875rem;
+    font-size: 1.625rem;
 }
 
 
 .header_right {
-    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    flex-shrink: 0;
+    padding: .875rem 0;
+    padding-left: .25rem;
 }
 
 .trigger_struttura{
@@ -359,7 +370,7 @@ h2.section-header {
         width: 60%;
     }
     .header-right {
-        width: 40%;
+       /* width: 40%;*/
     }
     .tagline .facility-location{
         font-size: 1.25rem;
