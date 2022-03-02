@@ -16,6 +16,9 @@ module.exports = {
       'md': '768px',
       // => @media (min-width: 768px) { ... }
 
+      'm-l': '992px', // custom query
+      // => @media (min-width: 992px) { ... }
+
       'lg': '1024px',
       // => @media (min-width: 1024px) { ... }
 
@@ -25,18 +28,62 @@ module.exports = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     },
+
+    container: {
+        center: true,
+        padding: {
+            DEFAULT: '15px;'
+        }
+    },
     extend: {
+      screens: {
+        'small': '576px',
+        'medium': '768px',
+        'large': '992px',
+        'xlarge': '1200px'
+      },
       colors: {
         "ll-blue": "#00173C",
         "ll-hover-blue": "#001c48",
         "ll-red": "#E52222",
         "ll-light-blue": "#5c6d88",
-        "clutter": "#037f78"
+        "clutter": "#037f78",
+          "lightblue": "#eaf3f9",
+          "dark": "#242424",
       },
     },
   },
   variants: {
     extend: {},
-  },
-  plugins: [],
+    },
+
+    plugins: [function ({ addComponents }) {
+        addComponents({
+            '.container': {
+                maxWidth: '100%',
+                '@screen small': {
+                    maxWidth: '540px',
+                },
+                '@screen medium': {
+                    maxWidth: '720px',
+                },
+                '@screen large': {
+                    maxWidth: '960px',
+                },
+                '@screen xlarge': {
+                    maxWidth: '1110px',
+                },
+            }
+        })
+        addComponents({
+            '.section': {
+                padding: '2.5rem 0',           
+                '@screen medium': {
+                    padding: '4rem 0',
+                },
+                
+            }
+        })
+    }
+    ],
 };
