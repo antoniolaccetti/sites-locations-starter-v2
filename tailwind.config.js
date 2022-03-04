@@ -48,8 +48,9 @@ module.exports = {
         "ll-red": "#E52222",
         "ll-light-blue": "#5c6d88",
         "clutter": "#037f78",
-          "lightblue": "#eaf3f9",
+        "lightblue": "#eaf3f9",
           "dark": "#242424",
+          "light": "#f9f9f9",
       },
     },
   },
@@ -65,7 +66,7 @@ module.exports = {
                     maxWidth: '540px',
                 },
                 '@screen medium': {
-                    maxWidth: '720px',
+                    maxWidth: '810px',
                 },
                 '@screen large': {
                     maxWidth: '960px',
@@ -79,6 +80,9 @@ module.exports = {
             '.section': {
                 padding: '2.5rem 0',           
                 '@screen medium': {
+                    padding: '3rem 0',
+                },
+                '@screen large': {
                     padding: '4rem 0',
                 },
                 

@@ -17,6 +17,7 @@
             "address",
             "mainPhone",
             "description",
+            "c_descrizioneLunga",
             "hours",
             "photoGallery",
             "slug",
@@ -46,21 +47,26 @@
 </head>
 <body class="relative">
     {{>header_elogic}}
-    <div class="w-full">
+    <div class="section">
         {{>main_banner}}
-        <div class="centered-container">
-            <div class="section">{{>locationdetails}} </div>
-            <div class="section">{{>schema}} </div>
-            <div class="section">{{>aboutmap}} </div>
-            <div class="section">{{>nearby geocodedCoordinate}}</div>
-        </div>
-        <div class="w-full bg-gray-100">
-            <div class="centered-container">
-                {{>footer}}
-            </div>
+
+        {{>locationdetails}}
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="">{{>aboutmap}} </div>
         </div>
     </div>
-
+    <div class="section">
+        <div class="container">
+            <div class="">{{>nearby geocodedCoordinate}}</div>
+        </div>
+    </div>
+    <div class="w-full bg-gray-100">
+        <div class="centered-container">
+            {{>footer}}
+        </div>
+    </div>
 </body>
 
 </html>

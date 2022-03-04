@@ -1,0 +1,67 @@
+{{!-- <summary class="hours-list text-base">   --}}
+
+{{#with (formatHours this "Monday" "TimeFormatShort" "DateFormatShort") }}
+{{#each this.regularHours}}
+<div class="grid grid-cols-2 lg:grid-cols-5">
+    <div class="lg:col-span-2">
+        <strong>{{this.displayDay}}</strong>
+    </div>
+    <div class="lg:col-span-3">
+        {{#if this.isClosed}}Chiuso{{/if}}
+        {{#if this.is247}}Aperto 24/7{{/if}}
+        {{#each this.openIntervals}}
+        {{this.start}} - {{this.end}}
+        <script>
+            var inizio = Handlebars.compile("{{this.start}}");
+            var giorno = 0;
+            for (i = 0; i < 7; i++) {
+                giorno++;
+                console.log(giorno);
+            }
+            console.log(inizio());
+         
+            console.log(giorno);
+        </script>
+
+        {{/each}}
+    </div>
+</div>
+{{/each}}
+{{/with}}
+{{!-- </summary> --}}
+
+<script> 
+  
+    const template = Handlebars.compile("{{name}}");
+    console.log(template());
+
+    function openTime() {        
+
+        var d = new Date();
+    
+        var dy = d.getDay(); // giorno della settimana -> 0 = domenica, 1 = lunedì etc..
+
+        console.log(array);
+     
+        var moment = String(Date()).slice(16, 21); // orario
+     
+        var moment = moment.replace(":", "");
+    
+        if (dy == 0 || dy == 6) {//saturday or sunday: closed
+
+            document.getElementById("openorclosed").innerHTML = "Closed Today";
+        } else {
+            if (moment > 830 && moment < 1700) {//is the current time between 830am and 5pm
+                document.getElementById("openorclosed").innerHTML = "We're open";
+            } else {
+                document.getElementById("openorclosed").innerHTML = "We're closed";
+            }
+        }
+      
+        
+    }
+
+    
+
+    
+</script>

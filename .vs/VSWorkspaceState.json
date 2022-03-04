@@ -2,9 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\assets",
+    "\\node_modules",
     "\\partials",
     "\\src",
+    "\\src\\js",
+    "\\src\\locator",
     "\\templates"
   ],
+  "SelectedNode": "\\src\\main.js",
   "PreviewInSolutionExplorer": false
 }
