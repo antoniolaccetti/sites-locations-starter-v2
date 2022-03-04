@@ -338,7 +338,37 @@ h2.section-header {
     vertical-align: -.125em;*/
 }
 
+.sidebar_lista_link a{
+    display: block;
+    background: #008dc9;
+    font-family: proxima-nova, sans-serif;
+    color: #FFF;
+    font-weight: 600;
+    margin: 10px 0;
+    border-radius: 100px;
+    padding:10px 20px;
+    transition: 0.3s;
+}
+.sidebar_lista_link a:hover{
+    opacity: 0.7;
+}
+.sidebar_lista_link .button_prenota{
+    background: #0ea80e;
+}
+.sidebar_lista_link svg{
+    width: 30px;
+    text-align: center;
+    margin-right: 5px;
+}
 
+.titolo_descrizione_lunga{
+    color: #23475D;
+    text-transform: uppercase;
+    
+}
+.descrizione_lunga p{
+    margin-bottom: 10px;
+}
 
 /* Media Queries */
 
@@ -425,7 +455,13 @@ h2.section-header {
         position: initial;
         background: transparent;
     }
+    .titolo_descrizione_lunga{
+        font-size: 2em;
+    }
 }
+
+
+
 
 @media (min-width:992px) {
     .header_right {
