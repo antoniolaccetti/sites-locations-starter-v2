@@ -1,67 +1,52 @@
-{{!-- <summary class="hours-list text-base">   --}}
-
-{{#with (formatHours this "Monday" "TimeFormatShort" "DateFormatShort") }}
-{{#each this.regularHours}}
-<div class="grid grid-cols-2 lg:grid-cols-5">
-    <div class="lg:col-span-2">
-        <strong>{{this.displayDay}}</strong>
-    </div>
-    <div class="lg:col-span-3">
-        {{#if this.isClosed}}Chiuso{{/if}}
-        {{#if this.is247}}Aperto 24/7{{/if}}
-        {{#each this.openIntervals}}
-        {{this.start}} - {{this.end}}
-        <script>
-            var inizio = Handlebars.compile("{{this.start}}");
-            var giorno = 0;
-            for (i = 0; i < 7; i++) {
-                giorno++;
-                console.log(giorno);
-            }
-            console.log(inizio());
-         
-            console.log(giorno);
-        </script>
-
-        {{/each}}
-    </div>
-</div>
-{{/each}}
-{{/with}}
-{{!-- </summary> --}}
+<div id="openorclosed"></div>
 
 <script> 
-  
-    const template = Handlebars.compile("{{name}}");
-    console.log(template());
-
-    function openTime() {        
-
-        var d = new Date();
-    
-        var dy = d.getDay(); // giorno della settimana -> 0 = domenica, 1 = lunedì etc..
-
-        console.log(array);
-     
-        var moment = String(Date()).slice(16, 21); // orario
-     
-        var moment = moment.replace(":", "");
-    
-        if (dy == 0 || dy == 6) {//saturday or sunday: closed
-
-            document.getElementById("openorclosed").innerHTML = "Closed Today";
-        } else {
-            if (moment > 830 && moment < 1700) {//is the current time between 830am and 5pm
-                document.getElementById("openorclosed").innerHTML = "We're open";
-            } else {
-                document.getElementById("openorclosed").innerHTML = "We're closed";
-            }
-        }
-      
+    Handlebars.compile("{{#with (formatHours this 'Monday' 'TimeFormatShort' 'DateFormatShort')}}");
+    var giorno = 1; //imposto lunedì
+    var d = new Date(); //vedo che giorno è
+    var dy = d.getDay(); // 0 = domenica, 1 = lunedì etc..
+    var moment = String(Date()).slice(16, 21); // orario
+    var moment = moment.replace(":", ""); //tolgo : e unisco i numeri
+    "{{#each this.regularHours}}"      
         
-    }
+        var today = "{{this.displayDay}}"; // Inutilizzato. Stampa il giorno della settimana
+        var closed = "{{this.Closed}}";
+        var open247 = "{{this.is247}}";
 
-    
+        //controllo se l'each è arrivato allo stesso numero di dy (giorno attuale)
+        if (giorno == dy) {     
 
-    
+            "{{#if this.isClosed}}"
+            document.getElementById("openorclosed").innerHTML = "Chiuso";
+            "{{/if}}"
+
+            "{{#if this.is247}}"
+            document.getElementById("openorclosed").innerHTML = "Aperto 24ore";
+            "{{/if}}"
+
+            //imposto counter per l'orario spezzato
+            var count = 0;
+            //itero tra gli intervalli di tempo in cui è aperto
+            "{{#each this.openIntervals}}"
+            var start = "{{this.start}}" //apertura
+            var end = "{{this.end}}"     //chiusura
+            var inizio = start.replace(":", "");
+            var fine = end.replace(":", "");                     
+            //controllo se l'orario attuale rientra negli orari di apertura
+            if (moment > inizio && moment < fine) {              
+                document.getElementById("openorclosed").innerHTML = "Aperto";
+                count++;
+            } else {
+                if (count != 1) {
+                    document.getElementById("openorclosed").innerHTML = "Chiuso";
+                }
+               
+            }
+            "{{/each}}"
+        }
+
+    giorno++;
+       
+   "{{/each}}"
+    Handlebars.compile("{{/with}}");
 </script>
