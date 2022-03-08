@@ -26,6 +26,17 @@ html {
     color: red;
 }
 
+#openorclosed{
+    text-transform: uppercase;
+    color: #008dc9;
+    font-weight: bold;
+    font-family:pt-sans-narrow,sans-serif;
+}
+
+.text-bold{
+    font-weight: bold;
+}
+
 #map {
     background-color: #e9ecef;
     flex-grow: 1;
