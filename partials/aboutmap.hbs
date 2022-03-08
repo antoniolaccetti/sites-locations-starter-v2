@@ -16,13 +16,26 @@
     {{#each c_iniziativeCorrelate}}
     <div class="w-1/4 col_iniziativa">
         <a href="{{this.c_baseURL}}" target="_blank" class="col_iniziativa_link">
-        <div class="col_iniziativa_image" style="background-image:url({{this.primaryPhoto.image.url}});"></div>
-        <h3 class="col_iniziativa_title">
-        {{this.name}}
-        </h3>
-        <div class="col_iniziativa_description">
-            {{this.c_descrizioneBreve}}
-        </div>
+            <div class="col_iniziativa_image" style="background-image: url('{{#with this.primaryPhoto.image.thumbnails.[3]}}{{url}}{{/with}}');">
+                {{#with this.primaryPhoto.image.thumbnails.[0]}}
+                {{url}}
+                {{/with}}
+                {{#with this.primaryPhoto.image.thumbnails.[1]}}
+                {{url}}
+                {{/with}}
+                {{#with this.primaryPhoto.image.thumbnails.[2]}}
+                {{url}}
+                {{/with}}
+                {{#with this.primaryPhoto.image.thumbnails.[3]}}
+                {{url}}
+                {{/with}}
+            </div>
+            <h3 class="col_iniziativa_title">
+                {{this.name}}
+            </h3>
+            <div class="col_iniziativa_description">
+                {{this.c_descrizioneBreve}}
+            </div>
         </a>
     </div>
     {{/each}}
