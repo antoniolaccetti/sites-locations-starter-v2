@@ -6,8 +6,7 @@
         "destination": "pages",
         "filter" : {
             "entityTypes": [
-                "healthcareFacility",
-                "ce_iniziativa"
+                "healthcareFacility"
             ]
         },
         "fields": [
@@ -34,7 +33,11 @@
             "neighborhood",
             "paymentOptions",
             "primaryPhoto",
-            "c_iniziativeCorrelate" 
+            "c_iniziativeCorrelate.primaryPhoto",
+            "c_iniziativeCorrelate.c_descrizioneBreve",
+            "c_iniziativeCorrelate.c_baseURL",
+            "c_iniziativeCorrelate.slug",
+            "c_iniziativeCorrelate.name"  
         ],
         "localization": {
             "locales": ["it"]

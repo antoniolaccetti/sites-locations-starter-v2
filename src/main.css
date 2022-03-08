@@ -18,7 +18,6 @@ html {
     @apply font-semibold;
 }
 
-
 /* Map Styling */
 
 .error-text {
@@ -380,6 +379,22 @@ h2.section-header {
 .descrizione_lunga p{
     margin-bottom: 10px;
 }
+
+/* INIZIATIVE CORRELATE */
+
+.iniziative_correlate_container{
+    background: #EEE;
+}
+.col_iniziativa{
+    display: block;
+}
+.col_iniziativa_image{
+    height: 120px;
+    background-position: center center;
+    background-size: cover;
+}
+
+
 
 /* Media Queries */
 
