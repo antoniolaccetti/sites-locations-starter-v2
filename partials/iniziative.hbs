@@ -1,0 +1,21 @@
+<div class="iniziative_correlate_container flex justify-center flex-wrap">
+    <div class="intro">
+    <h2 class="titolo_descrizione_lunga">Iniziative in corso</h2>
+    </div>
+    {{#each c_iniziativeCorrelate}}
+    <div class="w-1/4 col_iniziativa">
+        <a href="{{this.c_baseURL}}" target="_blank" class="p-2 col_iniziativa_link">
+        <div class="col_iniziativa_image" style="background-image:url({{this.primaryPhoto.image.url}});"></div>
+        <h3 class="col_iniziativa_title">
+        {{this.name}}
+        </h3>
+        <div class="col_iniziativa_description">
+            {{this.c_descrizioneBreve}}
+        </div>
+        <div class="col_iniziativa_fake_link">
+            <i class="fa fa-caret-right"></i> Ulteriori informazioni
+        </div>
+        </a>
+    </div>
+    {{/each}}
+</div>

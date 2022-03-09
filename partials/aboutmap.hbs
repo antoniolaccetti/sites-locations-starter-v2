@@ -6,24 +6,9 @@
         </div>
     </div>
     <div class="sidebar_lista_link w-full md:w-1/3 md:px-8">
-        <a class="button button_prenota" href="{{c_urlPrenotazioni}}"><i class="fa-solid fa-calendar-check fa-xl"></i> Prenota</a>
-        <a class="button button_scrivici" href="{{c_urlContatti}}"><i class="fa-solid fa-edit fa-xl"></i> Scrivici</a>
-        <a class="button button_struttura" href="{{c_urlbaseURL}}"><i class="fa-solid fa-hospital fa-xl"></i> Vai alla struttura</a>
-        <a class="button button_orari" href="{{c_urlOrari}}"><i class="fa-solid fa-clock fa-xl"></i> Orari e info generali</a>
+        <a class="button button_prenota" href="{{c_urlPrenotazione}}" target="_blank"><i class="fa-solid fa-calendar-check fa-xl"></i> Prenota</a>
+        <a class="button button_scrivici" href="{{c_urlContatti}}" target="_blank"><i class="fa-solid fa-edit fa-xl"></i> Scrivici</a>
+        <a class="button button_struttura" href="{{c_urlbaseURL}}" target="_blank"><i class="fa-solid fa-hospital fa-xl"></i> Vai alla struttura</a>
+        <a class="button button_orari" href="{{c_urlOrari}}" target="_blank"><i class="fa-solid fa-clock fa-xl"></i> Orari e info generali</a>
     </div>
-</div>
-<div class="iniziative_correlate_container flex flex-wrap">
-    {{#each c_iniziativeCorrelate}}
-    <div class="w-1/4 col_iniziativa">
-        <a href="{{this.c_baseURL}}" target="_blank" class="col_iniziativa_link">
-        <div class="col_iniziativa_image" style="background-image:url({{this.primaryPhoto.image.url}});"></div>
-        <h3 class="col_iniziativa_title">
-        {{this.name}}
-        </h3>
-        <div class="col_iniziativa_description">
-            {{this.c_descrizioneBreve}}
-        </div>
-        </a>
-    </div>
-    {{/each}}
 </div>

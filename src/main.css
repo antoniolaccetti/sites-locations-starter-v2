@@ -382,18 +382,44 @@ h2.section-header {
 
 /* INIZIATIVE CORRELATE */
 
-.iniziative_correlate_container{
-    background: #EEE;
+.intro{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
 }
-.col_iniziativa{
+
+.col_iniziativa_link{
     display: block;
+    transition: 0.3s;
+}
+
+.col_iniziativa_link:hover{
+    background: rgba(19,72,95,.05);
+}
+
+.background_iniziative{
+    background: linear-gradient(to bottom right,rgba(0,0,0,0.03),rgba(0,0,0,0.002));
+}
+
+.col_iniziativa_title{
+    color:#008dc9;
+    padding: 10px 0 5px 0;
+    line-height: 1.1em;
+}
+.col_iniziativa_description{
+    font-size: 14px;
 }
 .col_iniziativa_image{
     height: 120px;
     background-position: center center;
     background-size: cover;
 }
-
+.col_iniziativa_fake_link{
+    font-weight:bold;
+    font-size: 14px;
+    color: #00405c;
+    margin-top: 10px;
+}
 
 
 /* Media Queries */

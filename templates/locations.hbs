@@ -37,7 +37,8 @@
             "c_iniziativeCorrelate.c_descrizioneBreve",
             "c_iniziativeCorrelate.c_baseURL",
             "c_iniziativeCorrelate.slug",
-            "c_iniziativeCorrelate.name"  
+            "c_iniziativeCorrelate.name",
+            "c_specialitàStruttura" 
         ],
         "localization": {
             "locales": ["it"]
@@ -66,11 +67,16 @@
             <div class="">{{>aboutmap}} </div>
         </div>
     </div>
-    <div class="section">
+    <div class="section background_iniziative">
+        <div class="container">
+            {{>iniziative}} 
+        </div>
+    </div>
+    <!-- <div class="section">
         <div class="container">
             <div class="">{{>nearby geocodedCoordinate}}</div>
         </div>
-    </div>
+    </div> -->
     <div class="w-full bg-gray-100">
         <div class="centered-container">
             {{>footer}}
