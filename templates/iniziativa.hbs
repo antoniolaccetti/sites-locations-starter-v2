@@ -1,0 +1,36 @@
+---
+{
+    "stream": {
+        "$id": "iniziativa",
+        "source": "knowledgeGraph",
+        "destination": "pages",
+        "filter" : {
+            "entityTypes": [
+                "ce_iniziativa"
+            ]
+        },
+        "fields": [
+            "name",
+            "c_descrizioneBreve"
+        ],
+        "localization": {
+            "locales": ["it"]
+        }
+    },
+    "urlFormat": "{{slug}}"
+}
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>head }}
+    <title>{{name}}</title>
+    <link rel="shortcut icon" type="image/jpg" href="/images/yext-favicon.png" />
+</head>
+<body class="relative">
+    {{name}}
+</body>
+
+</html>
+
+
