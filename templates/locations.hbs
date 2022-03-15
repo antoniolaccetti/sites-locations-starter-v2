@@ -38,7 +38,7 @@
             "c_iniziativeCorrelate.c_baseURL",
             "c_iniziativeCorrelate.slug",
             "c_iniziativeCorrelate.name",
-            "c_specialitàStruttura"  
+            "c_listaSpecialità" 
         ],
         "localization": {
             "locales": ["it"]
@@ -57,14 +57,20 @@
 </head>
 <body class="relative">
     {{>header_elogic}}
-    <div class="section">
+    <div class="section section_main_banner"> 
         {{>main_banner}}
-
-        {{>locationdetails}}
+    </div>
+    <div class="section section_location_details">
+        {{>locationdetails}} 
     </div>
     <div class="section">
         <div class="container">
             <div class="">{{>aboutmap}} </div>
+        </div>
+    </div>
+     <div class="section background_specialita">
+        <div class="container">
+            {{>specialita}} 
         </div>
     </div>
     <div class="section background_iniziative">

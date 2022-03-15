@@ -15,7 +15,7 @@ html {
 }
 
 .headerLink {
-    @apply font-semibold;
+    @apply font-semibold; 
 }
 
 /* Map Styling */
@@ -380,12 +380,23 @@ h2.section-header {
     margin-bottom: 10px;
 }
 
+/* SPECIALITA CORRELATE */
+
+.link_specialita{
+    background: #FFF;
+    display: block;
+}
+
+.background_specialita{
+    background: rgba(234,243,249,0.8);
+}
+
 /* INIZIATIVE CORRELATE */
 
 .intro{
     width: 100%;
     text-align: center;
-    padding: 20px 0;
+    padding:0px 0 20px 0;
 }
 
 .col_iniziativa_link{
@@ -398,7 +409,7 @@ h2.section-header {
 }
 
 .background_iniziative{
-    background: linear-gradient(to bottom right,rgba(0,0,0,0.03),rgba(0,0,0,0.002));
+    background: #FFF;
 }
 
 .col_iniziativa_title{
@@ -549,8 +560,12 @@ h2.section-header {
         border-radius: 2.5rem;
     }
 
-
-
+    .section_main_banner{
+        padding: 4rem 0 0 0;
+    }
+    .section_location_details{
+        padding: 0 0 0 0;
+    }
     .trigger_prenota {
     }
 
