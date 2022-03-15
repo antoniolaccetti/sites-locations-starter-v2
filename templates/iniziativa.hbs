@@ -11,6 +11,7 @@
         },
         "fields": [
             "name",
+            "slug",
             "c_descrizioneBreve"
         ],
         "localization": {
@@ -25,10 +26,17 @@
 <head>
     {{>head }}
     <title>{{name}}</title>
+    {{>schema}}
     <link rel="shortcut icon" type="image/jpg" href="/images/yext-favicon.png" />
 </head>
 <body class="relative">
+    {{>header_elogic}}
     {{name}}
+    <div class="w-full bg-gray-100">
+        <div class="centered-container">
+            {{>footer}}
+        </div>
+    </div>
 </body>
 
 </html>
