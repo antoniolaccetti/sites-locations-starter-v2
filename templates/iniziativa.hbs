@@ -1,6 +1,6 @@
 ---
 {
-    "stream": {
+     "stream": {
         "$id": "iniziativa",
         "source": "knowledgeGraph",
         "destination": "pages",
@@ -10,9 +10,16 @@
             ]
         },
         "fields": [
+            "id",
+            "uid",
+            "meta",
             "name",
             "slug",
-            "c_descrizioneBreve"
+            "c_struttureCorrelate.name",
+            "c_struttureCorrelate.slug",
+            "c_struttureCorrelate.c_baseURL",
+            "c_struttureCorrelate.address.city",
+            "c_struttureCorrelate.c_urlPrenotazione"
         ],
         "localization": {
             "locales": ["it"]
@@ -30,13 +37,7 @@
     <link rel="shortcut icon" type="image/jpg" href="/images/yext-favicon.png" />
 </head>
 <body class="relative">
-    {{>header_elogic}}
-    {{name}}
-    <div class="w-full bg-gray-100">
-        <div class="centered-container">
-            {{>footer}}
-        </div>
-    </div>
+    {{>iniziativa-page}}
 </body>
 
 </html>
