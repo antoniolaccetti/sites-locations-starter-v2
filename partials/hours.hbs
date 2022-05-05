@@ -1,18 +1,45 @@
 {{!-- <summary class="hours-list text-base">   --}}
-  {{#with (formatHours this "Monday" "TimeFormatShort" "DateFormatShort") }}
-      {{#each this.regularHours}}
-      <div class="grid grid-cols-2 lg:grid-cols-5">
-        <div class="lg:col-span-2">
-          <strong>{{this.displayDay}}</strong>
-        </div>
-        <div class="lg:col-span-3">
-          {{#if this.isClosed}}Chiuso{{/if}}
-          {{#if this.is247}}Aperto 24/7{{/if}}
-          {{#each this.openIntervals}}
-            {{this.start}}-{{this.end}}
-          {{/each}}
-        </div>
-      </div>
-      {{/each}}
-  {{/with}}
+
+{{#prettifyDate}}{{timestamp}}{{/prettifyDate}}
+{{#with (formatHours this "Monday" "TimeFormatShort" "DateFormatShort") }}
+
+
+
+{{#each this.regularHours}}
+<div class="grid grid-cols-2 lg:grid-cols-5 day-list-inner">
+    <div class="lg:col-span-2">
+        <strong>{{this.displayDay}}</strong>
+    </div>
+    <div class="lg:col-span-3">
+        {{#if this.isClosed}}Chiuso{{/if}}
+        {{#if this.is247}}Aperto 24/7{{/if}}
+        {{#each this.openIntervals}}
+        {{this.start}}-{{this.end}}
+        {{/each}}
+    </div>
+</div>
+{{/each}}
+{{/with}}
 {{!-- </summary> --}}
+
+<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+        var d = new Date(); //vedo che giorno è
+        var dy = d.getDay(); // 0 = domenica, 1 = lunedì etc..
+        var counter = 1;
+
+        if (dy == 0) {
+            let x = $(".day-list-inner")[6];
+            $(x).addClass("font-bold")
+        } else {
+            $(".day-list-inner").each(function () {
+                if (counter == dy) {                    
+                    $(this).addClass("font-bold");
+                }
+                counter++;
+            })
+        }
+       
+            
+    });   
+</script>

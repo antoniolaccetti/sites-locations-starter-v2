@@ -15,6 +15,7 @@
             "meta",
             "name",
             "address",
+            "c_regione",
             "mainPhone",
             "description",
             "c_descrizioneLunga",
@@ -22,6 +23,8 @@
             "photoGallery",
             "slug",
             "c_immagineStruttura",
+            "c_immagineSpecialita",
+            "c_immagine_cartina",
             "c_descrizioneBreve",
             "geocodedCoordinate",
             "services",
@@ -38,7 +41,7 @@
             "c_iniziativeCorrelate.c_baseURL",
             "c_iniziativeCorrelate.slug",
             "c_iniziativeCorrelate.name",
-            "c_listaSpecialità" 
+            "c_listaSpecialità"
         ],
         "localization": {
             "locales": ["it"]
@@ -57,27 +60,27 @@
 </head>
 <body class="relative">
     {{>header_elogic}}
-    <div class="section section_main_banner"> 
+    <div class="section section_main_banner">
         {{>main_banner}}
     </div>
     <div class="section section_location_details">
-        {{>locationdetails}} 
+        {{>locationdetails}}
     </div>
     <div class="section">
         <div class="container">
             <div class="">{{>aboutmap}} </div>
         </div>
     </div>
-     <div class="section background_specialita">
+    <div class="section background_specialita">
         <div class="container">
-            {{>specialita}} 
+            {{>specialita}}
         </div>
     </div>
-    <div class="section background_iniziative">
-        <div class="container">
-            {{>iniziative}} 
-        </div>
-    </div>
+    <!-- <div class="section background_iniziative">
+         <div class="container">
+             {{>iniziative}}
+         </div>
+     </div>-->
     <!-- <div class="section">
         <div class="container">
             <div class="">{{>nearby geocodedCoordinate}}</div>

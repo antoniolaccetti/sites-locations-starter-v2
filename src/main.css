@@ -205,6 +205,18 @@ h2.section-header {
     @apply hover:bg-gray-100 focus:ring-2 focus:bg-gray-100;
 }
 
+.button-blue {
+    display: inline-flex;
+    background: #008dc9;
+    font-family: proxima-nova, sans-serif;
+    color: #FFF;
+    font-weight: 600;
+    margin: 10px 0;
+    border-radius: 100px;
+    padding: 10px 24px;
+    transition: 0.3s;
+}
+
 .error-text {
     padding-bottom: 10px;
     color: red;
@@ -328,12 +340,12 @@ h2.section-header {
     text-transform: uppercase;
 }
 
-    .trigger .menu-label {
-        font-size: .625rem;
-        letter-spacing: 1px;
-        margin-top: .25rem;
-        font-weight:300;
-    }
+.trigger .menu-label {
+    font-size: .625rem;
+    letter-spacing: 1px;
+    margin-top: .25rem;
+    font-weight:300;
+}
 
 
 .trigger_prenota {
@@ -380,9 +392,12 @@ h2.section-header {
     margin-bottom: 10px;
 }
 
+.immagine_cartina {
+    background-position: center center;
+    background-size:cover;
+}
 /* SPECIALITA CORRELATE */
-
-.link_specialita{
+.link_specialita {
     background: #FFF;
     display: block;
 }
