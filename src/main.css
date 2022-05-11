@@ -186,9 +186,10 @@ h2.section-header {
     @apply border-b pb-2 mb-3;
 }
 
-/*.section {
-    @apply mt-8 mb-16;
-}*/
+.section {
+   margin:20px 0 0 0;
+   padding:0;
+}
 
 .btn {
     @apply border px-4 py-2 rounded transform hover:-translate-y-1 ease-in-out transition-all cursor-pointer hover:shadow-lg text-center focus:outline-none flex gap-2 items-center justify-center;
@@ -229,6 +230,10 @@ h2.section-header {
 
 .header_sticky {
   /*  display: flex;*/
+}
+
+.sticky{
+    z-index: 100;
 }
 
 
@@ -403,6 +408,7 @@ h2.section-header {
 .immagine_cartina {
     background-position: center center;
     background-size:cover;
+    height: 200px;
 }
 /* SPECIALITA CORRELATE */
 .link_specialita {
@@ -590,6 +596,10 @@ h2.section-header {
     }
     .titolo_descrizione_lunga{
         font-size: 2em;
+    }
+
+    .immagine_cartina{
+        height: 100%;
     }
 }
 
