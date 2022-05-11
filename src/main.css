@@ -508,6 +508,18 @@ h2.section-header {
     padding: 20px 15px 0 15px;
 }
 
+.dati_struttura_governance{
+    padding-top: 20px;
+}
+
+
+
+.big_title{
+    color: #0d384b;
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 24px;
+}
 
 /* Media Queries */
 
@@ -524,7 +536,9 @@ h2.section-header {
 }
  
 @media (min-width:768px) {
-
+    .big_title{
+        font-size: 30px;
+    }
 
     .logo_gvm {
         height: 72px;
@@ -601,12 +615,34 @@ h2.section-header {
     .immagine_cartina{
         height: 100%;
     }
+    .container_descrizione{
+        padding: 30px 20px;
+    }
+    .box_informazioni{
+        padding:20px 0;
+    }
+    .box_informazioni_link{
+        padding-right: 0;
+
+    }
+    .sidebar_lista_link{
+        border:none;
+    }
+    .box_informazioni_link{
+        border-left: 1px #EEE solid;
+    }
 }
 
 
 
-
 @media (min-width:992px) {
+    .big_title{
+        font-size: 34px;
+    }
+
+    .container{
+        max-width: 1100px;
+    }
     .header_right {
         /*display: flex;*/
     }
