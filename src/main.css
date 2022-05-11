@@ -186,9 +186,10 @@ h2.section-header {
     @apply border-b pb-2 mb-3;
 }
 
-/*.section {
-    @apply mt-8 mb-16;
-}*/
+.section {
+   margin:20px 0 0 0;
+   padding:0;
+}
 
 .btn {
     @apply border px-4 py-2 rounded transform hover:-translate-y-1 ease-in-out transition-all cursor-pointer hover:shadow-lg text-center focus:outline-none flex gap-2 items-center justify-center;
@@ -229,6 +230,10 @@ h2.section-header {
 
 .header_sticky {
   /*  display: flex;*/
+}
+
+.sticky{
+    z-index: 100;
 }
 
 
@@ -393,8 +398,6 @@ h2.section-header {
 
 .titolo_descrizione_lunga{
     color: #23475D;
-    text-transform: uppercase;
-    
 }
 .descrizione_lunga p{
     margin-bottom: 10px;
@@ -403,6 +406,7 @@ h2.section-header {
 .immagine_cartina {
     background-position: center center;
     background-size:cover;
+    height: 200px;
 }
 /* SPECIALITA CORRELATE */
 .link_specialita {
@@ -411,15 +415,18 @@ h2.section-header {
 }
 
 .background_specialita{
-    background: rgba(234,243,249,0.8);
+    /* background: rgba(234,243,249,0.8); */
 }
 
 /* INIZIATIVE CORRELATE */
 
 .intro{
     width: 100%;
-    text-align: center;
-    padding:0px 0 20px 0;
+    text-align: left;
+    padding: 0;
+}
+.intro h2{
+   padding-left: 15px; 
 }
 
 .col_iniziativa_link{
@@ -484,6 +491,7 @@ h2.section-header {
 
 .main_banner_info{
     background: #FFF;
+    padding: 20px 15px;
 }
 
 .box_cartina_orari{
@@ -502,6 +510,53 @@ h2.section-header {
     padding: 20px 15px 0 15px;
 }
 
+.dati_struttura_governance{
+    padding-top: 20px;
+}
+
+.narrow_title{
+    font-family: pt-sans-narrow,sans-serif;
+    color: #000;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 1em;
+}
+
+.big_title{
+    color: #0d384b;
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 24px;
+}
+
+.via_struttura{
+    text-transform: uppercase;
+    color: #008dc9;
+    font-weight: normal;
+    font-family: pt-sans-narrow,sans-serif; 
+    line-height: 1em;
+    margin-bottom: 15px;
+}
+
+.hours strong{
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.box_orari{
+    padding: 15px;
+}
+
+.link_specialita{
+    margin-top: 10px;
+}
+.link_specialita:first-child{
+    margin-top: 0; 
+}
+
+.link_specialita .text{
+    padding: 15px;
+}
 
 /* Media Queries */
 
@@ -518,7 +573,16 @@ h2.section-header {
 }
  
 @media (min-width:768px) {
+    .section{
+       margin:30px 0 0 0;
+    }
+    .big_title{
+        font-size: 30px;
+    }
 
+    .main_banner_info{
+        padding: 20px;
+    }
 
     .logo_gvm {
         height: 72px;
@@ -591,12 +655,48 @@ h2.section-header {
     .titolo_descrizione_lunga{
         font-size: 2em;
     }
+
+    .immagine_cartina{
+        height: 100%;
+    }
+    .container_descrizione{
+        padding: 20px 20px;
+    }
+    .box_informazioni{
+        padding:20px 0;
+    }
+    .box_informazioni_link{
+        padding-right: 0;
+
+    }
+    .sidebar_lista_link{
+        border:none;
+    }
+    .box_informazioni_link{
+        border-left: 1px #EEE solid;
+    }
+
+    .box_orari{
+        padding: 20px;
+    }
 }
 
 
 
-
 @media (min-width:992px) {
+
+    
+
+    .main_banner_info{
+        padding: 30px;
+    }
+    .big_title{
+        font-size: 32px;
+    }
+
+    .container{
+        max-width: 1100px;
+    }
     .header_right {
         /*display: flex;*/
     }
@@ -616,7 +716,9 @@ h2.section-header {
     .tagline .facility-name {
         font-size: 1.1875rem;
     }
-
+    .box_orari{
+        padding: 30px;
+    }
     .trigger {
         flex-direction: row;
         font-size: 1rem;
@@ -631,7 +733,7 @@ h2.section-header {
     }
 
     .section_main_banner{
-        padding: 4rem 0 0 0;
+        padding:0;
     }
     .section_location_details{
         padding: 0 0 0 0;
