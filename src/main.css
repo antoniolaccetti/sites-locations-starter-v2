@@ -448,6 +448,33 @@ h2.section-header {
 }
 
 
+.main_banner_links a{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+}
+.main_banner_links a span{
+    font-size: 13px;
+}
+.main_banner_links strong{
+    color:#008dc9;
+    display: block;
+    font-size: 16px;
+}
+.main_banner_links span{
+    display: block;
+}
+.main_banner_links div{
+    line-height: 1;
+}
+.main_banner_links svg{
+    color:#008dc9;
+    margin-right: 10px;
+    font-size: 28px;
+}
+
+
 /* Media Queries */
 
 @media (min-width:360px) {
@@ -589,7 +616,12 @@ h2.section-header {
         margin-left: 20px;
     }
 
-    
+    .main_banner_links a:first-child{
+        width: 42%;
+    }
+    .main_banner_links a{
+        width: 58%;
+    }
 }
 
 @media (min-width:1200px) {
