@@ -2,12 +2,26 @@
     <div class="intro">
         <h2 class="titolo_descrizione_lunga">Specialità e Servizi: {{name}}</h2>
         <p>Lorem ipsum dolor sit amet</p>
+        <div class="flex">
+            <div class="flex">
+                <div class="flex">
+                    {{#RTFtoHtml c_elencoSpecialitaStrutturaGVM}}
+                </div>
+                <div>
+                    {{c_elencoServiziStrutturaGVM}}
+                </div>
+            </div>
+            
+        <div>
+            {{#with c_immagineSpecialita}}
 
-        {{c_elencoSpecialitaStrutturaGVM}}
-        <br>
-       {{c_elencoServiziStrutturaGVM}}
+            <div class="col_iniziativa_image" style="background-image: url('{{this.primaryPhoto.image.thumbnails.[2]}}{{url}}'); "></div>
+            {{/with}}
+
+        </div>
+        </div>
     </div>
-     {{#each c_listaSpecialità}}
+     <!--{{#each c_listaSpecialità}}
 <a href="{{this.linkSpecialità}}" class="link_specialita w-1/4 p-3 m-2" target="_blank">
     <div class="col_iniziativa_image" style="background-image: url('{{#with this.primaryPhoto.image.thumbnails.[2]}}{{url}}{{/with}}');"></div>
     <h4>{{this.nomeSpecialità}}</h4>
@@ -17,6 +31,8 @@
     <div class="col_iniziativa_fake_link">
         <i class="fa fa-caret-right"></i> Scopri di più
     </div>
-</a><!-- .link_specialita -->
-     {{/each}}
+</a>--><!-- .link_specialita -->
+     <!--{{/each}}-->
+
+
 </div>
