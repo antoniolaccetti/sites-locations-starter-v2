@@ -512,13 +512,37 @@ h2.section-header {
     padding-top: 20px;
 }
 
-
+.narrow_title{
+    font-family: pt-sans-narrow,sans-serif;
+    color: #000;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 1em;
+}
 
 .big_title{
     color: #0d384b;
     text-transform: uppercase;
     line-height: 1;
     font-size: 24px;
+}
+
+.via_struttura{
+    text-transform: uppercase;
+    color: #008dc9;
+    font-weight: normal;
+    font-family: pt-sans-narrow,sans-serif; 
+    line-height: 1em;
+    margin-bottom: 15px;
+}
+
+.hours strong{
+    font-weight: normal;
+    text-transform: capitalize;
+}
+
+.box_orari{
+    padding: 15px;
 }
 
 /* Media Queries */
@@ -616,7 +640,7 @@ h2.section-header {
         height: 100%;
     }
     .container_descrizione{
-        padding: 30px 20px;
+        padding: 20px 20px;
     }
     .box_informazioni{
         padding:20px 0;
@@ -631,13 +655,17 @@ h2.section-header {
     .box_informazioni_link{
         border-left: 1px #EEE solid;
     }
+
+    .box_orari{
+        padding: 20px;
+    }
 }
 
 
 
 @media (min-width:992px) {
     .big_title{
-        font-size: 34px;
+        font-size: 32px;
     }
 
     .container{
@@ -662,7 +690,9 @@ h2.section-header {
     .tagline .facility-name {
         font-size: 1.1875rem;
     }
-
+    .box_orari{
+        padding: 30px;
+    }
     .trigger {
         flex-direction: row;
         font-size: 1rem;
