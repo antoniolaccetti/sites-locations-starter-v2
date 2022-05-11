@@ -398,8 +398,6 @@ h2.section-header {
 
 .titolo_descrizione_lunga{
     color: #23475D;
-    text-transform: uppercase;
-    
 }
 .descrizione_lunga p{
     margin-bottom: 10px;
@@ -424,8 +422,11 @@ h2.section-header {
 
 .intro{
     width: 100%;
-    text-align: center;
-    padding:0px 0 20px 0;
+    text-align: left;
+    padding: 0;
+}
+.intro h2{
+   padding-left: 15px; 
 }
 
 .col_iniziativa_link{
@@ -543,6 +544,17 @@ h2.section-header {
 }
 
 .box_orari{
+    padding: 15px;
+}
+
+.link_specialita{
+    margin-top: 10px;
+}
+.link_specialita:first-child{
+    margin-top: 0; 
+}
+
+.link_specialita .text{
     padding: 15px;
 }
 
