@@ -143,6 +143,7 @@ html {
 
 body {
     @apply bg-white text-ll-blue;
+    background: #EEE;
     font-family: proxima-nova,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
     color: #555;
     margin: 0;
@@ -229,6 +230,8 @@ h2.section-header {
 .header_sticky {
   /*  display: flex;*/
 }
+
+
 
 .header .spacer {
     max-width: 1110px;   
@@ -472,6 +475,10 @@ h2.section-header {
     color:#008dc9;
     margin-right: 10px;
     font-size: 28px;
+}
+
+.main_banner_info{
+    background: #FFF;
 }
 
 
