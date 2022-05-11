@@ -417,7 +417,7 @@ h2.section-header {
 }
 
 .background_specialita{
-    background: rgba(234,243,249,0.8);
+    /* background: rgba(234,243,249,0.8); */
 }
 
 /* INIZIATIVE CORRELATE */
@@ -490,6 +490,7 @@ h2.section-header {
 
 .main_banner_info{
     background: #FFF;
+    padding: 20px 15px;
 }
 
 .box_cartina_orari{
@@ -560,8 +561,15 @@ h2.section-header {
 }
  
 @media (min-width:768px) {
+    .section{
+       margin:30px 0 0 0;
+    }
     .big_title{
         font-size: 30px;
+    }
+
+    .main_banner_info{
+        padding: 20px;
     }
 
     .logo_gvm {
@@ -664,6 +672,12 @@ h2.section-header {
 
 
 @media (min-width:992px) {
+
+    
+
+    .main_banner_info{
+        padding: 30px;
+    }
     .big_title{
         font-size: 32px;
     }
@@ -707,7 +721,7 @@ h2.section-header {
     }
 
     .section_main_banner{
-        padding: 4rem 0 0 0;
+        padding:0;
     }
     .section_location_details{
         padding: 0 0 0 0;
