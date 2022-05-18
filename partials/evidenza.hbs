@@ -1,19 +1,24 @@
 <div class="specialita_container flex justify-start items-stretch flex-wrap">
     <div class="intro">
-    <h2 class="titolo_descrizione_lunga">In evidenza</h2>
+        <h2 class="titolo_descrizione_lunga">In evidenza</h2>
     </div>
-     {{#each c_contenutiInEvidenza}}
-<a href="{{this.linkSpecialità}}" class="link_specialita md:w-1/4" target="_blank">
-    <div class="col_iniziativa_image" style="background-image: url('{{#with this.primaryPhoto.image.thumbnails.[2]}}{{url}}{{/with}}');"></div>
-    <div class="text">
-    <h4>{{this.nomeSpecialità}}</h4>
-    <div class="descrizione_specialita">
-        {{this.descrizioneSpecialità}}
-    </div>
-    <div class="col_iniziativa_fake_link">
-        <i class="fa fa-caret-right"></i> Scopri di più
-    </div>
-    </div>
-</a><!-- .link_specialita -->
-     {{/each}}
+    {{#each c_contenutiInEvidenza}}
+    {{this.titolo}}<br />
+    {{this.sommario}}<br />
+    {{this.link}}<br />
+    {{this}}
+    <!--<a href="{{this.linkSpecialità}}" class="link_specialita md:w-1/4" target="_blank">
+        <div class="col_iniziativa_image" style="background-image: url('{{#with this.primaryPhoto.image.thumbnails.[2]}}{{url}}{{/with}}');"></div>
+        <div class="text">
+        <h4>{{this.nomeSpecialità}}</h4>
+        <div class="descrizione_specialita">
+            {{this.descrizioneSpecialità}}
+        </div>
+        <div class="col_iniziativa_fake_link">
+            <i class="fa fa-caret-right"></i> Scopri di più
+        </div>
+        </div>
+    </a>-->
+    <!-- .link_specialita -->
+    {{/each}}
 </div>
