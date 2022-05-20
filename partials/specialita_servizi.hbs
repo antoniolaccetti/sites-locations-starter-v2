@@ -1,8 +1,22 @@
 
 <style>
+    .intro {
+        margin-bottom:15px;
+    }
+    .intro p {
+        padding-left: 15px;
+        font-family: pt-sans-narrow,sans-serif;
+    }
+    .specialita_container {
+        min-height: 350px;
+        padding: 15px;
+        width:100%;
+    }
+
     .col_specialita_image {
-        width:50%;
-        background-size:100%;
+        width: 50%;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .bg_white {
         background-color:#fff;
@@ -17,12 +31,13 @@
     .col_specialita_content {
         width:50%;
         display:flex;
+        flex-direction:column;
         padding: 25px;
     }
-    .specialita {
-        width:50%;
+    .col_specialita_content .specialita {
+        width: 50%;
     }
-    .servizi {
+    .col_specialita_content .servizi {
         width: 50%;
     }
     .col_specialita_content .title {
@@ -33,6 +48,10 @@
     }
     .col_specialita_content ::marker {
         color: #23475D;
+    }
+
+    .col_specialita_content .link {
+        margin-top: auto;
     }
 </style>
 <div class="specialita_container flex justify-center items-stretch flex-wrap">
@@ -46,13 +65,16 @@
             {{/if}}
         </h2>
         <p>Lorem ipsum dolor sit amet</p>
-        <div class="flex bg_white specialita_container">
-            
-            {{#with c_immagineSpecialita}}
-            <div class="col_specialita_image" style="background-image: url('{{this.primaryPhoto.image.thumbnails.[2]}}{{url}}')"></div>
-            {{/with}}
-           
-            <div class="col_specialita_content">
+
+    </div>
+    <div class="flex bg_white specialita_container">
+
+        {{#with c_immagineSpecialita}}
+        <div class="col_specialita_image" style="background-image: url('{{this.primaryPhoto.image.thumbnails.[2]}}{{url}}')"></div>
+        {{/with}}
+
+        <div class="col_specialita_content">
+            <div class="flex">
                 <div class="specialita">
                     <span class="title">Specialità</span>
                     {{convertRTFToHTML c_elencoSpecialitaStrutturaGVM}}
@@ -61,25 +83,28 @@
                     <span class="title">Servizi</span>
                     {{convertRTFToHTML c_elencoServiziStrutturaGVM}}
                 </div>
-                <div>
-                    <a>{{c_urlTutteLeSpecialita}}</a>
-                </div>
             </div>
-
+            <div class="link">
+                <a class="button-blue" href="{{c_urlTutteLeSpecialita}}" target="_blank">
+                    <i class="fa-solid fa-user-md fa-xl mr-2"></i> Tutte le specialità mediche
+                </a>
+            </div>
         </div>
+
     </div>
-     <!--{{#each c_listaSpecialità}}
-<a href="{{this.linkSpecialità}}" class="link_specialita w-1/4 p-3 m-2" target="_blank">
-    <div class="col_iniziativa_image" style="background-image: url('{{#with this.primaryPhoto.image.thumbnails.[2]}}{{url}}{{/with}}');"></div>
-    <h4>{{this.nomeSpecialità}}</h4>
-    <div class="descrizione_specialita">
-        {{this.descrizioneSpecialità}}
-    </div>
-    <div class="col_iniziativa_fake_link">
-        <i class="fa fa-caret-right"></i> Scopri di più
-    </div>
-</a>--><!-- .link_specialita -->
-     <!--{{/each}}-->
+    <!--{{#each c_listaSpecialità}}
+    <a href="{{this.linkSpecialità}}" class="link_specialita w-1/4 p-3 m-2" target="_blank">
+        <div class="col_iniziativa_image" style="background-image: url('{{#with this.primaryPhoto.image.thumbnails.[2]}}{{url}}{{/with}}');"></div>
+        <h4>{{this.nomeSpecialità}}</h4>
+        <div class="descrizione_specialita">
+            {{this.descrizioneSpecialità}}
+        </div>
+        <div class="col_iniziativa_fake_link">
+            <i class="fa fa-caret-right"></i> Scopri di più
+        </div>
+    </a>-->
+    <!-- .link_specialita -->
+    <!--{{/each}}-->
 
 
 </div>
