@@ -53,16 +53,21 @@
     .col_specialita_content .link {
         margin-top: auto;
     }
+    .text-regular {
+        font-weight: 400;
+    }
 </style>
 <div class="specialita_container flex justify-center items-stretch flex-wrap">
     <div class="intro">
         <h2 class="titolo_descrizione_lunga">
             Specialità e Servizi:
-            {{#if c_nomeStruttura}}
-            {{c_nomeStruttura}}
-            {{else}}
-            {{name}}
-            {{/if}}
+            <span class="text-regular">
+                {{#if c_nomeStruttura}}
+                {{c_nomeStruttura}}
+                {{else}}
+                {{name}}
+                {{/if}}
+            </span>
         </h2>
         <p>Lorem ipsum dolor sit amet</p>
 
