@@ -558,18 +558,21 @@ h2.section-header {
     padding: 15px;
 }
 
-.container_inevidenza {
-    width:100%;
-}
 
 .box_inevidenza {
-    width: 25%;
+    width: 100%;
     background: #fff;
+    margin-top: 20px;
+    position: relative;
+    padding-bottom: 40px;
+    max-width: 50%;
 }
 
 .box_inevidenza .bg_box {
     height:150px;
     width:100%;
+    background-size: cover;
+    background-position: center center;
 }
 
 .box_inevidenza .content {
@@ -590,6 +593,8 @@ h2.section-header {
     color: #008dc9;
     font-weight: 600;
     margin-top:15px;
+    position: absolute;
+    bottom: 20px;
 }
 
 .link_inevidenza span {
@@ -607,11 +612,18 @@ h2.section-header {
     .logo_gvm img {
         height: 32px;
     }
+    .box_inevidenza .bg_box{
+        height: 200px;    
+    }
 }
  
 @media (min-width:768px) {
     .section{
        margin:30px 0 0 0;
+    }
+    .box_inevidenza{
+        width: calc(50% - 20px);
+        margin: 20px 10px;
     }
     .big_title{
         font-size: 30px;
@@ -721,8 +733,15 @@ h2.section-header {
 
 
 @media (min-width:992px) {
-
     
+    .box_inevidenza{
+        width: calc(25% - 20px);
+        margin: 20px 10px;
+        flex-grow: 1;
+    }
+    .box_inevidenza .bg_box{
+        padding-bottom: 50%;
+    }
 
     .main_banner_info{
         padding: 30px;
