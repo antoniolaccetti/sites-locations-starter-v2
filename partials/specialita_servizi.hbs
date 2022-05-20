@@ -16,24 +16,41 @@
     }
     .col_specialita_content {
         width:50%;
+        display:flex;
+        padding: 25px;
+    }
+    .specialita {
+        width:50%;
+    }
+    .servizi {
+        width: 50%;
+    }
+    .col_specialita_content .title {
+        display: block;
+        font-size: 1.5rem;
+        color: #23475D;
+        font-weight:800;
+    }
+    .col_specialita_content ::marker {
+        color: #23475D;
     }
 </style>
 <div class="specialita_container flex justify-center items-stretch flex-wrap">
     <div class="intro">
         <h2 class="titolo_descrizione_lunga">Specialità e Servizi: {{name}}</h2>
         <p>Lorem ipsum dolor sit amet</p>
-        <div class="flex bg_white">
+        <div class="flex bg_white specialita_container">
             
             {{#with c_immagineSpecialita}}
             <div class="col_specialita_image" style="background-image: url('{{this.primaryPhoto.image.thumbnails.[2]}}{{url}}')"></div>
             {{/with}}
            
             <div class="col_specialita_content">
-                <div class="">
+                <div class="specialita">
                     <span class="title">Specialità</span>
                     {{convertRTFToHTML c_elencoSpecialitaStrutturaGVM}}
                 </div>
-                <div>
+                <div class="servizi">
                     <span class="title">Servizi</span>
                     {{convertRTFToHTML c_elencoServiziStrutturaGVM}}
                 </div>
