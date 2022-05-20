@@ -575,7 +575,7 @@ h2.section-header {
     background-position: center center;
 }
 
-.giorno_attivo{
+.giorno_attivo strong, .giorno_attivo div{
     font-weight: bold !important;
 }
 
