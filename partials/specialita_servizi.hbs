@@ -1,24 +1,44 @@
+
+<style>
+    .col_specialita_image {
+        width:50%;
+        background-size:100%;
+    }
+    .bg_white {
+        background-color:#fff;
+    }
+    ul {
+        list-style: disc;
+        list-style-position: inside;
+    }
+    .title  {
+        text-transform:uppercase;
+    }
+    .col_specialita_content {
+        width:50%;
+    }
+</style>
 <div class="specialita_container flex justify-center items-stretch flex-wrap">
     <div class="intro">
         <h2 class="titolo_descrizione_lunga">Specialità e Servizi: {{name}}</h2>
         <p>Lorem ipsum dolor sit amet</p>
-        <div class="flex">
-            <div class="flex">
-                <div class="flex">
+        <div class="flex bg_white">
+            
+            {{#with c_immagineSpecialita}}
+            <div class="col_specialita_image" style="background-image: url('{{this.primaryPhoto.image.thumbnails.[2]}}{{url}}')"></div>
+            {{/with}}
+           
+            <div class="col_specialita_content">
+                <div class="">
+                    <span class="title">Specialità</span>
                     {{convertRTFToHTML c_elencoSpecialitaStrutturaGVM}}
                 </div>
                 <div>
-                    {{c_elencoServiziStrutturaGVM}}
+                    <span class="title">Servizi</span>
+                    {{convertRTFToHTML c_elencoServiziStrutturaGVM}}
                 </div>
             </div>
-            
-        <div>
-            {{#with c_immagineSpecialita}}
 
-            <div class="col_iniziativa_image" style="background-image: url('{{this.primaryPhoto.image.thumbnails.[2]}}{{url}}'); "></div>
-            {{/with}}
-
-        </div>
         </div>
     </div>
      <!--{{#each c_listaSpecialità}}
