@@ -803,6 +803,8 @@ h2.section-header {
 
     .trigger_struttura {
         border-color: #fff;
+        background: #FFF;
+        color: #008dc9;
         margin-left: 20px;
     }
 
