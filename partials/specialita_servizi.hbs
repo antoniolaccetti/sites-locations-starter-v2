@@ -37,7 +37,14 @@
 </style>
 <div class="specialita_container flex justify-center items-stretch flex-wrap">
     <div class="intro">
-        <h2 class="titolo_descrizione_lunga">Specialità e Servizi: {{name}}</h2>
+        <h2 class="titolo_descrizione_lunga">
+            Specialità e Servizi:
+            {{#if c_nomeStruttura}}
+            {{c_nomeStruttura}}
+            {{else}}
+            {{name}}
+            {{/if}}
+        </h2>
         <p>Lorem ipsum dolor sit amet</p>
         <div class="flex bg_white specialita_container">
             
