@@ -1,18 +1,17 @@
-$(document).ready(function (event) {
-    var d = new Date(); //vedo che giorno è
-    var dy = d.getDay(); // 0 = domenica, 1 = lunedì etc..
+$(document).ready(function() {
+    var d = new Date(); //vedo che giorno ï¿½
+    var dy = d.getDay(); // 0 = domenica, 1 = lunedï¿½ etc..
     var counter = 1;
 
     if (dy == 0) {
         let x = $(".day-list-inner")[6];
-        $(x).addClass("font-bold")
+        $(x).addClass("giorno_attivo")
     } else {
         $(".day-list-inner").each(function () {
             if (counter == dy) {
-                $(this).addClass("font-bold");
+                $(this).addClass("giorno_attivo");
             }
             counter++;
         })
     }
-
-})
+});
