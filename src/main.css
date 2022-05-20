@@ -575,6 +575,10 @@ h2.section-header {
     background-position: center center;
 }
 
+.giorno_attivo{
+    font-weight: bold !important;
+}
+
 .box_inevidenza .content {
     padding: 15px 20px;
 }
