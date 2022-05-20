@@ -1,19 +1,31 @@
 <div class="specialita_container flex justify-start items-stretch flex-wrap">
     <div class="intro">
-    <h2 class="titolo_descrizione_lunga">In evidenza</h2>
+        <h2 class="titolo_descrizione_lunga">In evidenza</h2>
     </div>
-     {{#each c_contenutiInEvidenza}}
-<a href="{{this.linkSpecialità}}" class="link_specialita md:w-1/4" target="_blank">
-    <div class="col_iniziativa_image" style="background-image: url('{{#with this.primaryPhoto.image.thumbnails.[2]}}{{url}}{{/with}}');"></div>
-    <div class="text">
-    <h4>{{this.nomeSpecialità}}</h4>
-    <div class="descrizione_specialita">
-        {{this.descrizioneSpecialità}}
+    {{#each c_contenutiInEvidenza}}
+<div class="flex flex-wrap container_inevidenza">
+    <div class="box_inevidenza">
+        <div class="bg_box" style="background-image: url('{{this.immagine.thumbnails.[0].url}}')"></div>
+        <div class="content">
+            <div class="title_inevidenza">{{this.titolo}}</div>
+            <div class="description_inevidenza">{{this.sommario}}</div>
+            <div class="link_inevidenza"><a href="{{this.link}}"> <i class="fa-solid fa-caret-right fa-xl"></i><span>Scopri di più</span></a></div>           
+        </div>
     </div>
-    <div class="col_iniziativa_fake_link">
-        <i class="fa fa-caret-right"></i> Scopri di più
-    </div>
-    </div>
-</a><!-- .link_specialita -->
-     {{/each}}
 </div>
+    <!--<a href="{{this.linkSpecialità}}" class="link_specialita md:w-1/4" target="_blank">
+        <div class="col_iniziativa_image" style="background-image: url('{{#with this.primaryPhoto.image.thumbnails.[2]}}{{url}}{{/with}}');"></div>
+        <div class="text">
+        <h4>{{this.nomeSpecialità}}</h4>
+        <div class="descrizione_specialita">
+            {{this.descrizioneSpecialità}}
+        </div>
+        <div class="col_iniziativa_fake_link">
+            <i class="fa fa-caret-right"></i> Scopri di più
+        </div>
+        </div>
+    </a>-->
+    <!-- .link_specialita -->
+    {{/each}}
+</div>
+
