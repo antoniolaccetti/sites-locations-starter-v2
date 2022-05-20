@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function (event) {
+$(document).ready(function (event) {
     var d = new Date(); //vedo che giorno è
     var dy = d.getDay(); // 0 = domenica, 1 = lunedì etc..
     var counter = 1;
@@ -15,5 +15,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
         })
     }
 
-
-});
+})
