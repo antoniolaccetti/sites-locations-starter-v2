@@ -7,57 +7,8 @@
         padding-left: 15px;
         font-family: pt-sans-narrow,sans-serif;
     }
-    .specialita_container {
-        min-height: 350px;
-        padding: 15px;
-        width:100%;
-    }
-
-    .col_specialita_image {
-        width: 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    .bg_white {
-        background-color:#fff;
-    }
-    ul {
-        list-style: disc;
-        list-style-position: inside;
-    }
-    .title  {
-        text-transform:uppercase;
-    }
-    .col_specialita_content {
-        width:50%;
-        display:flex;
-        flex-direction:column;
-        padding: 25px;
-    }
-    .col_specialita_content .specialita {
-        width: 50%;
-    }
-    .col_specialita_content .servizi {
-        width: 50%;
-    }
-    .col_specialita_content .title {
-        display: block;
-        font-size: 1.5rem;
-        color: #23475D;
-        font-weight:800;
-    }
-    .col_specialita_content ::marker {
-        color: #23475D;
-    }
-
-    .col_specialita_content .link {
-        margin-top: auto;
-    }
-    .text-regular {
-        font-weight: 400;
-    }
 </style>
-<div class="specialita_container flex justify-center items-stretch flex-wrap">
+<div class="specialita_container_main flex justify-center items-stretch flex-wrap">
     <div class="intro">
         <h2 class="titolo_descrizione_lunga">
             Specialità e Servizi:
@@ -69,17 +20,17 @@
                 {{/if}}
             </span>
         </h2>
-        <p>Lorem ipsum dolor sit amet</p>
+        <p>Scopri le specialità e i servizi della struttura o visualizza tutte le specialità mediche sul sito web</p>
 
     </div>
-    <div class="flex bg_white specialita_container">
+    <div class="flex bg_white flex-wrap specialita_container">
 
         {{#with c_immagineSpecialita}}
         <div class="col_specialita_image" style="background-image: url('{{this.primaryPhoto.image.thumbnails.[2]}}{{url}}')"></div>
         {{/with}}
 
         <div class="col_specialita_content">
-            <div class="flex">
+            <div class="specilita_servizi">
                 <div class="specialita">
                     <span class="title">Specialità</span>
                     {{convertRTFToHTML c_elencoSpecialitaStrutturaGVM}}
