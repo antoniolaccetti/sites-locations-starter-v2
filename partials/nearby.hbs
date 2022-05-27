@@ -190,7 +190,7 @@
     var radius = 500;
     var entityTypes =
         "healthcareFacility";
-    var fields = "name,c_nomeStruttura,hours,neighborhood,address,mainPhone,timeZoneUtcOffset";
+    var fields = "name,c_nomeStruttura,c_immagineStruttura,hours,neighborhood,address,mainPhone,timeZoneUtcOffset";
     const savedSearchIdString = "";
     var fullURL =
         baseURL +
@@ -234,32 +234,32 @@
             });
         }
         for (var i = 1; i < entities.length; i++) {
-        location = entities[i];
-        locationHTML = "";
-        const parsedOffset = parseTimeZoneUtcOffset(location.timeZoneUtcOffset);
-        //style="width:80%;height:auto;padding-top:2rem;padding-bottom:2rem;
-        //style="width:100%;height:auto;        
-        if (true) {
-            if (location.websiteUrl) {
-            locationHTML =
-                '<div class="location grid grid-cols-1 shadow-md rounded-lg sm:grid-cols-2 grid gap-x-5 gap-y-3 md:grid-cols-1 bg-white "><div class="grid address-cta-column px-5 py-5 gap-y-4"><div class="name text-xl font-semibold">' +
-                location.c_nomeStruttura +
-                '</div><a class="address hover:underline" href="#"><div>' +
-                location.address.line1 +
-                '</div><div class="address-line-2">' + 
-                location.address.city + ', ' + location.address.region + ' ' + location.address.postalCode +
-                '</div></a></div>';
-            } else {
-            locationHTML =
-                '<div class="location grid grid-cols-1 shadow-md rounded-lg sm:grid-cols-2 grid gap-x-5 gap-y-3 md:grid-cols-1 bg-white "><div class="grid address-cta-column px-5 py-5 gap-y-4"><div class="name text-xl font-semibold">' +
-                location.c_nomeStruttura +
-                '</div><a class="address hover:underline" href="#"><div>' +
-                location.address.line1 +
-                '</div><div class="address-line-2">' + 
-                location.address.city + ', ' + location.address.region + ' ' + location.address.postalCode +
-                '</div></a></div>';
-            }
-            //console.log(locationHTML);
+            location = entities[i];
+            locationHTML = "";
+            const parsedOffset = parseTimeZoneUtcOffset(location.timeZoneUtcOffset);
+            //style="width:80%;height:auto;padding-top:2rem;padding-bottom:2rem;
+            //style="width:100%;height:auto;        
+            if (true) {
+                if (location.websiteUrl) {
+                    locationHTML =
+                        '<div class="location grid grid-cols-1 shadow-md rounded-lg sm:grid-cols-2 grid gap-x-5 gap-y-3 md:grid-cols-1 bg-white "><div class="grid address-cta-column px-5 py-5 gap-y-4"><div class="name text-xl font-semibold">' +
+                        location.c_nomeStruttura +
+                        '</div><a class="address hover:underline" href="#"><div>' +
+                        location.address.line1 +
+                        '</div><div class="address-line-2">' +
+                        location.address.city + ', ' + location.address.region + ' ' + location.address.postalCode +
+                        '</div></a></div>';
+                } else {
+                    locationHTML =
+                        '<img class=" w-full object-cover h-full" src="'+location.c_immagineStruttura.url+'" /><div class="location grid grid-cols-1 shadow-md rounded-lg sm:grid-cols-2 grid gap-x-5 gap-y-3 md:grid-cols-1 bg-white "><div class="grid address-cta-column px-5 py-5 gap-y-4"><div class="name text-xl font-semibold">' +
+                        location.c_nomeStruttura +
+                        '</div><a class="address hover:underline" href=""><div>' +
+                        location.address.line1 +
+                        '</div><div class="address-line-2">' +
+                        location.address.city + ', ' + location.address.region + ' ' + location.address.postalCode +
+                        '</div></a></div>';
+                }
+                console.log(entities);
             [].slice
             .call(document.querySelectorAll(".location-data") || [])
             .forEach(function (el) {
