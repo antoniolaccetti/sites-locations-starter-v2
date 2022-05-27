@@ -189,8 +189,8 @@
     var limit = 3;
     var radius = 500;
     var entityTypes =
-        "location";
-    var fields = "name,hours,neighborhood,address,mainPhone,timeZoneUtcOffset";
+        "healthcareFacility";
+    var fields = "name,c_nomeStruttura,hours,neighborhood,address,mainPhone,timeZoneUtcOffset";
     const savedSearchIdString = "";
     var fullURL =
         baseURL +
@@ -243,7 +243,7 @@
             if (location.websiteUrl) {
             locationHTML =
                 '<div class="location grid grid-cols-1 shadow-md rounded-lg sm:grid-cols-2 grid gap-x-5 gap-y-3 md:grid-cols-1 bg-white "><div class="grid address-cta-column px-5 py-5 gap-y-4"><div class="name text-xl font-semibold">' +
-                location.neighborhood +
+                location.c_nomeStruttura +
                 '</div><a class="address hover:underline" href="#"><div>' +
                 location.address.line1 +
                 '</div><div class="address-line-2">' + 
@@ -252,7 +252,7 @@
             } else {
             locationHTML =
                 '<div class="location grid grid-cols-1 shadow-md rounded-lg sm:grid-cols-2 grid gap-x-5 gap-y-3 md:grid-cols-1 bg-white "><div class="grid address-cta-column px-5 py-5 gap-y-4"><div class="name text-xl font-semibold">' +
-                location.neighborhood +
+                location.c_nomeStruttura +
                 '</div><a class="address hover:underline" href="#"><div>' +
                 location.address.line1 +
                 '</div><div class="address-line-2">' + 
