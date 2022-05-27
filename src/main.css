@@ -217,6 +217,9 @@ h2.section-header {
     border-radius: 100px;
     padding: 10px 24px;
     transition: 0.3s;
+    line-height: 1em;
+    align-items:center;
+    
 }
 
 .error-text {
@@ -331,7 +334,7 @@ h2.section-header {
 }
 
 .header_sticky {
-    width: 991px;
+    width: 100%;
     background: linear-gradient(to bottom,#0d384b,#00405c 30%,#165e93);
 }
 
@@ -425,9 +428,73 @@ h2.section-header {
     text-align: left;
     padding: 0;
 }
+
 .intro h2{
    padding-left: 15px; 
 }
+
+.specialita_container {
+    min-height: 350px;
+    padding: 15px;
+    width:100%;
+}
+
+.col_specialita_image {
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150px;
+    padding-bottom: 20%;
+}
+.bg_white {
+    background-color:#fff;
+}
+ul {
+    list-style: disc;
+    list-style-position: inside;
+}
+.title  {
+    text-transform:uppercase;
+}
+.col_specialita_content {
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    padding:10px 0px;
+}
+.col_specialita_content .specialita {
+    width: 100%;
+}
+.col_specialita_content .servizi {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.specilita_servizi{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.col_specialita_content .title {
+    display: block;
+    font-size: 1.5rem;
+    color: #23475D;
+    font-weight:800;
+}
+.col_specialita_content ::marker {
+    color: #23475D;
+}
+
+.col_specialita_content .link {
+    margin-top: auto;
+}
+.text-regular {
+    font-weight: 400;
+}
+
 
 .col_iniziativa_link{
     display: block;
@@ -565,8 +632,8 @@ h2.section-header {
     margin-top: 20px;
     position: relative;
     padding-bottom: 40px;
-    max-width: 50%;
 }
+
 
 .box_inevidenza .bg_box {
     height:150px;
@@ -622,6 +689,15 @@ h2.section-header {
 }
  
 @media (min-width:768px) {
+    
+    .col_specialita_content .specialita, .col_specialita_content .servizi{
+        width: calc(50% - 10px);
+        margin: 0;
+    }
+
+    .box_inevidenza {
+        max-width: 50%;
+    }
     .section{
        margin:30px 0 0 0;
     }
@@ -732,12 +808,27 @@ h2.section-header {
     .box_orari{
         padding: 20px;
     }
+    .col_specialita_image{
+        height: 350px;
+    }
+    .col_specialita_content{
+        padding: 20px 10px;
+    }
 }
 
 
 
 @media (min-width:992px) {
-    
+    .col_specialita_content{
+        width:50%;
+        padding: 30px;
+    }
+    .col_specialita_image{
+        width:50%;
+        padding-bottom: 0;
+        height: auto;
+        min-height: 350px;
+    }
     .box_inevidenza{
         width: calc(25% - 20px);
         margin: 20px 10px;
