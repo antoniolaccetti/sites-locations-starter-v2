@@ -672,6 +672,47 @@ ul {
     margin-left:5px;
 }
 
+.location-data{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container_nearby{
+    padding: 20px 10px;
+}
+
+.location_nearby{
+    flex-basis: 100%;
+    
+    background:rgba(255,255,255,0.5);
+    margin-top: 15px;
+    transition:0.3s;
+}
+.location_nearby .grid{
+    padding: 15px;
+}
+.location_nearby .name{
+    color: #008dc9;
+    font-family: pt-sans-narrow,sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1em;
+}
+.location_nearby .address{
+    font-size: 14px;
+    margin-top: 10px;
+    color: #555;
+}
+
+.location_nearby:hover{
+    background: #FFF;
+    text-decoration: none;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
 /* Media Queries */
 @media (min-width:360px) {
     .tagline .facility-name, .tagline .facility-location {
@@ -689,7 +730,12 @@ ul {
 }
  
 @media (min-width:768px) {
+    .location_nearby{
     
+        flex-basis: calc(33% - 20px);
+        margin: 10px;
+        flex-grow: 1;
+    }
     .col_specialita_content .specialita, .col_specialita_content .servizi{
         width: calc(50% - 10px);
         margin: 0;

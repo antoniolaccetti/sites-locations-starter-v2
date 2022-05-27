@@ -1,6 +1,6 @@
-<div class="bg-gray-100 p-8">
-    <h2 class="text-center mb-5">Nearby Locations</h2>
-    <div class="location-data grid gap-x-5 gap-y-5 sm:px-10 md:px-0 md:grid-cols-3 lg:gap-x-20"> </div>   
+<div class="bg-gray-100 container_nearby">
+    <h2 class="text-center mb-2">Nearby Locations</h2>
+    <div class="location-data"> </div>   
 </div>
 
 
@@ -190,7 +190,7 @@
     var radius = 500;
     var entityTypes =
         "healthcareFacility";
-    var fields = "name,c_nomeStruttura,c_immagineStruttura,hours,neighborhood,address,mainPhone,timeZoneUtcOffset";
+    var fields = "name,c_nomeStruttura,hours,neighborhood,address,mainPhone,timeZoneUtcOffset,c_baseURL,c_immagineStruttura";
     const savedSearchIdString = "";
     var fullURL =
         baseURL +
@@ -234,32 +234,32 @@
             });
         }
         for (var i = 1; i < entities.length; i++) {
-            location = entities[i];
-            locationHTML = "";
-            const parsedOffset = parseTimeZoneUtcOffset(location.timeZoneUtcOffset);
-            //style="width:80%;height:auto;padding-top:2rem;padding-bottom:2rem;
-            //style="width:100%;height:auto;        
-            if (true) {
-                if (location.websiteUrl) {
-                    locationHTML =
-                        '<div class="location grid grid-cols-1 shadow-md rounded-lg sm:grid-cols-2 grid gap-x-5 gap-y-3 md:grid-cols-1 bg-white "><div class="grid address-cta-column px-5 py-5 gap-y-4"><div class="name text-xl font-semibold">' +
-                        location.c_nomeStruttura +
-                        '</div><a class="address hover:underline" href="#"><div>' +
-                        location.address.line1 +
-                        '</div><div class="address-line-2">' +
-                        location.address.city + ', ' + location.address.region + ' ' + location.address.postalCode +
-                        '</div></a></div>';
-                } else {
-                    locationHTML =
-                        '<img class=" w-full object-cover h-full" src="'+location.c_immagineStruttura.url+'" /><div class="location grid grid-cols-1 shadow-md rounded-lg sm:grid-cols-2 grid gap-x-5 gap-y-3 md:grid-cols-1 bg-white "><div class="grid address-cta-column px-5 py-5 gap-y-4"><div class="name text-xl font-semibold">' +
-                        location.c_nomeStruttura +
-                        '</div><a class="address hover:underline" href=""><div>' +
-                        location.address.line1 +
-                        '</div><div class="address-line-2">' +
-                        location.address.city + ', ' + location.address.region + ' ' + location.address.postalCode +
-                        '</div></a></div>';
-                }
-                console.log(entities);
+        location = entities[i];
+        locationHTML = "";
+        const parsedOffset = parseTimeZoneUtcOffset(location.timeZoneUtcOffset);
+        //style="width:80%;height:auto;padding-top:2rem;padding-bottom:2rem;
+        //style="width:100%;height:auto;        
+        if (true) {
+            if (location.websiteUrl) {
+            locationHTML =
+                '<a target="_blank" href="'+ location.c_baseURL +'" class="location_nearby"><div class="grid address-cta-column"><div class="name text-xl font-semibold">' +
+                location.c_nomeStruttura +
+                '</div><div class="address"><div>' +
+                location.address.line1 +
+                '</div><div class="address-line-2">' + 
+                location.address.city + ', ' + location.address.region + ' ' + location.address.postalCode +
+                '</div></div></div></a>';
+            } else {
+            locationHTML =
+                '<img class=" w-full object-cover h-full" src="' + location.c_immagineStruttura.url + '"/><a target="_blank" href="' + location.c_baseURL + '" class="location_nearby"><div class="grid address-cta-column"><div class="name text-xl font-semibold">' +
+                 location.c_nomeStruttura +
+                '</div><div class="address"><div>' +
+                location.address.line1 +
+                '</div><div class="address-line-2">' + 
+                location.address.city + ', ' + location.address.region + ' ' + location.address.postalCode +
+                '</div></div></div></a>';
+            }
+            //console.log(locationHTML);
             [].slice
             .call(document.querySelectorAll(".location-data") || [])
             .forEach(function (el) {
