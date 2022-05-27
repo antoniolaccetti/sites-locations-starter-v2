@@ -20,6 +20,10 @@ html {
 
 /* Map Styling */
 
+.lista_struttura_mappa a{
+    color: #008dc9;
+}
+
 .error-text {
     padding-bottom: 10px;
     color: red;
