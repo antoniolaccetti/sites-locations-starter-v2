@@ -685,7 +685,7 @@ ul {
 
 .location_nearby{
     flex-basis: 100%;
-    
+    max-width: 33%;
     background:rgba(255,255,255,0.5);
     margin-top: 15px;
     transition:0.3s;
@@ -705,6 +705,18 @@ ul {
     font-size: 14px;
     margin-top: 10px;
     color: #555;
+}
+
+.title_nearby{
+    color: #0d384b;
+}
+
+.location_nearby .image{
+    height: 150px;
+    padding-bottom: 20%;
+    margin-bottom: 15px;
+    background-position: center center;
+    background-size: cover;
 }
 
 .location_nearby:hover{
@@ -730,6 +742,19 @@ ul {
 }
  
 @media (min-width:768px) {
+    .inevidenza_container{
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    .inevidenza_container .titolo_descrizione_lunga{
+        padding-left: 25px;
+    }
+    .inevidenza_container .intro{
+        margin-bottom: 0;
+    }
+    .container_nearby{
+        padding: 30px 10px;
+    }
     .location_nearby{
     
         flex-basis: calc(33% - 20px);

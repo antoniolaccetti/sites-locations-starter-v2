@@ -1,5 +1,5 @@
 <div class="bg-gray-100 container_nearby">
-    <h2 class="text-center mb-2">Nearby Locations</h2>
+    <h2 class="text-center mb-2 title_nearby">Strutture vicine</h2>
     <div class="location-data"> </div>   
 </div>
 
@@ -190,7 +190,7 @@
     var radius = 500;
     var entityTypes =
         "healthcareFacility";
-    var fields = "name,c_nomeStruttura,hours,neighborhood,address,mainPhone,timeZoneUtcOffset,c_baseURL,c_immagineStruttura";
+    var fields = "name,c_nomeStruttura,hours,neighborhood,address,mainPhone,timeZoneUtcOffset,c_baseURL,c_immagineStruttura,slug";
     const savedSearchIdString = "";
     var fullURL =
         baseURL +
@@ -242,8 +242,8 @@
         if (true) {
             if (location.websiteUrl) {
             locationHTML =
-                '<a target="_blank" href="'+ location.c_baseURL +'" class="location_nearby"><div class="grid address-cta-column"><div class="name text-xl font-semibold">' +
-                location.c_nomeStruttura +
+                '<a target="_blank" href="' + location.slug + '" class="location_nearby"><div class="grid address-cta-column"><div class="image" style="background-image:url('+location.c_immagineStruttura.url+');"></div><div class="name text-xl font-semibold">' +
+                 location.c_nomeStruttura +
                 '</div><div class="address"><div>' +
                 location.address.line1 +
                 '</div><div class="address-line-2">' + 
@@ -251,7 +251,7 @@
                 '</div></div></div></a>';
             } else {
             locationHTML =
-                '<img class=" w-full object-cover h-full" src="' + location.c_immagineStruttura.url + '"/><a target="_blank" href="' + location.c_baseURL + '" class="location_nearby"><div class="grid address-cta-column"><div class="name text-xl font-semibold">' +
+                '<a target="_blank" href="' + location.slug + '" class="location_nearby"><div class="grid address-cta-column"><div class="image" style="background-image:url('+location.c_immagineStruttura.url+');"></div><div class="name text-xl font-semibold">' +
                  location.c_nomeStruttura +
                 '</div><div class="address"><div>' +
                 location.address.line1 +
