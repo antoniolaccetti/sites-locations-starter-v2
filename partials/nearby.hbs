@@ -214,10 +214,12 @@
         .forEach(function (el) {
             el.innerHTML = '<div class="col">Loading...</div>';
         });
+    
     //$.get(fullURL, function (data) {
     fetch(fullURL).then(response => response.json()).then(data => {
         //entities = data.response.entities;
         entities = data.response.entities;
+        console.log(data);
         [].slice
         .call(document.querySelectorAll(".location-data") || [])
         .forEach(function (el) {
