@@ -219,7 +219,6 @@
     fetch(fullURL).then(response => response.json()).then(data => {
         //entities = data.response.entities;
         entities = data.response.entities;
-        console.log(data);
         [].slice
         .call(document.querySelectorAll(".location-data") || [])
         .forEach(function (el) {
@@ -241,11 +240,23 @@
         const parsedOffset = parseTimeZoneUtcOffset(location.timeZoneUtcOffset);
         //style="width:80%;height:auto;padding-top:2rem;padding-bottom:2rem;
         //style="width:100%;height:auto;        
-        if (true) {
+            if (true) {
+                var immagine;
+                var nomeStruttura;
+                if (location.c_immagineStruttura != undefined) {
+                    immagine = location.c_immagineStruttura.url;
+                } else {
+                    immagine = 'https://www.gvmnet.it/admingvm/media/immagininews/cuoreevasi/cardiologia_interventistica.jpg';
+                }
+                if (location.c_nomeStruttura != undefined) {
+                    nomeStruttura = location.c_nomeStruttura;
+                } else {
+                    nomeStruttura = location.name;
+                }
             if (location.websiteUrl) {
             locationHTML =
-                '<a target="_blank" href="' + location.slug + '" class="location_nearby"><div class="grid address-cta-column"><div class="image" style="background-image:url('+location.c_immagineStruttura.url+');"></div><div class="name text-xl font-semibold">' +
-                 location.c_nomeStruttura +
+                '<a target="_blank" href="' + location.slug + '" class="location_nearby"><div class="grid address-cta-column"><div class="image" style="background-image:url(' + immagine+');"></div><div class="name text-xl font-semibold">' +
+            nomeStruttura +
                 '</div><div class="address"><div>' +
                 location.address.line1 +
                 '</div><div class="address-line-2">' + 
@@ -253,8 +264,8 @@
                 '</div></div></div></a>';
             } else {
             locationHTML =
-                '<a target="_blank" href="' + location.slug + '" class="location_nearby"><div class="grid address-cta-column"><div class="image" style="background-image:url('+location.c_immagineStruttura.url+');"></div><div class="name text-xl font-semibold">' +
-                 location.c_nomeStruttura +
+                '<a target="_blank" href="' + location.slug + '" class="location_nearby"><div class="grid address-cta-column"><div class="image" style="background-image:url('+immagine+');"></div><div class="name text-xl font-semibold">' +
+            nomeStruttura +
                 '</div><div class="address"><div>' +
                 location.address.line1 +
                 '</div><div class="address-line-2">' + 
