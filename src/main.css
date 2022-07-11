@@ -333,6 +333,10 @@ h2.section-header {
     margin: 0;
 }
 
+.tagline .facility-name, .tagline .facility-location {
+    font-size: 1rem;
+}
+
 .header_right {
   /*  display:none; */
 }
@@ -793,13 +797,11 @@ ul {
 }
 }
 
-@media (min-width:375px) {
-    .logo_gvm img {
-        height: 32px;
-    }
-    .box_inevidenza .bg_box{
-        height: 200px;    
-    }
+.logo_gvm img {
+    height: 32px;
+}
+.box_inevidenza .bg_box{
+    height: 200px;    
 }
 
 @media (min-width:576px){
