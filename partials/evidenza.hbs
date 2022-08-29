@@ -1,16 +1,18 @@
+{{#if c_contenutiInEvidenza}}
 <div class="inevidenza_container flex justify-start items-stretch flex-wrap">
-    <div class="intro">
-        <h2 class="titolo_descrizione_lunga">In evidenza</h2>
-    </div>
+        <div class="intro">
+            <h2 class="titolo_descrizione_lunga">In evidenza</h2>
+        </div>    
     {{#each c_contenutiInEvidenza}}
-    <div class="box_inevidenza">
-        <div class="bg_box" style="background-image: url('{{this.immagine.thumbnails.[0].url}}')"></div>
-        <div class="content">
-            <h3 class="title_inevidenza">{{this.titolo}}</h3>
-            <div class="description_inevidenza">{{this.sommario}}</div>
-            <div class="link_inevidenza"><a href="{{this.link}}"> <i class="fa-solid fa-caret-right fa-xl"></i><span>Scopri di più</span></a></div>           
+        <div class="box_inevidenza">
+            <div class="bg_box" style="background-image: url('{{this.immagine.thumbnails.[0].url}}')"></div>
+            <div class="content">
+                <h3 class="title_inevidenza">{{this.titolo}}</h3>
+                <div class="description_inevidenza">{{this.sommario}}</div>
+                <div class="link_inevidenza"><a href="{{this.link}}"> <i class="fa-solid fa-caret-right fa-xl"></i><span>Scopri di più</span></a></div>           
+            </div>
         </div>
-    </div>
     {{/each}}
 </div>
-
+{{else}}
+{{/if}}

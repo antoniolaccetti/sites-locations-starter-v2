@@ -15,9 +15,18 @@
             <a class="button-text button-prenota" href="{{c_urlPrenotazione}}" target="_blank"><i class="fa-solid fa-caret-right fa-xl"></i> Prenota</a>
         </div>
         <div class="dati_struttura_governance">
-            <p><strong>Direttore sanitario:</strong> {{c_direttoreSanitario}}</p>
-            <p><strong>Amministratore delegato:</strong> {{c_amministratoreDelegato}}</p>
-            <p><strong>Posti Letto:</strong> {{c_postiLetto}}</p>
+            {{#if c_direttoreSanitario}}
+                <p><strong>Direttore sanitario:</strong> {{c_direttoreSanitario}}</p>
+            {{else}}
+            {{/if}}
+            {{#if c_amministratoreDelegato}}
+                <p><strong>Amministratore delegato:</strong> {{c_amministratoreDelegato}}</p>
+            {{else}}
+            {{/if}}
+            {{#if c_postiLetto}}
+                <p><strong>Posti Letto:</strong> {{c_postiLetto}}</p>
+            {{else}}
+            {{/if}}
         </div>
     </div>
 </div>
