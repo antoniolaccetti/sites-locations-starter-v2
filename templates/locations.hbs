@@ -55,6 +55,9 @@
         ],
         "localization": {
             "locales": ["it"]
+        },
+        "transform": {            
+             "replaceOptionValuesWithDisplayNames": ["c_regione"]
         }
     },
     "urlFormat": "{{slug}}"
@@ -96,18 +99,18 @@
              {{>iniziative}}
          </div>
      </div>-->
-    <div class="section">
+    <div class="section">        
         <div class="container">
             <div class="">{{>nearby geocodedCoordinate}}</div>
         </div>
     </div>
     <div class="section">
-         <div class="container">
-             {{>dati_legali}}
-         </div>
-     </div><!-- new data_legal -->
+        <div class="container">
+            {{>dati_legali}}
+        </div>
+    </div><!-- new data_legal -->
     <div class="w-full">
-           {{>footer}}
+        {{>footer}}
     </div>
 
 </body>

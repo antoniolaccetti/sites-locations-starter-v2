@@ -1,15 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets",
-    "\\partials",
+    "\\localData",
     "\\sites-config",
     "\\sites-global",
     "\\src",
-    "\\src\\js",
-    "\\src\\js\\custom",
     "\\src\\locator",
     "\\templates"
   ],
+  "SelectedNode": "\\src",
   "PreviewInSolutionExplorer": false
 }

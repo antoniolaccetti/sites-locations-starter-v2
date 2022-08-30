@@ -414,9 +414,10 @@ h2.section-header {
     margin-bottom: 10px;
 }
 
-.descrizione_lunga ul{
-    margin-bottom:10px;
+.descrizione_lunga ul {
+    margin-bottom: 10px;
 }
+
 .descrizione_lunga li{
     /* display: block;
     list-style: circle; 

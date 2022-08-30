@@ -1,3 +1,4 @@
+{{#if c_descrizioneLunga}}
 <div class="flex flex-wrap box_informazioni">
     <div class="w-full md:w-2/3">
         <div class="container_descrizione">
@@ -16,17 +17,18 @@
         </div>
         <div class="dati_struttura_governance">
             {{#if c_direttoreSanitario}}
-                <p><strong>Direttore sanitario:</strong> {{c_direttoreSanitario}}</p>
+            <p><strong>Direttore sanitario:</strong> {{c_direttoreSanitario}}</p>
             {{else}}
             {{/if}}
             {{#if c_amministratoreDelegato}}
-                <p><strong>Amministratore delegato:</strong> {{c_amministratoreDelegato}}</p>
+            <p><strong>Amministratore delegato:</strong> {{c_amministratoreDelegato}}</p>
             {{else}}
             {{/if}}
             {{#if c_postiLetto}}
-                <p><strong>Posti Letto:</strong> {{c_postiLetto}}</p>
+            <p><strong>Posti Letto:</strong> {{c_postiLetto}}</p>
             {{else}}
             {{/if}}
         </div>
     </div>
 </div>
+{{/if}}
