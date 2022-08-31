@@ -1,13 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\localData",
+    "\\partials",
     "\\sites-config",
     "\\sites-global",
     "\\src",
     "\\src\\locator",
     "\\templates"
   ],
-  "SelectedNode": "\\src",
+  "SelectedNode": "\\partials\\evidenza.hbs",
   "PreviewInSolutionExplorer": false
 }

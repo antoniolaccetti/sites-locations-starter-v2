@@ -31,14 +31,18 @@
 
         <div class="col_specialita_content">
             <div class="specilita_servizi">
+                {{#if c_elencoSpecialitaStrutturaGVM}}
                 <div class="specialita">
                     <span class="title">Specialità</span>
                     {{convertRTFToHTML c_elencoSpecialitaStrutturaGVM}}
                 </div>
+                {{/if}}
+                {{#if c_elencoServiziStrutturaGVM}}
                 <div class="servizi">
                     <span class="title">Servizi</span>
-                    {{convertRTFToHTML c_elencoServiziStrutturaGVM}}
+                    {{convertRTFToHTML this}}
                 </div>
+                {{/if}}
             </div>
             <div class="link">
                 <a class="button-blue" href="{{c_urlTutteLeSpecialita}}" target="_blank">

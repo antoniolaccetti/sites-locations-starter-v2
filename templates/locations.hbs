@@ -84,22 +84,26 @@
             <div class="">{{>aboutmap}} </div>
         </div>
     </div>
+    {{#if c_contenutiInEvidenza}}
     <div class="section background_specialita">
         <div class="container">
             {{>evidenza}}
         </div>
     </div>
+    {{/if}}
+    {{#if c_elencoSpecialitaStrutturaGVM}}
     <div class="section background_specialita">
         <div class="container">
             {{>specialita_servizi}}
         </div>
     </div>
+    {{/if}}
     <!-- <div class="section background_iniziative">
          <div class="container">
              {{>iniziative}}
          </div>
      </div>-->
-    <div class="section">        
+    <div class="section">
         <div class="container">
             <div class="">{{>nearby geocodedCoordinate}}</div>
         </div>
