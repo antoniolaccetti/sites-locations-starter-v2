@@ -79,11 +79,13 @@
     <div class="section section_location_details">
         {{>locationdetails}}
     </div>
+    {{#if c_descrizioneLunga}}
     <div class="section">
         <div class="container">
             <div class="">{{>aboutmap}} </div>
         </div>
     </div>
+    {{/if}}
     {{#if c_contenutiInEvidenza}}
     <div class="section background_specialita">
         <div class="container">
