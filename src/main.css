@@ -386,17 +386,18 @@ h2.section-header {
     padding: 10px 0;
 }
 
-.sidebar_lista_link a{
-    display: block;
+.sidebar_lista_link a {
+    display: flex;
     /* background: #008dc9; */
     font-family: proxima-nova, sans-serif;
-    color:#008dc9;
+    color: #008dc9;
     font-weight: 600;
     margin: 0px 0;
     /* border-radius: 100px; */
-    padding:5px 0px;
+    padding: 5px 0px;
     transition: 0.3s;
 }
+
 .sidebar_lista_link a:hover{
     opacity: 0.7;
 }

@@ -1,7 +1,7 @@
 import './main.css';
-import './js/fontawesome/brands.min.js';
+/*import './js/fontawesome/brands.min.js';
 import './js/fontawesome/solid.min.js';
-import './js/fontawesome/fontawesome.min.js';
+import './js/fontawesome/fontawesome.min.js';*/
 import './js/custom/hours-active.js';
 
 function importAll(r) {
