@@ -1277,6 +1277,15 @@ h2.section-header {
    padding-left: 15px; 
 }
 
+.intro {
+    margin-bottom:15px; 
+}
+.intro p {
+    padding-left: 15px; 
+    /* font-family: pt-sans-narrow,sans-serif; */
+    margin-top: 5px;
+}
+
 .specialita_container {
     min-height: 350px;
     padding: 15px;
@@ -1431,6 +1440,7 @@ ul {
     font-weight: 600;
     font-size: 25px;
     line-height: 1em;
+    text-transform: uppercase; 
 }
 
 .big_title{
