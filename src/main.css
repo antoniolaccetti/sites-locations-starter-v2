@@ -404,9 +404,6 @@ h2.section-header {
 .sidebar_lista_link .button_prenota{
     background: #0ea80e;
 }
-.sidebar_lista_link svg{
-
-}
 
 .titolo_descrizione_lunga{
     color: #23475D;
@@ -688,7 +685,7 @@ ul {
 }
 
 .link_inevidenza {
-    display: block;
+    display: flex;
     font-family: proxima-nova, sans-serif;
     color: #008dc9;
     font-weight: 600;
@@ -697,8 +694,9 @@ ul {
     bottom: 20px;
 }
 
-.link_inevidenza span {
-    margin-left:5px;
+
+.link_inevidenza a {
+    display: flex;
 }
 
 .location-data{
