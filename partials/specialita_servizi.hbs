@@ -16,7 +16,7 @@
     <div class="flex bg_white flex-wrap specialita_container">
 
         {{#with c_immagineSpecialita}}
-        <div class="col_specialita_image" style="background-image: url('{{this.primaryPhoto.image.thumbnails.[2]}}{{url}}')"></div>
+        <div class="col_specialita_image" style="background-image: url('{{this.thumbnails.[2].url}}')"></div>
         {{/with}}
 
         <div class="col_specialita_content">

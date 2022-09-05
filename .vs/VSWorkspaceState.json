@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
     "",
+    "\\assets",
+    "\\assets\\images",
     "\\partials",
     "\\sites-config",
     "\\sites-global",
@@ -8,6 +10,6 @@
     "\\src\\locator",
     "\\templates"
   ],
-  "SelectedNode": "\\src\\main.css",
+  "SelectedNode": "\\partials\\dati_legali.hbs",
   "PreviewInSolutionExplorer": false
 }
