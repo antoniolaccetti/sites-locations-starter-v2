@@ -21,6 +21,17 @@
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script defer src="/main.js"></script>
+<meta property="og:url" content="{{c_baseURL}}" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="{{#if c_nomeStruttura}}
+            {{c_nomeStruttura}}
+        {{else}}
+            {{name}}
+         {{/if}} {{#if address.city}}
+            - {{address.city}}{{#if c_regione}}, {{c_regione}} {{/if}}
+         {{/if}} - GVM" />
+<meta property="og:description" content="{{c_descrizioneBreve}}" />
+<meta property="og:image" content="{{c_immagineStruttura.thumbnails.[2].url}}" />
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <!-- Google Tag Manager -->
