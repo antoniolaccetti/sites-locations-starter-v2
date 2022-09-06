@@ -6,10 +6,18 @@
   "@type": "MedicalClinic",
   "name": "{{name}}",
   "telephone": "{{mainPhone}}",
+  "address":{
+    "@type": "PostalAddress",
+    "addressLocality": "{{address.city}}",
+    "addressRegion": "{{c_regione}}",
+    "postalCode": "{{address.postalCode}}",
+    "streetAddress": "{{address.line1}}"
+  },
   "geo": {{>schemaHelpers-geo geocodedCoordinate}},
   "openingHoursSpecification": [
     {{>schemaHelpers-hours hours}}
   ],
-  "MedicalSpecialty":"{{c_elencoSpecialitaStrutturaGVM}}"
+  "MedicalSpecialty":"{{c_elencoSpecialitaStrutturaGVM}}",
+
 }
 </script>
