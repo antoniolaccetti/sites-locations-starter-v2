@@ -4,7 +4,7 @@
   "@context": "https://schema.org",
   "@id": "{{id}}",
   "@type": "MedicalClinic",
-  "name": "{{name}}",
+  "name": "{{c_nomeStruttura}}",
   "telephone": "{{mainPhone}}",
   "address":{
     "@type": "PostalAddress",
@@ -18,6 +18,14 @@
     {{>schemaHelpers-hours hours}}
   ],
   "MedicalSpecialty":"{{c_elencoSpecialitaStrutturaGVM}}",
-  "logo":"{{c_baseURL}}/images/gruppovillamaria_logo.png"
+  "logo":"https://www.gvmnet.it/App_Themes/GVMNet/images/gruppovillamaria_logo.png",
+  "photo":{
+    "@type": "ImageObject",
+    "author": "Gruppo Villa Maria",
+    "contentLocation": "{{c_nomeStruttura}}, {{address.city}},{{c_regione}}",
+    "contentUrl": "{{c_immagineStruttura.thumbnails.[2].url}}",
+    "description": "{{c_immagineStruttura.alternateText}}",
+    "name": "{{c_nomeStruttura}}"
+}
 }
 </script>
