@@ -14,10 +14,10 @@
                     </style>
                 </div><!-- .image -->
             </div><!-- .main_banner -->
-            <div class="flex box_orari flex-col justify-between w-full md:w-2/5">
-                <h1 class="narrow_title">{{c_regione}}</h1>
+            <div class="flex box_orari flex-col justify-between w-full md:w-2/5" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                <h1 class="narrow_title" itemprop="addressRegion">{{c_regione}}</h1>
                 <a id="address" class="via_struttura hover:underline" href="https://www.google.com/maps/dir/?api=1&destination={{address.line1}} {{address.city}} {{address.region}} {{address.postalCode}}" target="_blank">
-                    <div>{{address.line1}}, {{address.postalCode}}, {{address.city}}, {{address.region}} </div>
+                    <div><span itemprop="streetAddress">{{address.line1}}</span>, {{address.postalCode}}, <span itemprop="addressLocality">{{address.city}}</span>, {{address.region}} </div>
                 </a>
                 <div class="hours">
                     <div>{{>hours hours}}</div>
