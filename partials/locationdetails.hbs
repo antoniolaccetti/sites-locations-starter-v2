@@ -1,8 +1,9 @@
     <div class="container mt-6">
         <div class="flex items-stretch flex-wrap box_cartina_orari">
             <div class="w-full md:w-3/5">
-                <div class="immagine_cartina relative z-20 overflow-hidden md:w-full ">
-                    {{>staticmap}}
+                {{>staticmap}}
+                <!--<div class="immagine_cartina relative z-20 overflow-hidden md:w-full ">
+
                     <style scoped>
                         .immagine_cartina {
                             background-image: url('{{c_immagine_cartina.thumbnails.[1].url}}');
@@ -13,13 +14,15 @@
                             }
                         }
                     </style>
-                </div><!-- .image -->
+                </div>--><!-- .image -->
             </div><!-- .main_banner -->
             <div class="flex box_orari flex-col justify-between w-full md:w-2/5">
-                <h1 class="narrow_title">{{c_regione}}</h1>
-                <a id="address" class="via_struttura hover:underline" href="https://www.google.com/maps/dir/?api=1&destination={{address.line1}} {{address.city}} {{address.region}} {{address.postalCode}}" target="_blank">
-                    <div>{{address.line1}}, {{address.postalCode}}, {{address.city}}, {{address.region}} </div>
-                </a>
+                <div>
+                    <h1 class="narrow_title">{{c_regione}}</h1>
+                    <a id="address" class="via_struttura hover:underline" href="https://www.google.com/maps/dir/?api=1&destination={{address.line1}} {{address.city}} {{address.region}} {{address.postalCode}}" target="_blank">
+                        <div>{{address.line1}}, {{address.postalCode}}, {{address.city}}, {{address.region}} </div>
+                    </a>
+                </div>
                 <div class="hours">
                     <div>{{>hours hours}}</div>
                 </div>              
