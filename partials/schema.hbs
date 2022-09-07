@@ -3,18 +3,31 @@
 {
   "@context": "https://schema.org",
   "@id": "{{id}}",
-  "@type": [""],
-  "name": "{{name}}",
+  "@type": "MedicalClinic",
+  "name": "{{c_nomeStruttura}}",
   "telephone": "{{mainPhone}}",
+  "address":{
+    "@type": "PostalAddress",
+    "addressLocality": "{{address.city}}",
+    "addressRegion": "{{c_regione}}",
+    "postalCode": "{{address.postalCode}}",
+    "streetAddress": "{{address.line1}}"
+  },
   "geo": {{>schemaHelpers-geo geocodedCoordinate}},
-  "paymentAccepted": [
-    {{>schemaHelpers-payments paymentOptions}}
-  ],
   "openingHoursSpecification": [
     {{>schemaHelpers-hours hours}}
   ],
-  "makesOffer": [
-    {{>schemaHelpers-offers services}}
-  ]
+  "MedicalSpecialty":"{{c_elencoSpecialitaStrutturaGVM}}",
+  "logo":"https://www.gvmnet.it/App_Themes/GVMNet/images/gruppovillamaria_logo.png",
+  "image":{
+    "@type": "ImageObject",
+    "author": "Gruppo Villa Maria",
+    "contentLocation": "{{c_nomeStruttura}}, {{address.city}},{{c_regione}}",
+    "contentUrl": "{{c_immagineStruttura.thumbnails.[2].url}}",
+    "url":"{{c_immagineStruttura.thumbnails.[2].url}}",
+    "description": "{{c_immagineStruttura.alternateText}}",
+    "name": "{{c_nomeStruttura}}"
+},
+"url":"{{c_baseURL}}"
 }
 </script>
