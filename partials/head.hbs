@@ -1,18 +1,20 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>{{#if c_nomeStruttura}}
-            {{c_nomeStruttura}}
-        {{else}}
-            {{name}}
-         {{/if}} {{#if address.city}}
-            - {{address.city}}{{#if c_regione}}, {{c_regione}} {{/if}}
-         {{/if}} - GVM</title>
+<title>
+    {{#if c_nomeStruttura}}
+    {{c_nomeStruttura}}
+    {{else}}
+    {{name}}
+    {{/if}} {{#if address.city}}
+    - {{address.city}}{{#if c_regione}}, {{c_regione}} {{/if}}
+    {{/if}} - GVM
+</title>
 <meta name="description" content="{{c_descrizioneBreve}}">
 <meta name="author" content="Gruppo Villa Maria">
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js" as="script" />
 <!-- <link rel="preload" href="https://cookie-cdn.cookiepro.com/consent/c54082c8-37c1-441f-99c2-972f4ecddf88-test/OtAutoBlock.js" as="script" />
-<link rel="preload" href="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js" as="script" /> --> 
+<link rel="preload" href="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js" as="script" /> -->
 <link rel="preload" href="/main.css" as="style" />
 <link rel="preload" href="https://use.typekit.net/yfq1avx.css" as="style">
 <link rel="preload" href="/main.js" as="script" />
@@ -52,15 +54,14 @@
 <meta name="twitter:description" content="{{c_descrizioneBreve}}">
 <meta name="twitter:image" content="{{c_immagineStruttura.thumbnails.[0].url}}">
 <!-- Global site tag (gtag.js) - Google Analytics -->
-
-<!-- CookiePro Cookies Consent Notice start for www.gvmnet.it -->
-<script async type="text/javascript" src="https://cookie-cdn.cookiepro.com/consent/c54082c8-37c1-441f-99c2-972f4ecddf88-test/OtAutoBlock.js" ></script>
-<script async src="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="c54082c8-37c1-441f-99c2-972f4ecddf88-test" ></script>
-<script async type="text/javascript">
-function OptanonWrapper() { }
-</script>
 <!-- CookiePro Cookies Consent Notice end for www.gvmnet.it -->
-
+<!-- OptanonConsentNoticeStart -->
+<script type="text/javascript" src="https://cookie-cdn.cookiepro.com/consent/c54082c8-37c1-441f-99c2-972f4ecddf88-test/OtAutoBlock.js"></script>
+<script src="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="c54082c8-37c1-441f-99c2-972f4ecddf88-test"></script>
+<script type="text/javascript">
+    function OptanonWrapper() { }
+</script>
+<!-- OptanonConsentNoticeEnd -->
 <!-- Google Tag Manager -->
 <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
