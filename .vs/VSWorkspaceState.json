@@ -2,13 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\assets",
+    "\\data",
     "\\partials",
-    "\\sites-config",
-    "\\sites-global",
     "\\src",
+    "\\src\\images",
     "\\src\\js",
+    "\\src\\js\\custom",
+    "\\src\\locator",
     "\\templates"
   ],
-  "SelectedNode": "\\partials\\specialita_servizi.hbs",
+  "SelectedNode": "\\templates\\locations.hbs",
   "PreviewInSolutionExplorer": false
 }
