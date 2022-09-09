@@ -244,7 +244,8 @@
                 var immagine;
                 var nomeStruttura;
                 if (location.c_immagineStruttura != undefined) {
-                    immagine = location.c_immagineStruttura.thumbnails.[2].url;
+                    console.log(location.c_immagineStruttura.thumbnails[2].url);
+                    immagine = location.c_immagineStruttura.thumbnails[2].url;
                 } else {
                     immagine = 'https://www.gvmnet.it/admingvm/media/immagininews/cuoreevasi/cardiologia_interventistica.jpg';
                 }
@@ -275,7 +276,8 @@
             //console.log(locationHTML);
             [].slice
             .call(document.querySelectorAll(".location-data") || [])
-            .forEach(function (el) {
+                .forEach(function (el) {
+                console.log("test");
                 el.innerHTML += locationHTML;
             });
         }
