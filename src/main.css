@@ -1149,6 +1149,37 @@ ul {
 }
 
 
-
+.lp-subparam-getDirectionsLabel{
+    margin-top: 5px;
+}
+.lp-subparam-getDirectionsLabel p {
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.lp-subparam-getDirectionsLabel p:before{
+    content:"▶︎"; 
+    margin-right: 3px;
+    display: inline-block;
+}
+.lp-subparam-getDirectionsLabel p:hover{
+    color:#00405c;
+}
+.lp-subparam-cardTitle a{
+    transition: all 0.3s ease-in-out;
+}
+.c-address-country-name{
+    display: none;
+}
+.lp-subparam-cardTitle a:hover{
+    color:#00405c;
+    text-decoration: none; 
+}
+.lp-subparam-hours{
+    margin-bottom: 5px;
+}
+.c-AddressRow{
+    font-size: 15px;
+}
 
 @tailwind utilities;
