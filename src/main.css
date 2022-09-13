@@ -344,9 +344,28 @@ h2.section-header {
   /*  display:none; */
 }
 
+.header_right a{
+    transition: all 0.3s ease-in-out;
+}
+.header_right a:hover{
+    opacity: 1;
+    background: #00405c;
+    color: #FFF;
+    border-color: #00405c;
+}
+
 .header_sticky {
     width: 100%;
     background: linear-gradient(to bottom,#0d384b,#00405c 30%,#165e93);
+}
+
+.header_sticky a{
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+.header_sticky a:hover{
+        opacity: 0.5;
 }
 
 .trigger {
@@ -783,6 +802,10 @@ ul {
 
 .footer a{
     color:rgba(0,141,201,1);
+    transition: all 0.3s ease-in-out;
+}
+.footer a:hover{
+    opacity: 0.5;
 }
 
 .credits{
@@ -835,8 +858,16 @@ ul {
 } 
 }
 
+.logo_gvm {
+    cursor: pointer;
+}
+/* .logo_gvm:hover{
+    opacity: 0.5;
+} */
+
 .logo_gvm img {
     height: 32px;
+    cursor: pointer;
 }
 .box_inevidenza .bg_box{
     height: 200px;    
