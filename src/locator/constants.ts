@@ -17,7 +17,7 @@ export const entityTypes = "healthcareFacility";
 export const loadLocationsOnLoad = true;
 export const enableAutocomplete = true;
 export const base_url = "https://liveapi.yext.com/v2/accounts/me/";
-export const useMiles = true;
+export const useMiles = false;
 
 export type locationOption = {
   // The value of the content, either a field name or a constant value
