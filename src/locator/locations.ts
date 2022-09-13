@@ -197,17 +197,17 @@ export function renderLocations(locations, append, viewMore) {
 
 function searchDetailMessageForCityAndRegion(total) {
   if (total === 0) {
-    return '0 [locationType] found near <strong>"[city], [region]"</strong>';
+    return '0 [locationType] trovati vicino a <strong>"[city], [region]"</strong>';
   } else {
-    return '[formattedVisible] of [formattedTotal] [locationType] near <strong>"[city], [region]"</strong>';
+    return '[formattedVisible] di [formattedTotal] [locationType] vicini a <strong>"[city], [region]"</strong>';
   }
 }
 
 function searchDetailMessageForArea(total) {
   if (total == 0) {
-    return '0 [locationType] found near <strong>"[location]"</strong>';
+    return '0 [locationType] trovati vicino a <strong>"[location]"</strong>';
   } else {
-    return '[formattedVisible] of [formattedTotal] [locationType] near <strong>"[location]"</strong>';
+    return '[formattedVisible] di [formattedTotal] [locationType] vicini a <strong>"[location]"</strong>';
   }
 }
 
@@ -215,7 +215,7 @@ function searchDetailMessageNoGeo(total) {
   if (total === 0) {
     return "0 [locationType]";
   } else {
-    return "[formattedVisible] of [formattedTotal] [locationType]";
+    return "[formattedVisible] di [formattedTotal] [locationType]";
   }
 }
 

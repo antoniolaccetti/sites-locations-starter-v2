@@ -6,7 +6,7 @@ export const locationInput = <HTMLInputElement>(
 );
 export const searchButton = document.getElementById("search-location-button");
 export const useMyLocation = document.getElementById("useLocation");
-export const locationNoun = "Ospedale";
+export const locationNoun = "Ospedali";
 export const locationNounPlural = "Ospedali";
 
 // Live Api query variables
