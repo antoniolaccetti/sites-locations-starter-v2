@@ -75,7 +75,7 @@ export function locationJSONtoHTML(entityProfile, index, locationOptions) {
        html += "</div>";
      }
 
-  const localeString = "en-US";
+  const localeString = "it-IT";
   html += i18n.addressForCountry({
     locale: localeString,
     profile: { address: addressValue },
@@ -84,7 +84,7 @@ export function locationJSONtoHTML(entityProfile, index, locationOptions) {
   });
 
 
-  html += '<div class="lp-param-results lp-subparam-phoneNumber">';
+  /*html += '<div class="lp-param-results lp-subparam-phoneNumber">';
   if (phoneNumberValue) {
     const formattedPhoneNumber = formatPhone(
       phoneNumberValue,
@@ -94,7 +94,7 @@ export function locationJSONtoHTML(entityProfile, index, locationOptions) {
       html += '<div class="phone">' + formattedPhoneNumber + "</div>";
     }
   }
-  html += "</div>";
+  html += "</div>";*/
 
   const singleLineAddress =
     entityProfile.name +
