@@ -32,8 +32,14 @@
     </div>
     <div class="main_banner main_banner_image w-full md:w-3/5">
         <div class="relative z-20 overflow-hidden h-70 md:h-full">
+       <!-- <picture>
+            <source srcset="img/awesomeWebPImage.webp" type="image/webp">
+            <source srcset="img/creakyOldJPEG.jpg" type="image/jpeg"> 
+            <img src="img/creakyOldJPEG.jpg" alt="Alt Text!">
+        </picture>-->
+          <!--  {{>test c_immagineStruttura.thumbnails.[0]}}-->
             <img class=" w-full object-cover h-full"
-                 srcset="{{c_immagineStruttura.thumbnails.[2].url}} 480w,{{c_immagineStruttura.thumbnails.[0].url}} 800w" sizes="(max-width: 600px) 480px, 800px"  src="{{c_immagineStruttura.thumbnails.[0].url}}" width="1200" height="675" alt=" {{#if c_nomeStruttura}}
+                 srcset="{{c_immagineStruttura.thumbnails.[2].url}} 480w,{{c_immagineStruttura.thumbnails.[0].url}} 800w" sizes="(max-width: 600px) 480px, 800px" src="{{c_immagineStruttura.thumbnails.[0].url}}" width="1200" height="675" alt=" {{#if c_nomeStruttura}}
                 {{c_nomeStruttura}}
                 {{else}}
                 {{name}}
