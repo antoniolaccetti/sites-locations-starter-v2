@@ -87,19 +87,19 @@ export function formatOpenNowString(hoursData, utcOffset) {
     if (openRightNow) {
       // Check first for a 24-hour interval, then check for open past midnight
       if (currentInterval.start == "00:00" && currentInterval.end == "23:59") {
-        hoursString += "<strong>Open 24 hours</strong>";
+        hoursString += "<strong>Aperto 24 ore</strong>";
       } else if (
         nextInterval.start == "00:00" &&
         currentInterval.end == "23:59"
       ) {
         hoursString +=
-          "<strong>Open</strong> · Closes at [closingTime] tomorrow";
+          "<strong>Aperto</strong> · Chiude alle [closingTime] domani";
         hoursString = hoursString.replace(
           "[closingTime]",
           formatTime(currentInterval.end)
         );
       } else {
-        hoursString += "<strong>Open</strong> · Closes at [closingTime]";
+        hoursString += "<strong>Aperto</strong> · Chiude alle [closingTime]";
         hoursString = hoursString.replace(
           "[closingTime]",
           formatTime(currentInterval.end)
@@ -108,13 +108,13 @@ export function formatOpenNowString(hoursData, utcOffset) {
     } else {
       if (nextIsTomorrow) {
         hoursString +=
-          "<strong>Closed</strong> · Opens at [openingTime] tomorrow";
+          "<strong>Chiuso</strong> · Apre alle [openingTime] domani";
         hoursString = hoursString.replace(
           "[openingTime]",
           formatTime(nextInterval.start)
         );
       } else {
-        hoursString += "<strong>Closed</strong> · Opens at [openingTime]";
+        hoursString += "<strong>Chiuso</strong> · Apre alle [openingTime]";
         hoursString = hoursString.replace(
           "[openingTime]",
           formatTime(nextInterval.start)
