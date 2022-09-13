@@ -51,7 +51,7 @@ export const locationOptions = {
     contentSource: "FIELD",
   },
   getDirectionsLabel: {
-    value: "Get Directions",
+    value: "Ottieni indicazioni",
     contentSource: "text",
     isRtf: true,
   },
@@ -60,7 +60,7 @@ export const locationOptions = {
     contentSource: "FIELD",
   },
   viewDetailsLinkText: {
-    value: "View Details",
+    value: "Dettagli",
     contentSource: "text",
   },
   viewDetailsLinkUrl: {
