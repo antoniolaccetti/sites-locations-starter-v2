@@ -188,6 +188,7 @@
     var location = lat + ", " + lng;
     var limit = 3;
     var radius = 500;
+    var savedFilterIds = "1234994255";
     var entityTypes =
         "healthcareFacility";
     var fields = "name,c_nomeStruttura,hours,neighborhood,address,mainPhone,timeZoneUtcOffset,c_baseURL,c_immagineStruttura,slug";
@@ -206,6 +207,8 @@
         radius +
         "&entityTypes=" +
         entityTypes +
+        "&savedFilterIds=" +
+        savedFilterIds +
         "&fields=" +
         fields +
         "&resolvePlaceholders=true";
