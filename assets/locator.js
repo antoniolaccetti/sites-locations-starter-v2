@@ -8944,7 +8944,7 @@ var defaultQuery = "";
 var locationInput = document.getElementById("location-input");
 var searchButton = document.getElementById("search-location-button");
 var useMyLocation = document.getElementById("useLocation");
-var locationNoun = "Ospedali";
+var locationNoun = "Ospedale";
 var locationNounPlural = "Ospedali"; // Live Api query variables
 
 var script_tag = document.getElementById('js-locator');
@@ -9209,7 +9209,7 @@ function locationJSONtoHTML(entityProfile, index, locationOptions) {
       address: addressValue
     }
   });
-  html += '<div class="lp-param-results lp-subparam-phoneNumber">';
+  /*html += '<div class="lp-param-results lp-subparam-phoneNumber">';
 
   if (phoneNumberValue) {
     var formattedPhoneNumber = (0,_utils__WEBPACK_IMPORTED_MODULE_0__.formatPhone)(phoneNumberValue, addressValue.countryCode);
@@ -9219,7 +9219,7 @@ function locationJSONtoHTML(entityProfile, index, locationOptions) {
     }
   }
 
-  html += "</div>";
+  html += "</div>";*/
   var singleLineAddress = entityProfile.name + " " + addressValue.line1 + " " + (addressValue.line2 ? addressValue.line2 + " " : "") + addressValue.city + " " + addressValue.region + " " + addressValue.postalCode;
   html += "<div class=\"lp-param-results lp-subparam-getDirectionsLabel\">\n    <div class=\"link\">\n      <a target=\"_blank\"\n        href=\"https://www.google.com/maps/dir/?api=1&destination=" + singleLineAddress + "\"\n      >\n        " + getDirectionsLabelValue + "\n      </a>\n    </div>\n  </div>";
   html += '<div class="lp-param-results lp-subparam-availability mt-3">';
@@ -10417,7 +10417,7 @@ i18n.ad = function (opt_data, opt_sb, opt_ijData) {
         output += "\x3C/div\x3E";
       }
 
-      if (opt_data.profile.address.countryCode) {
+      /*if (opt_data.profile.address.countryCode) {
         output += "\x3Cdiv class=c-AddressRow\x3E";
 
         if (opt_data.profile.address.countryCode) {
@@ -10425,7 +10425,7 @@ i18n.ad = function (opt_data, opt_sb, opt_ijData) {
         }
 
         output += "\x3C/div\x3E";
-      }
+      }*/
 
       break;
   }
