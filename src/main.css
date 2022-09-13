@@ -222,8 +222,10 @@ h2.section-header {
     padding: 10px 24px;
     transition: 0.3s;
     line-height: 1em;
-    align-items:center;
-    
+    align-items:center; 
+}
+.button-blue:hover{
+    background: #0d384b;
 }
 
 .error-text {
@@ -560,6 +562,9 @@ ul {
     align-items: center;
     width: 100%;
     margin: 10px 0;
+}
+.main_banner_links a:hover strong{
+    color: #0d384b !important; 
 }
 .main_banner_links a span{
     font-size: 13px;
@@ -1133,6 +1138,8 @@ ul {
         min-height: 360px;
     }
 }
+
+
 
 
 @tailwind utilities;
