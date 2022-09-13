@@ -12,7 +12,7 @@ export const locationNounPlural = "Locations";
 // Live Api query variables
 var script_tag = document.getElementById('js-locator');
 export const liveAPIKey = script_tag.getAttribute('data');
-export const savedFilterId = "";
+export const savedFilterId = "1234994255";
 export const entityTypes = "healthcareFacility";
 export const loadLocationsOnLoad = true;
 export const enableAutocomplete = true;
