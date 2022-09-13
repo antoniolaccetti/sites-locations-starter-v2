@@ -30,7 +30,7 @@ export type locationOption = {
 
 export const locationOptions = {
   cardTitle: {
-    value: "name",
+    value: "c_nomeStruttura",
     contentSource: "FIELD",
     isRtf: true,
   },
