@@ -8944,8 +8944,8 @@ var defaultQuery = "";
 var locationInput = document.getElementById("location-input");
 var searchButton = document.getElementById("search-location-button");
 var useMyLocation = document.getElementById("useLocation");
-var locationNoun = "Locations";
-var locationNounPlural = "Locations"; // Live Api query variables
+var locationNoun = "Ospedali";
+var locationNounPlural = "Ospedali"; // Live Api query variables
 
 var script_tag = document.getElementById('js-locator');
 var liveAPIKey = script_tag.getAttribute('data');
