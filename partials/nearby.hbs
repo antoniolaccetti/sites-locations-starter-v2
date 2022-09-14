@@ -1,5 +1,5 @@
 <div class="bg-gray-100 container_nearby">
-    <h2 class="text-center mb-2 title_nearby">Strutture vicine</h2>
+    <h4 class="text-center mb-2 title_nearby">Strutture vicine</h4>
     <div class="location-data"> </div>   
 </div>
 
@@ -258,18 +258,18 @@
                 }
             if (location.websiteUrl) {
             locationHTML =
-                '<a target="_blank" href="' + location.slug + '" class="location_nearby"><div class="grid address-cta-column"><div class="image" style="background-image:url(' + immagine+');"></div><div class="name text-xl font-semibold">' +
+                '<a target="_blank" href="' + location.slug + '" class="location_nearby"><div class="grid address-cta-column"><div class="image" style="background-image:url(' + immagine+');"></div><h5 class="name text-xl font-semibold">' +
             nomeStruttura +
-                '</div><div class="address"><div>' +
+                '</h5><div class="address"><div>' +
                 location.address.line1 +
                 '</div><div class="address-line-2">' + 
                 location.address.city + ', ' + location.address.region + ' ' + location.address.postalCode +
                 '</div></div></div></a>';
             } else {
             locationHTML =
-                '<a target="_blank" href="' + location.slug + '" class="location_nearby"><div class="grid address-cta-column"><div class="image" style="background-image:url('+immagine+');"></div><div class="name text-xl font-semibold">' +
+                '<a target="_blank" href="' + location.slug + '" class="location_nearby"><div class="grid address-cta-column"><div class="image" style="background-image:url('+immagine+');"></div><h5 class="name text-xl font-semibold">' +
             nomeStruttura +
-                '</div><div class="address"><div>' +
+                '</h5><div class="address"><div>' +
                 location.address.line1 +
                 '</div><div class="address-line-2">' + 
                 location.address.city + ', ' + location.address.region + ' ' + location.address.postalCode +
