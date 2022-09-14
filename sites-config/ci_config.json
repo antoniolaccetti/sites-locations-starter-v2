@@ -13,6 +13,9 @@
       {
         "root": "partials",
         "pattern": "**/*.hbs"
+      },
+      {
+        "pattern": "robots.txt"
       }
     ]
   },
