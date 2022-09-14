@@ -7,6 +7,8 @@
     var dy = d.getDay(); // 0 = domenica, 1 = lunedì etc..
     var moment = String(Date()).slice(16, 21); // orario
     var moment = moment.replace(":", ""); //tolgo : e unisco i numeri
+    var openorclosed = document.getElementById("openorclosed");
+
     "{{#each this.regularHours}}"      
         
         var today = "{{this.displayDay}}"; // Inutilizzato. Stampa il giorno della settimana
@@ -17,10 +19,12 @@
         if (giorno == dy) {     
 
             "{{#if this.isClosed}}"
+            addClassClosed();
             document.getElementById("openorclosed").innerHTML = "Chiuso";
             "{{/if}}"
 
-            "{{#if this.is247}}"
+            "{{#if this.is247}}"     
+            addClassOpen()
             document.getElementById("openorclosed").innerHTML = "Aperto 24ore";
             "{{/if}}"
 
@@ -33,17 +37,27 @@
             var inizio = start.replace(":", "");
             var fine = end.replace(":", "");                     
             //controllo se l'orario attuale rientra negli orari di apertura
-            if (moment > inizio && moment < fine) {              
+            if (moment > inizio && moment < fine) {     
+                addClassOpen()
                 document.getElementById("openorclosed").innerHTML = "Aperto";
                 count++;
             } else {
                 if (count != 1) {
+                    addClassClosed();
                     document.getElementById("openorclosed").innerHTML = "Chiuso";
                 }
                
             }
             "{{/each}}"
-        }
+    }
+
+    function addClassOpen() {
+        openorclosed.classList.add("open");
+    }
+
+    function addClassClosed() {
+        openorclosed.classList.add("closed");
+    }
 
     giorno++;
        
