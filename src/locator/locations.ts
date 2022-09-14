@@ -52,13 +52,13 @@ export function locationJSONtoHTML(entityProfile, index, locationOptions) {
     if (cardTitleLinkUrlValue["url"]) {
       cardTitleLinkUrlValue = cardTitleLinkUrlValue["url"];
     }
-    html += `<div class="name hover:underline hover:font-semibold text-ll-red ">
+    html += `<div class="name">
       <a href="${cardTitleLinkUrlValue}">
         ${cardTitleValue} 
       </a>
     </div>`;
   } else if (cardTitleValue) {
-    html += `<div class="name hover:underline hover:font-semibold text-ll-red ">
+    html += `<div class="name ">
       ${cardTitleValue}
     </div>`;
   }
