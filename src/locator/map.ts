@@ -138,8 +138,8 @@ export function addMarkersToMap(locations) {
     fill: "#E52222", //default google red
     stroke: "white",
     text: "white",
-    fill_selected: "red",
-    stroke_selected: "#E52222",
+    fill_selected: "#008dc9",
+    stroke_selected: "#008dc9",
     text_selected: "white",
   };
 
@@ -157,8 +157,8 @@ export function addMarkersToMap(locations) {
   selected_marker_icon = {
     path: "M0-48c-9.8 0-17.7 7.8-17.7 17.4 0 15.5 17.7 30.6 17.7 30.6s17.7-15.4 17.7-30.6c0-9.6-7.9-17.4-17.7-17.4z",
     fillColor: pinStyles.fill_selected,
-    fillOpacity: 0.8,
-    scale: 0.75,
+    fillOpacity: 1,
+    scale: 0.78,
     strokeColor: pinStyles.stroke_selected,
     strokeWeight: 1,
     labelOrigin: new google.maps.Point(0, -25),
