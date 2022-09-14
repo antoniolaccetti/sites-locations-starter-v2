@@ -3,6 +3,9 @@
     "assets": [
       {
         "root": "assets"
+      },
+      {
+        "pattern": "robots.txt"
       }
     ],
     "hbsTemplates": [
@@ -13,9 +16,6 @@
       {
         "root": "partials",
         "pattern": "**/*.hbs"
-      },
-      {
-        "pattern": "robots.txt"
       }
     ]
   },
