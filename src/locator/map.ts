@@ -135,11 +135,11 @@ export function addMarkersToMap(locations) {
     contentSource: "FIELD",
   };
   pinStyles = {
-    fill: "#E52222", //default google red
-    stroke: "white",
+    fill: "#008dc9", //default google red
+    stroke: "#008dc9",
     text: "white",
-    fill_selected: "#008dc9",
-    stroke_selected: "#008dc9",
+    fill_selected: "#00405c",
+    stroke_selected: "#00405c",
     text_selected: "white",
   };
 
