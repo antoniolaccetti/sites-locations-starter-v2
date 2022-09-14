@@ -22,9 +22,9 @@
 <link rel="preload" fetchpriority="high" as="image" href="{{c_immagineStruttura.thumbnails.[0].url}}" />
 <!--<link rel="preload" media="(max-width: 600px)" as="image" href="{{c_immagineStruttura.thumbnails.[2].url}}">
 <link rel="preload" media="(min-width: 601px)" as="image" href="{{c_immagineStruttura.thumbnails.[0].url}}">-->
-<link rel="preload" href="https://cookie-cdn.cookiepro.com/consent/c54082c8-37c1-441f-99c2-972f4ecddf88-test/OtAutoBlock.js" as="script" />
+<!-- <link rel="preload" href="https://cookie-cdn.cookiepro.com/consent/c54082c8-37c1-441f-99c2-972f4ecddf88-test/OtAutoBlock.js" as="script" />
 <link rel="preload" href="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js" as="script" />
-<link rel="preload" href="https://cookie-cdn.cookiepro.com/scripttemplates/202209.1.0/otBannerSdk.js" as="script"/>
+<link rel="preload" href="https://cookie-cdn.cookiepro.com/scripttemplates/202209.1.0/otBannerSdk.js" as="script"/> -->
 <link rel="stylesheet" href="https://use.typekit.net/yfq1avx.css">
 <link rel="stylesheet" href="/main.css" />
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
@@ -57,4 +57,22 @@
          {{/if}} - GVM">
 <meta name="twitter:description" content="{{c_descrizioneBreve}}">
 <meta name="twitter:image" content="{{c_immagineStruttura.thumbnails.[0].url}}">
+
+
 {{>scripts}}
+
+<script>
+  if (!yext) {
+    window.yCookieOptInQ = window.yCookieOptInQ || [];
+    window.yPixelOptInQ = window.yPixelOptInQ || [];
+    var yext = {
+      'cookie': { 'optIn': function() { window.yCookieOptInQ.push(arguments); } },
+      'pixel': { 'optIn': function() { window.yPixelOptInQ.push(arguments); } }
+    };
+  }
+  //replace ‘false’ below with the user opt-in status from your consent management solution
+  yext.pixel.optIn(true);
+  yext.cookie.optIn(true);
+</script>
+
+<script async src="https://knowledgetags.yextpages.net/embed?key=aeVvlX61tE_abWvcVxDKxPhMW7d4Oy0zszBYxsGqYJyMbxG2XNqNMwQyE398-1n6&account_id=8463802047007380757&entity_id={{id}}&locale=it&v=20210504" type="text/javascript"></script>

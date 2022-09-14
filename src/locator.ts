@@ -52,7 +52,7 @@ if (enableAutocomplete) {
     {
       options: {
         //types: ["(regions)"],
-        componentRestrictions: {'country': "us"}
+        componentRestrictions: {'country': "it"}
       },
     }
   );

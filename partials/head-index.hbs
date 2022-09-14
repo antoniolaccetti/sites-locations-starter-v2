@@ -4,52 +4,33 @@
 <title>
    Ospedali - GVM
 </title>
-<meta name="description" content="{{c_descrizioneBreve}}">
+<meta name="description" content="Trova le cliniche GVM">
 <meta name="author" content="Gruppo Villa Maria">
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js" as="script" />
 <!-- <link rel="preload" href="https://cookie-cdn.cookiepro.com/consent/c54082c8-37c1-441f-99c2-972f4ecddf88-test/OtAutoBlock.js" as="script" />
 <link rel="preload" href="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js" as="script" /> -->
 <link rel="preload" href="/main.css" as="style" />
 <link rel="preload" href="https://use.typekit.net/yfq1avx.css" as="style">
-<link rel="preload" href="/main.js" as="script" />
+{{!-- <link rel="preload" href="/main.js" as="script" /> --}}
 <link rel="preload" as="image" href="/images/gruppovillamaria_logo.png">
 <link rel="preload" as="image" href="/images/yext-favicon.png">
-<link rel="preload" fetchpriority="high" as="image" href="{{c_immagineStruttura.thumbnails.[0].url}}" />
-<!--<link rel="preload" media="(max-width: 600px)" as="image" href="{{c_immagineStruttura.thumbnails.[2].url}}">
-<link rel="preload" media="(min-width: 601px)" as="image" href="{{c_immagineStruttura.thumbnails.[0].url}}">-->
-<link rel="preload" src="https://cookie-cdn.cookiepro.com/consent/c54082c8-37c1-441f-99c2-972f4ecddf88-test/OtAutoBlock.js" as="script" />
-<link rel="preload" src="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js" as="script" />
-<link rel="preload" src="https://cookie-cdn.cookiepro.com/scripttemplates/202209.1.0/otBannerSdk.js" as="script"/>
+
 <link rel="stylesheet" href="https://use.typekit.net/yfq1avx.css">
 <link rel="stylesheet" href="/main.css" />
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script defer src="/main.js"></script>
+{{!-- <script defer src="/main.js"></script> --}}
 <link rel="shortcut icon" type="image/jpg" href="/images/yext-favicon.png" />
 <meta property="og:url" content="{{c_baseURL}}" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="{{#if c_nomeStruttura}}
-            {{c_nomeStruttura}}
-        {{else}}
-            {{name}}         
-          {{/if}}
-      {{#if address.city}}
-            - {{address.city}}{{#if c_regione}}, {{c_regione}} {{/if}}
-         {{/if}} 
-      - GVM" />
-<meta property="og:description" content="{{c_descrizioneBreve}}" />
-<meta property="og:image" content="{{c_immagineStruttura.thumbnails.[2].url}}" />
+<meta property="og:title" content="Ospedali - GVM" />
+<meta property="og:description" content="Trova le cliniche GVM" />
+<meta property="og:image" content="/images/gvm-care-and-research.jpg" />
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@GVMCareResearch">
 <meta name="twitter:creator" content="@GVMCareResearch">
-<meta name="twitter:title" content="{{#if c_nomeStruttura}}
-            {{c_nomeStruttura}}
-        {{else}}
-            {{name}}
-         {{/if}} {{#if address.city}}
-            - {{address.city}}{{#if c_regione}}, {{c_regione}} {{/if}}
-         {{/if}} - GVM">
-<meta name="twitter:description" content="{{c_descrizioneBreve}}">
-<meta name="twitter:image" content="{{c_immagineStruttura.thumbnails.[0].url}}">
+<meta name="twitter:title" content="Ospedali - GVM">
+<meta name="twitter:description" content="Trova le cliniche GVM">
+<meta name="twitter:image" content="/images/gvm-care-and-research.jpg">
 {{>scripts}}
