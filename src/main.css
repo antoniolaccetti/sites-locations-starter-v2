@@ -1181,7 +1181,8 @@ ul {
 
 
 .lp-subparam-getDirectionsLabel{
-    margin-top: 5px;
+    margin-top: 10px;
+    font-size: 14px;
 }
 .lp-subparam-getDirectionsLabel p {
     font-weight: bold;
@@ -1198,6 +1199,7 @@ ul {
 }
 .lp-subparam-cardTitle a{
     transition: all 0.3s ease-in-out;
+    font-size: 18px;
 }
 .c-address-country-name{
     display: none;
@@ -1207,17 +1209,29 @@ ul {
     text-decoration: none; 
 }
 .lp-subparam-hours{
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
+
+.lp-subparam-hours{
+    font-size: 14px;
+    font-style: italic;
+}
+
 .c-AddressRow{
-    font-size: 15px;
+    font-size: 14px;
+}
+
+.lp-subparam-availability{
+    display: none;
 }
 
 .result.border{
     transition: all 0.3s ease-in-out;
 }
 .result.border.selected{
-    background: rgba(0,66,94,0.3);  
+    background: rgba(0,141,201,0.1);
+    /* border-color: #008dc9; */
+    border-color:rgba(0,141,201,0.1);
 }
 
 @tailwind utilities;
