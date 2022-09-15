@@ -457,6 +457,13 @@ h2.section-header {
     background-size:cover;
     height: 200px;
 }
+
+.strutture-vicinanze-title {
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
 /* SPECIALITA CORRELATE */
 .link_specialita {
     background: #FFF;

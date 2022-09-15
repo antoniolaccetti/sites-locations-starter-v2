@@ -1,6 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\assets",
+    "\\partials",
+    "\\sites-config",
+    "\\sites-global",
+    "\\src",
+    "\\src\\locator",
+    "\\templates"
   ],
+  "SelectedNode": "\\src\\locator\\time.ts",
   "PreviewInSolutionExplorer": false
 }
