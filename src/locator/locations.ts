@@ -76,12 +76,13 @@ export function locationJSONtoHTML(entityProfile, index, locationOptions) {
      }
 
   const localeString = "it-IT";
-  html += i18n.addressForCountry({
-    locale: localeString,
-    profile: { address: addressValue },
-    regionAbbr: false,
-    derivedData: { address: addressValue },
-  });
+  html += "<div itemprop=\"address\">" 
+       + i18n.addressForCountry({
+            locale: localeString,
+            profile: { address: addressValue },
+            regionAbbr: false,
+            derivedData: { address: addressValue },
+          }) + "</div>";
 
 
   /*html += '<div class="lp-param-results lp-subparam-phoneNumber">';
