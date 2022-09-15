@@ -151,7 +151,7 @@ export function locationJSONtoHTML(entityProfile, index, locationOptions) {
     </div></div>`;
   }
 
-  return `<div id="result-${index}" class="result border">${html}</div>`;
+  return `<div id="result-${index}" class="result border" itemscope itemtype="https://schema.org/MedicalClinic">${html}</div>`;
 }
 
 // Renders each location the the result-list-inner html
