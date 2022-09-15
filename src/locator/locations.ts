@@ -191,7 +191,7 @@ export function renderLocations(locations, append, viewMore) {
       .call(document.querySelectorAll(".result-list-inner") || [])
       .forEach(function (el) {
         el.innerHTML +=
-          '<div><div class="btn btn-link btn-block">View More</div></div>';
+          '<div><div class="btn btn-link btn-block">Più risultati</div></div>';
       });
   }
 }
