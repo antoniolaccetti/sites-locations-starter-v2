@@ -3,9 +3,6 @@
     "assets": [
       {
         "root": "assets"
-      },
-      {
-        "pattern": "robots.txt"
       }
     ],
     "hbsTemplates": [

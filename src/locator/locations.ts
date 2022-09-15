@@ -52,13 +52,13 @@ export function locationJSONtoHTML(entityProfile, index, locationOptions) {
     if (cardTitleLinkUrlValue["url"]) {
       cardTitleLinkUrlValue = cardTitleLinkUrlValue["url"];
     }
-    html += `<div class="name">
+    html += `<div class="name" itemprop="name">
       <a href="${cardTitleLinkUrlValue}">
         ${cardTitleValue} 
       </a>
     </div>`;
   } else if (cardTitleValue) {
-    html += `<div class="name ">
+    html += `<div class="name " itemprop="name">
       ${cardTitleValue}
     </div>`;
   }
@@ -111,7 +111,7 @@ export function locationJSONtoHTML(entityProfile, index, locationOptions) {
 
   html += `<div class="lp-param-results lp-subparam-getDirectionsLabel">
     <div class="link">
-      <a target="_blank"
+      <a target="_blank" itemprop="url"
         href="https://www.google.com/maps/dir/?api=1&destination=${singleLineAddress}"
       >
         ${getDirectionsLabelValue}
