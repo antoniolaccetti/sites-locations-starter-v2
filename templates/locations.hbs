@@ -52,7 +52,10 @@
             "c_datiAmministrazione_2",
             "c_elencoSpecialitaStrutturaGVM",
             "c_elencoServiziStrutturaGVM",
-            "c_urlTutteLeSpecialita"
+            "c_urlTutteLeSpecialita",
+            "dm_directoryParents",
+            "c_relazioneRegioneStruttura.name",
+            "c_relazioneRegioneStruttura.slug"
         ],
         "localization": {
             "locales": ["it"]
@@ -72,10 +75,20 @@
 </head>
 <body class="relative">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVQ4R5G"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVQ4R5G"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
     {{>header_elogic}}
+
+    <div class="section">
+        <div class="container">
+            <a class="br_home" href="/index.html">Home</a> > {{#with c_relazioneRegioneStruttura}}<a class="br_regione"  href="{{this.slug}}">{{this.name}}</a>{{/with}} > <span class="br_ospedale">{{#if c_nomeStruttura}}{{c_nomeStruttura}}{{else}}{{name}}{{/if}}
+            </span>
+        </div>
+    </div>
+
     <div class="section section_main_banner">
         {{>main_banner}}
     </div>

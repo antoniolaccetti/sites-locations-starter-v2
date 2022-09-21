@@ -1,22 +1,41 @@
 ---
 {
+    "stream": {
+            "$id": "ce_root",
+            "filter" : {
+                "savedFilterIds": ["dm_healthcare-directory"]
+            },
+            "fields": [
+                "id",
+                "uid",
+                "meta",
+                "name",
+                "slug",
+                "dm_directoryChildrenRegione.name",
+                "dm_directoryChildrenRegione.slug"
+            ],
+            "localization": {
+                "locales": ["it"]
+            }
+        },
     "urlFormat" : "index.html"
 }
 ---
 <!DOCTYPE html>
 <html lang="it">
-    <head>
-        {{>head-index}}           
-        <script>
-                console.log("defining initMaps Functions");
-                var initMapsFunctions = [];
-                var initMaps = function(noKey) {
-                    for (i = 0; i < initMapsFunctions.length; i++) {
-                        initMapsFunctions[i](noKey);
-                    }
-                }
-        </script>
-        <script>
+<head>
+    {{>head-index}}
+
+    <script>
+        console.log("defining initMaps Functions");
+        var initMapsFunctions = [];
+        var initMaps = function (noKey) {
+            for (i = 0; i < initMapsFunctions.length; i++) {
+                initMapsFunctions[i](noKey);
+            }
+        }
+    </script>
+    <script>
             function loadScriptAsync(url) {
                 return new Promise((resolve, reject) => {
                     const script = document.createElement("script");
@@ -30,26 +49,31 @@
                 });
             }
             window.mapsLoader = loadScriptAsync("https://maps.googleapis.com/maps/api/js?key={{global.googleApiKey}}&callback=initMaps&libraries=places");
-        </script>
-    </head>
-    <body>
-        <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVQ4R5G"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    </script>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVQ4R5G"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
     <!-- End Google Tag Manager (noscript) -->
-        <div class="flex min-h-screen w-full">
+    <div class="flex min-h-screen w-full">
+        <div class="w-full">
+            {{>nav}}
             <div class="w-full">
-                {{>nav}}               
-                <div class="w-full">                    
-                    {{>locator}}
-                </div>
-                <div class="w-full bg-gray-100">
-                    <div class="">
-                        {{>footer}}
-                    </div>
+                {{>locator}}
+            </div>
+            <div>
+                {{>region}}
+            </div>
+            <div class="w-full bg-gray-100">
+                <div class="">
+                    {{>footer}}
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
 

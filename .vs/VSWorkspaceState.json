@@ -1,14 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets",
-    "\\partials",
+    "\\localdata",
     "\\sites-config",
-    "\\sites-global",
+    "\\sites-rendered-output",
     "\\src",
     "\\src\\locator",
     "\\templates"
   ],
-  "SelectedNode": "\\src\\locator\\time.ts",
+  "SelectedNode": "\\templates\\directory.hbs",
   "PreviewInSolutionExplorer": false
 }

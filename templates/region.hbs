@@ -1,0 +1,58 @@
+---
+{
+    "stream": {
+        "$id": "ce_regione",
+        "filter" : {
+            "savedFilterIds": ["dm_healthcare-directory_regione"]
+        },
+        "fields": [
+            "id",
+            "uid",
+            "meta",
+            "name",
+            "slug",
+            "c_regioneDisplayName",
+            "dm_directoryParents.name",
+            "dm_directoryParents.slug",
+            "dm_directoryChildren.name",
+            "dm_directoryChildren.slug",
+            "dm_directoryChildren.address",
+            "dm_directoryChildren.id",
+            "dm_directoryChildren.c_immagineStruttura"
+
+        ],
+        "localization": {
+            "locales": ["it"]
+        }
+    },
+    "urlFormat" : "{{slug}}"
+}
+---
+
+{{#if c_regioneDisplayName}}
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    {{>head}}
+    {{>schema}}
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVQ4R5G"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    {{>header_elogic}}
+    {{>regione_page}}
+
+</body>
+</html>
+{{else}}
+
+{{>regione_partial}}
+
+{{/if}}
+
+
+
