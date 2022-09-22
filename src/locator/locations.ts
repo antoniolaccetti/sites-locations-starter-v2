@@ -136,9 +136,22 @@ export function locationJSONtoHTML(entityProfile, index, locationOptions) {
   // }
 
   // Add center column
-  html = `<div class="center-column">${html}</div>`;
+    html = `<div class="center-column">${html}</div>`;
 
-  // Add left and right column
+ // Add left and right column without km
+    html = `<div class="left-column">${index + 1}.</div>${html}`;
+
+    if (entityProfile.__distance) {
+        html = `${html}
+        <div class="right-column"><div class="distance">
+          ${formatMiOrKm(
+                entityProfile.__distance.distanceMiles,
+                entityProfile.__distance.distanceKilometers
+            )}
+        </div></div>`;
+    }
+
+ /* // Add left and right column
   if (entityProfile.__distance) {
     html = `<div class="left-column">
       ${index + 1}.
@@ -150,7 +163,7 @@ export function locationJSONtoHTML(entityProfile, index, locationOptions) {
         entityProfile.__distance.distanceKilometers
       )}
     </div></div>`;
-  }
+  }*/
 
   return `<div id="result-${index}" class="result border" itemscope itemtype="https://schema.org/MedicalClinic">${html}</div>`;
 }
