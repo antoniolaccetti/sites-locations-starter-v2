@@ -1,7 +1,7 @@
 
-    <div class="section">
+    <div class="section section_breadcrumbs">
         <div class="container">
-            <a href="/index.html">Home</a> > {{this.name}}
+            <a href="/index.html" class="br_home">Home</a> > <span class="active_page">{{this.name}}</span>
         </div>
     </div>
     <div class="section">
@@ -13,7 +13,7 @@
                     <a class="location_nearby" href="{{this.slug}}">
                         <div class="grid address-cta-column">
                             <div class="image" style="background-image: url({{this.c_immagineStruttura.thumbnails.[2].url}}); "></div>
-                            <h5 class="name text-xl font-semibold">{{this.name}}</h5>
+                            <h5 class="name text-xl font-semibold">{{this.c_nomeStruttura}}</h5>
                             <div class="address">
                                 <div><span data-yext-field="address.line1" data-yext-id="{{this.id}}">{{this.address.line1}}</span>, <span data-yext-field="address.postalCode" data-yext-id="{{this.id}}">{{this.address.postalCode}}</span>, <span data-yext-field="address.city" data-yext-id="{{this.id}}">{{this.address.city}}</span>, <span data-yext-field="address.region" data-yext-id="{{this.id}}">{{this.address.region}}</span></div>
                             </div>
