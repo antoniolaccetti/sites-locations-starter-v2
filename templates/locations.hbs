@@ -83,9 +83,9 @@
     <!-- End Google Tag Manager (noscript) -->
     {{>header_elogic}}
 
-    <div class="section">
+    <div class="section section_breadcrumbs">
         <div class="container">
-            <a class="br_home" href="/index.html">Home</a> > {{#with c_regioneStruttura}}<a class="br_regione" href="{{this.slug}}">{{this.name}}</a>{{/with}} > <span class="br_ospedale">
+            <a class="br_home" href="/index.html">Home</a> > {{#with c_regioneStruttura}}<a class="br_regione" href="{{this.slug}}">{{this.name}}</a>{{/with}} > <span class="active_page br_ospedale">
                 {{#if c_nomeStruttura}}{{c_nomeStruttura}}{{else}}{{name}}{{/if}}
             </span>
         </div>
