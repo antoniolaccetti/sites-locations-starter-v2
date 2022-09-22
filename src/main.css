@@ -163,9 +163,18 @@ html {
     text-transform:uppercase;
 }
 
+/* Home */
+
+.regioni-lista-container {
+    margin: 70px auto;
+  
+}
+
+.regioni-list {
+    padding: 20px;   
+}
 
 /* Body Styling */
-
 body {
     @apply bg-white text-ll-blue;
     background: #EEE;

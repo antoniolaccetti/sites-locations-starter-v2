@@ -7,6 +7,9 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     {{>head-index}}
 
     <script>
@@ -47,26 +50,13 @@
             <div class="w-full">
                 {{>locator}}
             </div>
-            <div>
-                <h5>Ospedali GVM per Regione</h5>
-                <ul class="regioni-list">
-                    <li><a href="emilia-romagna">Emilia Romagna</a></li>
-                    <li><a href="lazio">Lazio</a></li>
-                    <li><a href="liguria">Liguria</a></li>
-                    <li><a href="lombardia">Lombardia</a></li>
-                    <li><a href="piemonte">Piemonte</a></li>
-                    <li><a href="puglia">Puglia</a></li>
-                    <li><a href="sicilia">Sicilia</a></li>
-                    <li><a href="toscana">Toscana</a></li>
-                    <li><a href="veneto">Veneto</a></li>
-                </ul>
-            </div>
-            <div class="w-full bg-gray-100">
-                <div class="">
-                    {{>footer}}
+                {{>regione-list}}
+                <div class="w-full bg-gray-100">
+                    <div class="">
+                        {{>footer}}
+                    </div>
                 </div>
             </div>
-        </div>
     </div>
 </body>
 </html>

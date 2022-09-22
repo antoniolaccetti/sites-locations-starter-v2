@@ -1,16 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\assets",
-    "\\localData",
     "\\partials",
-    "\\sites-global",
     "\\src",
-    "\\src\\images",
-    "\\src\\js",
-    "\\src\\js\\custom",
     "\\templates"
   ],
-  "SelectedNode": "\\partials\\regione_partial.hbs",
+  "SelectedNode": "\\partials\\regione-list.hbs",
   "PreviewInSolutionExplorer": false
 }
