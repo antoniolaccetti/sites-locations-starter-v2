@@ -100,6 +100,21 @@ html {
     overflow: hidden;
 }
 
+.section_breadcrumbs{
+    font-size: 14px;
+    margin-top: 10px;
+}
+.section_breadcrumbs a{
+    color:#008dc9;
+    transition: all 0.3s ease-in-out;
+}
+.section_breadcrumbs a:hover{
+    color: #0d384b;
+}
+.section_breadcrumbs .active_page{
+    font-weight: normal;
+}
+
 .result-list {
     overflow-x: hidden;
 }
@@ -839,6 +854,8 @@ ul {
     padding-top: 30px;
 }
 
+
+
 .footer-links{
     font-size: .9375rem;
     padding: .625rem 0 1.5rem;
@@ -894,11 +911,15 @@ ul {
 }
  
 @media (min-width:768px) {
+    
     .footer .container{
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+    }
+    .title_nearby{
+        text-align: center;
     }
     .footer .container > div{
         
@@ -933,10 +954,9 @@ ul {
         padding: 30px 10px;
     }
     .location_nearby{
-    
         flex-basis: calc(33% - 20px);
         margin: 10px;
-        flex-grow: 1;
+        flex-grow: 0;
     }
     .col_specialita_content .specialita, .col_specialita_content .servizi{
         width: calc(50% - 10px);
@@ -948,6 +968,10 @@ ul {
     }
     .section{
        margin:30px 0 0 0;
+    }
+    .section_breadcrumbs{
+        margin-top: 15px;
+        margin-bottom: -20px;
     }
     .box_inevidenza{
         width: calc(50% - 20px);
