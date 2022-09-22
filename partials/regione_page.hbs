@@ -9,7 +9,7 @@
             <div class="bg-gray-100 container_nearby">
                 <h4 class="text-center mb-2 title_nearby">Ospedali GVM in {{name}}</h4>
                 <div class="location-data">
-                    {{#each dm_directoryChildren}}
+                    {{#each c_regioneStruttura}}
                     <a class="location_nearby" href="{{this.slug}}">
                         <div class="grid address-cta-column">
                             <div class="image" style="background-image: url({{this.c_immagineStruttura.thumbnails.[2].url}}); "></div>

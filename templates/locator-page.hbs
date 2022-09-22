@@ -1,23 +1,6 @@
 ---
 {
-    "stream": {
-            "$id": "ce_root",
-            "filter" : {
-                "entityTypes": ["ce_root"]
-            },
-            "fields": [
-                "id",
-                "uid",
-                "meta",
-                "name",
-                "slug",
-                "dm_directoryChildrenRegione.name",
-                "dm_directoryChildrenRegione.slug"
-            ],
-            "localization": {
-                "locales": ["it"]
-            }
-        },
+    
     "urlFormat" : "index.html"
 }
 ---
@@ -65,7 +48,18 @@
                 {{>locator}}
             </div>
             <div>
-                {{>region}}
+                <h5>Ospedali GVM per Regione</h5>
+                <ul class="regioni-list">
+                    <li><a href="emilia-romagna">Emilia Romagna</a></li>
+                    <li><a href="lazio">Lazio</a></li>
+                    <li><a href="liguria">Liguria</a></li>
+                    <li><a href="lombardia">Lombardia</a></li>
+                    <li><a href="piemonte">Piemonte</a></li>
+                    <li><a href="puglia">Puglia</a></li>
+                    <li><a href="sicilia">Sicilia</a></li>
+                    <li><a href="toscana">Toscana</a></li>
+                    <li><a href="veneto">Veneto</a></li>
+                </ul>
             </div>
             <div class="w-full bg-gray-100">
                 <div class="">

@@ -7,18 +7,13 @@
         },
         "fields": [
             "id",
-            "uid",
-            "meta",
             "name",
             "slug",
-            "c_regioneDisplayName",
-            "dm_directoryParents.name",
-            "dm_directoryParents.slug",
-            "dm_directoryChildren.name",
-            "dm_directoryChildren.slug",
-            "dm_directoryChildren.address",
-            "dm_directoryChildren.id",
-            "dm_directoryChildren.c_immagineStruttura"
+            "c_regioneStruttura.name",
+            "c_regioneStruttura.id",
+            "c_regioneStruttura.slug",
+            "c_regioneStruttura.address",
+            "c_regioneStruttura.c_immagineStruttura"
 
         ],
         "localization": {
@@ -29,7 +24,7 @@
 }
 ---
 
-{{#if c_regioneDisplayName}}
+{{#if c_regioneStruttura}}
 <!DOCTYPE html>
 <html lang="it">
 <head>

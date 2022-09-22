@@ -53,9 +53,10 @@
             "c_elencoSpecialitaStrutturaGVM",
             "c_elencoServiziStrutturaGVM",
             "c_urlTutteLeSpecialita",
-            "dm_directoryParents",
-            "c_relazioneRegioneStruttura.name",
-            "c_relazioneRegioneStruttura.slug"
+             "c_regioneStruttura.name",
+            "c_regioneStruttura.id",
+            "c_regioneStruttura.slug"
+
         ],
         "localization": {
             "locales": ["it"]
@@ -84,7 +85,8 @@
 
     <div class="section">
         <div class="container">
-            <a class="br_home" href="/index.html">Home</a> > {{#with c_relazioneRegioneStruttura}}<a class="br_regione"  href="{{this.slug}}">{{this.name}}</a>{{/with}} > <span class="br_ospedale">{{#if c_nomeStruttura}}{{c_nomeStruttura}}{{else}}{{name}}{{/if}}
+            <a class="br_home" href="/index.html">Home</a> > {{#with c_regioneStruttura}}<a class="br_regione" href="{{this.slug}}">{{this.name}}</a>{{/with}} > <span class="br_ospedale">
+                {{#if c_nomeStruttura}}{{c_nomeStruttura}}{{else}}{{name}}{{/if}}
             </span>
         </div>
     </div>
