@@ -1,9 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\partials",
     "\\sites-config",
-    "\\sites-global"
+    "\\sites-global",
+    "\\src",
+    "\\src\\locator",
+    "\\templates"
   ],
-  "SelectedNode": "\\partials",
+  "SelectedNode": "\\sites-global\\global.json",
   "PreviewInSolutionExplorer": false
 }
