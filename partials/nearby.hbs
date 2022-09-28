@@ -258,7 +258,7 @@
                 }
             if (location.websiteUrl) {
             locationHTML =
-                '<a target="_blank" href="' + location.slug + '" class="location_nearby"><div class="grid address-cta-column"><div class="image" style="background-image:url(' + immagine+');"></div><h5 class="name text-xl font-semibold">' +
+                '<a data-ya-track="LinkStrutturaVicina" target="_blank" href="' + location.slug + '" class="location_nearby"><div class="grid address-cta-column"><div class="image" style="background-image:url(' + immagine+');"></div><h5 class="name text-xl font-semibold">' +
             nomeStruttura +
                 '</h5><div class="address"><div>' +
                 location.address.line1 +
@@ -267,7 +267,7 @@
                 '</div></div></div></a>';
             } else {
             locationHTML =
-                '<a target="_blank" href="' + location.slug + '" class="location_nearby"><div class="grid address-cta-column"><div class="image" style="background-image:url('+immagine+');"></div><h5 class="name text-xl font-semibold">' +
+                '<a data-ya-track="LinkStrutturaVicina" target="_blank" href="' + location.slug + '" class="location_nearby"><div class="grid address-cta-column"><div class="image" style="background-image:url('+immagine+');"></div><h5 class="name text-xl font-semibold">' +
             nomeStruttura +
                 '</h5><div class="address"><div>' +
                 location.address.line1 +

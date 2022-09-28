@@ -83,18 +83,18 @@
     <!-- End Google Tag Manager (noscript) -->
     {{>header_elogic}}
 
-    <div class="section section_breadcrumbs">
+    <div class="section section_breadcrumbs" data-ya-scope="SectionBreadcrumbs">
         <div class="container">
-            <a class="br_home" href="/index.html">Home</a> > {{#with c_regioneStruttura}}<a class="br_regione" href="{{this.slug}}">{{this.name}}</a>{{/with}} > <span class="active_page br_ospedale">
+            <a class="br_home" data-ya-track="LinkHome"  href="/index.html">Home</a> > {{#with c_regioneStruttura}}<a class="br_regione" data-ya-track="LinkRegione" href="{{this.slug}}">{{this.name}}</a>{{/with}} > <span class="active_page br_ospedale">
                 {{#if c_nomeStruttura}}{{c_nomeStruttura}}{{else}}{{name}}{{/if}}
             </span>
         </div>
     </div>
 
-    <div class="section section_main_banner">
+    <div class="section section_main_banner" data-ya-scope="SectionBanner">
         {{>main_banner}}
     </div>
-    <div class="section section_location_details" data-ya-scope="Section Mappa">
+    <div class="section section_location_details" data-ya-scope="SectionMappa">
         {{>locationdetails}}
     </div>
     {{#if c_descrizioneLunga}}
@@ -105,30 +105,30 @@
     </div>
     {{/if}}
     {{#if c_contenutiInEvidenza}}
-    <div class="section background_specialita">
+    <div class="section background_specialita" data-ya-scope="SectionInEvidenza">
         <div class="container">
             {{>evidenza}}
         </div>
     </div>
     {{/if}}
     {{#if c_elencoSpecialitaStrutturaGVM}}
-    <div class="section background_specialita">
+    <div class="section background_specialita" data-ya-scope="SectionSpecialitaServizi">
         <div class="container">
             {{>specialita_servizi}}
         </div>
     </div>
     {{/if}}
-    <div class="section">
+    <div class="section" data-ya-scope="SectionClinicheVicine">
         <div class="container">
             <div class="">{{>nearby geocodedCoordinate}}</div>
         </div>
     </div>
-    <div class="section">
+    <div class="section" data-ya-scope="SectionDatiLegali">
         <div class="container">
             {{>dati_legali}}
         </div>
     </div><!-- new data_legal -->
-    <div class="w-full">
+    <div class="w-full" data-ya-scope="SectionFooter">
         {{>footer}}
     </div>
 
