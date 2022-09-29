@@ -5,7 +5,8 @@
     "\\sites-config",
     "\\sites-global",
     "\\src",
-    "\\src\\locator",
+    "\\src\\analytics",
+    "\\src\\images",
     "\\templates"
   ],
   "SelectedNode": "\\sites-global\\global.json",
