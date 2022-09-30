@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\localData",
     "\\partials",
     "\\sites-config",
     "\\sites-global",
-    "\\src",
     "\\src\\analytics",
     "\\src\\images",
     "\\templates"

@@ -246,8 +246,14 @@
             if (true) {
                 var immagine;
                 var nomeStruttura;
+                var linkImmagine = location.c_immagineStruttura.url; //aggiunto
+                var pathname = new URL(linkImmagine).pathname,//aggiunto
+                    shortUrl = pathname.substring(0, pathname.lastIndexOf("/")),//aggiunto
+                    modUrl = 'https://dynl.mktgcdn.com' + shortUrl + '/460x300.jpg';  //aggiunto    
+                   
                 if (location.c_immagineStruttura != undefined) {
-                    immagine = location.c_immagineStruttura.thumbnails[2].url;
+                    immagine = modUrl;  //aggiunto
+                   // immagine = location.c_immagineStruttura.url;
                 } else {
                     immagine = 'https://www.gvmnet.it/admingvm/media/immagininews/cuoreevasi/cardiologia_interventistica.jpg';
                 }

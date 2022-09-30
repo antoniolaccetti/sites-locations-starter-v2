@@ -31,13 +31,11 @@
 
     </div>
     <div class="main_banner main_banner_image w-full md:w-3/5">
-        <div class="relative z-20 overflow-hidden h-70 md:h-full">       
+        <div class="relative z-20 overflow-hidden h-70 md:h-full">
             <img class=" w-full object-cover h-full"
-                 srcset="{{c_immagineStruttura.thumbnails.[2].url}} 480w,{{c_immagineStruttura.thumbnails.[0].url}} 800w" sizes="(max-width: 600px) 480px, 800px" src="{{c_immagineStruttura.thumbnails.[0].url}}" width="1200" height="675" alt=" {{#if c_nomeStruttura}}
-                {{c_nomeStruttura}}
-                {{else}}
-                {{name}}
-                {{/if}}" />
+                srcset=" {{dynamicImage c_immagineStruttura.url "510x290" true}} 480w,{{dynamicImage c_immagineStruttura.url "650x365" true}} 800w" 
+                sizes="(max-width: 767px) 480px, 800px" src="{{dynamicImage c_immagineStruttura.url "650x365" true}}" width="650" height="365" 
+                alt=" {{#if c_nomeStruttura}}{{c_nomeStruttura}}{{else}}{{name}}{{/if}}" /><!--fixed-->  
         </div><!-- .image -->
     </div><!-- .main_banner -->
 </div>
