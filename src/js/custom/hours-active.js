@@ -14,4 +14,48 @@ $(document).ready(function() {
             counter++;
         })
     }
+
+    function getCookie(name) {
+        var dc = document.cookie;
+        var prefix = name + "=";
+        var begin = dc.indexOf("; " + prefix);
+        if (begin == -1) {
+            begin = dc.indexOf(prefix);
+            if (begin != 0) return null;
+        }
+        else
+        {
+            begin += 2;
+            var end = document.cookie.indexOf(";", begin);
+            if (end == -1) {
+            end = dc.length;
+            }
+        }
+        // because unescape has been deprecated, replaced with decodeURI
+        //return unescape(dc.substring(begin + prefix.length, end));
+        return decodeURI(dc.substring(begin + prefix.length, end));
+    } 
+    
+    var myCookie = getCookie("_hjFirstSeen");
+    
+    if (myCookie == null) {
+        // do cookie doesn't exist stuff;
+    }
+    else {
+        (function(w,d,y){
+            w['YextAnalyticsObject']=y;
+            w[y]=w[y]||function(){
+            (w[y].q=w[y].q||[]).push(arguments)
+            };
+            w[y]('create', '3688791', '31913', isStaging());
+        })(window, document, 'ya');
+        {{#if uid}}
+            ya('set', { id: '{{uid}}' })
+        {{/if}}
+        ya('pageview');
+    }  
+    
+
+
 });
+
