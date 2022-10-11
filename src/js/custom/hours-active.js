@@ -14,7 +14,7 @@ $(document).ready(function() {
             counter++;
         })
     }
-
+/*
     function getCookie(name) {
         var dc = document.cookie;
         var prefix = name + "=";
@@ -54,7 +54,7 @@ $(document).ready(function() {
         {{/if}}
         ya('pageview');
     }  
-    
+    */
 
 
 });

@@ -4,8 +4,10 @@
     "\\partials",
     "\\sites-config",
     "\\sites-global",
+    "\\src",
+    "\\src\\locator",
     "\\templates"
   ],
-  "SelectedNode": "\\partials\\evidenza.hbs",
+  "SelectedNode": "\\sites-global\\global.json",
   "PreviewInSolutionExplorer": false
 }
