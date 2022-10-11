@@ -3,44 +3,6 @@
 <script type="text/javascript" src="https://cookie-cdn.cookiepro.com/consent/f83d6a91-93e1-4d6c-a7c7-562a7f5a9526/OtAutoBlock.js"></script>
 <script src="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="f83d6a91-93e1-4d6c-a7c7-562a7f5a9526"></script>
 
-<script id="checkOptanonWrapper">
-    var checkCookieTerzi = false;
-    function OptanonWrapper() {
-        // console.log(document.cookie);
-        //   console.log(document.cookie);
-        window.dataLayer.push({ event: 'OneTrustGroupsUpdated' });
-        // delete_cookie();
-
-        function getCookie(cookieName) {
-            var dc = document.cookie;
-            var prefix = cookieName + "=";
-            var begin = dc.indexOf("; " + prefix);
-            var cookieString = dc.substring(begin).split("; ").pop();
-            result = cookieString.indexOf("groups");
-            cookieString = cookieString.substring(result).split("&");
-            cookieString = cookieString[0].split("=").pop().split("C0001%3A");
-            cookieString = cookieString[1].split("%2CC0002%3A");
-            cookieString = cookieString[1].split("%2CC0004%3A");
-            var cookiePrestazione = cookieString[0];
-            var cookieTerzi = cookieString[1];
-
-            if (cookieTerzi == 1) {
-                console.log(cookieString[1]);
-                checkCookieTerzi = true;
-                console.log("si cookie terzi");               
-            } else {
-                console.log("no cookie terzi");
-            }
-
-        }
-
-        getCookie("OptanonConsent");
-      
-
-    }
-
-</script>
-
 {{> analytics uid = uid}}
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -55,23 +17,3 @@
                 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
     })(window, document, 'script', 'dataLayer', 'GTM-WVQ4R5G');</script>
 <!-- End Google Tag Manager -->
-<!--inizialmente
-
-    gvmnet.it OptanonConsent
-
-    isGpcEnabled=0&datestamp=Tue+Oct+11+2022+10%3A25%3A21+GMT%2B0200+(Ora+legale+dell%E2%80%99Europa+centrale)&version=202209.2.0&isIABGlobal=false&landingPath=https%3A%2F%2Fospedali.gvmnet.it%2F&groups=C0001%3A1%2CC0002%3A0%2CC0004%3A0&hosts=H14%3A1%2CH6%3A0%2CH7%3A0%2CH2%3A0%2CH10%3A0&genVendors=
-
-
-    ospedali.gvmnet.it __cf_bm
-
-    Km2QQG2YtTvgaDRA3uBNtGtELbowFBZWuo74ZLi572M-1665476721-0-AWlwjXBaxpv+hr1Gbita87IwnsgQcknGvMg2VDSKWfgiipzwrjTqEaVmihUvX0Ot6ZySX+aDhp9Xhvzn+nxMwrE=
-    -->
-<!--se accetti
-
-      gvmnet.it OptanonConsent
-
-    isGpcEnabled=0&datestamp=Tue+Oct+11+2022+10%3A27%3A08+GMT%2B0200+(Ora+legale+dell%E2%80%99Europa+centrale)&version=202209.2.0&isIABGlobal=false&landingPath=NotLandingPage&groups=C0001%3A1%2CC0002%3A1%2CC0004%3A1&hosts=H14%3A1%2CH6%3A1%2CH7%3A1%2CH2%3A1%2CH10%3A1&genVendors=
-
-
-
-    -->
