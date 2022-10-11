@@ -2,35 +2,35 @@
 <!-- OptanonConsentNoticeStart -->
 <script type="text/javascript" src="https://cookie-cdn.cookiepro.com/consent/f83d6a91-93e1-4d6c-a7c7-562a7f5a9526/OtAutoBlock.js"></script>
 <script src="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="f83d6a91-93e1-4d6c-a7c7-562a7f5a9526"></script>
-{{>analytics uid=uid}}
+
 <script>
     function OptanonWrapper() {
-        console.log(document.cookie);
+       // console.log(document.cookie);
         //   console.log(document.cookie);
         window.dataLayer.push({ event: 'OneTrustGroupsUpdated' });
        // delete_cookie();
       
 
         function getCookie(cookieName) {
-            var value = '; ' + document.cookie;
-            var parts = value.split('; ' + cookieName + '=');
-            console.log(parts);
-
-            let parts = text.indexOf("groups");
-            parts = text.substring(result).split("&");
-            parts = parts[0].split("=").pop().split("C0001%3A");
-            parts = parts[1].split("%2CC0002%3A");
-            parts = parts[1].split("%2CC0004%3A");
-            var cookiePrestazione = parts[0];
-            var cookieTerzi = parts[1];
+            var dc = document.cookie;
+            var prefix = cookieName + "=";
+            var begin = dc.indexOf("; " + prefix);
+            var cookieString = dc.substring(begin).split("; ").pop();          
+            result = cookieString.indexOf("groups");
+            cookieString = cookieString.substring(result).split("&");
+            cookieString = cookieString[0].split("=").pop().split("C0001%3A");
+            cookieString = cookieString[1].split("%2CC0002%3A");
+            cookieString = cookieString[1].split("%2CC0004%3A");
+            var cookiePrestazione = cookieString[0];
+            var cookieTerzi = cookieString[1];
 
             if (cookieTerzi == 1) {
-                console.log(parts[1]);
+                console.log(cookieString[1]);
+                {{> analytics uid = uid }}
                 console.log("si cookie terzi");
             } else {
                 console.log("no cookie terzi");
             }
-
 
         }
 
