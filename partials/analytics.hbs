@@ -1,19 +1,52 @@
 <script src="/util.js"></script>
 <script src="/analytics.js"></script>
-<script>
-    if (checkCookieTerzi == true) {
+<script type="text/javascript">
+   
+    function OptanonWrapper() {
+        // console.log(document.cookie);
+        //   console.log(document.cookie);
+        window.dataLayer.push({ event: 'OneTrustGroupsUpdated' });
+        // delete_cookie();
+        getCookie("OptanonConsent");
+
+        function getCookie(cookieName) {
+            var dc = document.cookie;
+            var prefix = cookieName + "=";
+            var begin = dc.indexOf("; " + prefix);
+            var cookieString = dc.substring(begin).split("; ").pop();
+            result = cookieString.indexOf("groups");
+            cookieString = cookieString.substring(result).split("&");
+            cookieString = cookieString[0].split("=").pop().split("C0001%3A");
+            cookieString = cookieString[1].split("%2CC0002%3A");
+            cookieString = cookieString[1].split("%2CC0004%3A");
+            var cookiePrestazione = cookieString[0];
+            var cookieTerzi = cookieString[1];
+
+            if (cookieTerzi == 1) {
+                console.log(cookieString[1]);               
+                console.log("si cookie terzi");
+                startYext();
+            }
+
+        }      
+
+
+    }
+
+    function startYext() {    
+       
         (function(w,d,y){
         w['YextAnalyticsObject']=y;
         w[y]=w[y]||function(){
         (w[y].q=w[y].q||[]).push(arguments)
         };
-        w[y]('create', '{{businessId}}', '{{siteId}}', isStaging());
+        w[y]('create', '3688791', '31913', isStaging());
         })(window, document, 'ya');
         {{#if uid}}
             ya('set', { id: '{{uid}}' })
         {{/if}}
         ya('pageview');
+       
     }
 </script>
-
 <!-- OptanonConsentNoticeEnd -->
