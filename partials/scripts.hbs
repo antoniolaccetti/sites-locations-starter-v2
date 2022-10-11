@@ -4,13 +4,12 @@
 <script src="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="f83d6a91-93e1-4d6c-a7c7-562a7f5a9526"></script>
 
 <script id="checkOptanonWrapper">
+    var checkCookieTerzi = false;
     function OptanonWrapper() {
         // console.log(document.cookie);
         //   console.log(document.cookie);
         window.dataLayer.push({ event: 'OneTrustGroupsUpdated' });
         // delete_cookie();
-
-       
 
         function getCookie(cookieName) {
             var dc = document.cookie;
@@ -26,31 +25,23 @@
             var cookieTerzi = cookieString[1];
 
             if (cookieTerzi == 1) {
-                console.log(cookieString[1]);               
+                console.log(cookieString[1]);
                 console.log("si cookie terzi");
                 startYextAnalytics();
-            } else {               
+            } else {
                 console.log("no cookie terzi");
             }
 
         }
 
         getCookie("OptanonConsent");
-        // document.cookie = "OptanonConsent=groups=3:0,2:0"
+      
 
     }
-
-
-
-    function startYextAnalytics() {
-        var string = "> analytics uid = uid";
-        document.head.append("{{" + string + "}}");
-    }
-
-
 
 </script>
 
+{{> analytics uid = uid}}
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <!-- Google Tag Manager -->
