@@ -2,19 +2,18 @@
 <script src="/analytics.js"></script>
 <script>
     if (checkCookieTerzi == true) {
-        (function (w, d, y) {
-            w['YextAnalyticsObject'] = y;
-            w[y] = w[y] || function () {
-                (w[y].q = w[y].q || []).push(arguments)
-            };
-            w[y]('create', '{{businessId}}', '{{siteId}}', isStaging());
+        (function(w,d,y){
+        w['YextAnalyticsObject']=y;
+        w[y]=w[y]||function(){
+        (w[y].q=w[y].q||[]).push(arguments)
+        };
+        w[y]('create', '{{businessId}}', '{{siteId}}', isStaging());
         })(window, document, 'ya');
-        {{ #if uid }}
-        ya('set', { id: '{{uid}}' })
+        {{#if uid}}
+            ya('set', { id: '{{uid}}' })
         {{/if}}
         ya('pageview');
     }
 </script>
-
 
 <!-- OptanonConsentNoticeEnd -->
