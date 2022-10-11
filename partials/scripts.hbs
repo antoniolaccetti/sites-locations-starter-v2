@@ -9,58 +9,33 @@
         //   console.log(document.cookie);
         window.dataLayer.push({ event: 'OneTrustGroupsUpdated' });
        // delete_cookie();
-        function delete_cookie() {
-
-            if (!getCookie('cleared-onetrust-cookies')) {
-                console.log("entered");
-                // document.cookie = "OptanonAlertBoxClosed" + "=" + "; path=/" + "; domain=.yourdomain.com" + '; expires=Thu, 01 Jan 1970 00:00:01 GMT';
-
-                //  document.cookie = "OptanonConsent" + "=" + "; path=/" + "; domain=.yourdomain.com" + '; expires=Thu, 01 Jan 1970 00:00:01 GMT';
-                console.log("exit");
-            }
-
-            // document.cookie = "cleared-onetrust-cookies" + "=" + "; path=/" + "; domain=.yourdomain.com" + "; expires=" + now;
-            console.log("test");
-
-        }
+      
 
         function getCookie(cookieName) {
             var value = '; ' + document.cookie;
             var parts = value.split('; ' + cookieName + '=');
             console.log(parts);
-            if (parts.length == 2) {
-               
-                return true;
+
+            let parts = text.indexOf("groups");
+            parts = text.substring(result).split("&");
+            parts = parts[0].split("=").pop().split("C0001%3A");
+            parts = parts[1].split("%2CC0002%3A");
+            parts = parts[1].split("%2CC0004%3A");
+            var cookiePrestazione = parts[0];
+            var cookieTerzi = parts[1];
+
+            if (cookieTerzi == 1) {
+                console.log(parts[1]);
+                console.log("si cookie terzi");
+            } else {
+                console.log("no cookie terzi");
             }
+
+
         }
 
        getCookie("OptanonConsent");
       // document.cookie = "OptanonConsent=groups=3:0,2:0"
-
-        function getCookiee(cname) {
-            let name = cname + "=";
-            let decodedCookie = decodeURIComponent(document.cookie);
-            let ca = decodedCookie.split(';');
-            for (let i = 0; i < ca.length; i++) {
-                let c = ca[i];
-                console.log("test0");
-                console.log(c);
-                while (c.charAt(0) == ' ') {
-                    c = c.substring(1);
-                    console.log("test1");
-                    console.log(c);
-                }
-                if (c.indexOf(name) == 0) {
-                    var test = c.substring(name.length, c.length);
-                    console.log("test2");
-                    console.log(test);
-                    return c.substring(name.length, c.length);
-                }
-                console.log("test3");
-                console.log(c);
-            }
-            return "";
-        }
 
     }
 </script>
