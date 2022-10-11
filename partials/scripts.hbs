@@ -3,19 +3,20 @@
 <script type="text/javascript" src="https://cookie-cdn.cookiepro.com/consent/f83d6a91-93e1-4d6c-a7c7-562a7f5a9526/OtAutoBlock.js"></script>
 <script src="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="f83d6a91-93e1-4d6c-a7c7-562a7f5a9526"></script>
 
-<script>
+<script id="checkOptanonWrapper">
     function OptanonWrapper() {
-       // console.log(document.cookie);
+        // console.log(document.cookie);
         //   console.log(document.cookie);
         window.dataLayer.push({ event: 'OneTrustGroupsUpdated' });
-       // delete_cookie();
-      
+        // delete_cookie();
+
+        var checkCookieTerzi = false;
 
         function getCookie(cookieName) {
             var dc = document.cookie;
             var prefix = cookieName + "=";
             var begin = dc.indexOf("; " + prefix);
-            var cookieString = dc.substring(begin).split("; ").pop();          
+            var cookieString = dc.substring(begin).split("; ").pop();
             result = cookieString.indexOf("groups");
             cookieString = cookieString.substring(result).split("&");
             cookieString = cookieString[0].split("=").pop().split("C0001%3A");
@@ -26,18 +27,25 @@
 
             if (cookieTerzi == 1) {
                 console.log(cookieString[1]);
-                {{> analytics uid = uid }}
+                checkCookieTerzi = true;
                 console.log("si cookie terzi");
             } else {
+                checkCookieTerzi = false;
                 console.log("no cookie terzi");
-            }
+            }        
 
         }
 
-       getCookie("OptanonConsent");
-      // document.cookie = "OptanonConsent=groups=3:0,2:0"
+        getCookie("OptanonConsent");
+        // document.cookie = "OptanonConsent=groups=3:0,2:0"
 
     }
+    if (checkCookieTerzi == true) {
+        var insertYextAnalytics = "{{> analytics uid = uid }}";
+        var thisScript = document.getElementById("checkOptanonWrapper");
+        thisScript.after(insertYextAnalytics);
+    }
+   
 </script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <!-- Google Tag Manager -->
