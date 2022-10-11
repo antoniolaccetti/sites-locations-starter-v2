@@ -10,7 +10,7 @@
         window.dataLayer.push({ event: 'OneTrustGroupsUpdated' });
         // delete_cookie();
 
-        var checkCookieTerzi = false;
+       
 
         function getCookie(cookieName) {
             var dc = document.cookie;
@@ -26,13 +26,12 @@
             var cookieTerzi = cookieString[1];
 
             if (cookieTerzi == 1) {
-                console.log(cookieString[1]);
-                checkCookieTerzi = true;
+                console.log(cookieString[1]);               
                 console.log("si cookie terzi");
-            } else {
-                checkCookieTerzi = false;
+                startYextAnalytics();
+            } else {               
                 console.log("no cookie terzi");
-            }        
+            }
 
         }
 
@@ -40,13 +39,19 @@
         // document.cookie = "OptanonConsent=groups=3:0,2:0"
 
     }
-    if (checkCookieTerzi == true) {
-        var insertYextAnalytics = "{{> analytics uid = uid }}";
-        var thisScript = document.getElementById("checkOptanonWrapper");
-        thisScript.after(insertYextAnalytics);
+
+
+
+    function startYextAnalytics() {
+        var string = "> analytics uid = uid";
+        document.head.append("{{" + string + "}}");
     }
-   
+
+
+
 </script>
+
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <!-- Google Tag Manager -->
 <script>
