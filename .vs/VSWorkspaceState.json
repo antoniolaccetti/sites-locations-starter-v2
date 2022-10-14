@@ -5,9 +5,11 @@
     "\\sites-config",
     "\\sites-global",
     "\\src",
+    "\\src\\js",
+    "\\src\\js\\custom",
     "\\src\\locator",
     "\\templates"
   ],
-  "SelectedNode": "\\sites-global\\global.json",
+  "SelectedNode": "\\partials\\analytics.hbs",
   "PreviewInSolutionExplorer": false
 }
