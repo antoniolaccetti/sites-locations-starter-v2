@@ -9,7 +9,7 @@
         window.dataLayer.push({ event: 'OneTrustGroupsUpdated' });
 
         var handlerCookie = false;
-
+        var cookieIfExistInterval = false;
 
         const banner = document.getElementById("onetrust-banner-sdk");
 
@@ -28,7 +28,9 @@
                 head.appendChild(analytics);
                 head.appendChild(util);
                 console.log("si cookie");
-                clearInterval(cookieIfExist);
+                if (cookieIfExistInterval == true) {
+                    clearInterval(cookieIfExist);
+                }                
                 handledCookie = true;
                 var prefix = cookieName + "=";
                 var begin = dc.indexOf("; " + prefix);
@@ -38,15 +40,21 @@
                 cookieString = cookieString[0].split("=").pop().split("C0001%3A");
                 cookieString = cookieString[1].split("%2CC0002%3A");
                 cookieString = cookieString[1].split("%2CC0004%3A");
-                var cookiePrestazione = parseInt(cookieString[0]);
-                var cookieTerzi = parseInt(cookieString[1]);
-
+                var cookiePrestazione = cookieString[0];
+                var cookieTerzi = cookieString[1];
+                console.log(cookiePrestazione);
+                console.log(cookieTerzi);
+                cookiePrestazione = parseInt(cookieString[0]);
+                cookieTerzi = parseInt(cookieString[1]);
+                console.log(cookiePrestazione);
+                console.log(cookieTerzi);
                 if (cookieTerzi == 1 || cookiePrestazione == 1) {
                    console.log("startYext");
                    startYext();
                 }
             } else {
                 if (handlerCookie == false) {
+                    cookieIfExistInterval = true;
                     cookieIfExist = setInterval(function () { getCookie("OptanonConsent"); console.log("no cookieInterval") }, 5000);
                     console.log("no cookie")
                 }
