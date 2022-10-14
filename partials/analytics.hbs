@@ -1,6 +1,11 @@
 <script src="/util.js"></script>
-<script src="/analytics.js"></script>
+<!--<script src="/analytics.js"></script>-->
+
+
 <script type="text/javascript">
+
+    var head = document.getElementsByTagName('head')[0];
+    var js = document.createElement("script");
    
     function OptanonWrapper() {
         // console.log(document.cookie);
@@ -24,6 +29,8 @@
         function getCookie(cookieName) {
             var dc = document.cookie;
             if (dc) {
+                js.src = "/analytics.js";
+                head.appendChild(js);
                 console.log("si cookie");
                 clearInterval(cookieIfExist); 
                 handledCookie = true;        
