@@ -1,6 +1,19 @@
 <script src="/util.js"></script>
 <!--<script src="/analytics.js"></script>-->
 
+<script>
+    (function(w,d,y){
+        w['YextAnalyticsObject']=y;
+        w[y]=w[y]||function(){
+        (w[y].q=w[y].q||[]).push(arguments)
+        };
+        w[y]('create', '{{businessId}}', '{{siteId}}', isStaging());
+    })(window, document, 'ya');
+    {{#if uid}}
+        ya('set', { id: '{{uid}}' })
+    {{/if}}
+    ya('pageview');
+</script>
 
 <script type="text/javascript">
 
@@ -47,7 +60,7 @@
 
                 if (cookieTerzi == 1 || cookiePrestazione == 1) {
                     console.log("startYext");
-                    startYext();                  
+                   // startYext();                  
                 }
             } else {
                 if (handlerCookie == false) {
@@ -65,18 +78,7 @@
 
     function startYext() {    
        
-        (function(w,d,y){
-        w['YextAnalyticsObject']=y;
-        w[y]=w[y]||function(){
-        (w[y].q=w[y].q||[]).push(arguments)
-        };
-        w[y]('create', '3688791', '31913', isStaging());
-        })(window, document, 'ya');
-        {{#if uid}}
-            ya('set', { id: '{{uid}}' })
-        {{/if}}
-        ya('pageview');
-       
+        
     }
 </script>
 <!-- OptanonConsentNoticeEnd -->
