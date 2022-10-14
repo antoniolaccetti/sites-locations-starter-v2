@@ -10,6 +10,6 @@
     "\\src\\locator",
     "\\templates"
   ],
-  "SelectedNode": "\\partials\\analytics.hbs",
+  "SelectedNode": "\\src\\js\\custom\\hours-active.js",
   "PreviewInSolutionExplorer": false
 }
