@@ -38,11 +38,11 @@
                 cookieString = cookieString[0].split("=").pop().split("C0001%3A");
                 cookieString = cookieString[1].split("%2CC0002%3A");
                 cookieString = cookieString[1].split("%2CC0004%3A");
-                var cookiePrestazione = cookieString[0];
-                var cookieTerzi = cookieString[1];
+                var cookiePrestazione = parseInt(cookieString[0]);
+                var cookieTerzi = parseInt(cookieString[1]);
 
                 if (cookieTerzi == 1 || cookiePrestazione == 1) {
-                    console.log("startYext");
+                   console.log("startYext");
                    startYext();
                 }
             } else {
