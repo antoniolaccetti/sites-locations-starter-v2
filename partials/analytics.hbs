@@ -1,8 +1,10 @@
+<!--<script src="/util.js"></script>
+<script src="/analytics.js"></script>-->
 
-<script type="text/javascript">
+<script>
     var head = document.getElementsByTagName('head')[0];
     var util = document.createElement("script");
-    var analytics = document.createElement("script");   
+    var analytics = document.createElement("script");
 
     function OptanonWrapper() {
         window.dataLayer.push({ event: 'OneTrustGroupsUpdated' });
@@ -25,11 +27,11 @@
                 util.src = "/util.js";
                 analytics.src = "/analytics.js";
                 head.appendChild(util);
-                head.appendChild(analytics);                
+                head.appendChild(analytics);
                // console.log("si cookie");
                 if (cookieIfExistInterval == true) {
                     clearInterval(cookieIfExist);
-                }                
+                }
                 handledCookie = true;
                 var prefix = cookieName + "=";
                 var begin = dc.indexOf("; " + prefix);
@@ -38,12 +40,12 @@
                 cookieString = cookieString.substring(result).split("&");
                 cookieString = cookieString[0].split("=").pop().split("C0001%3A");
                 cookieString = cookieString[1].split("%2CC0002%3A");
-                cookieString = cookieString[1].split("%2CC0004%3A"); 
+                cookieString = cookieString[1].split("%2CC0004%3A");
                 cookiePrestazione = parseInt(cookieString[0]);
                 cookieTerzi = parseInt(cookieString[1]);
-                
+
                 if (cookieTerzi == 1 || cookiePrestazione == 1) {
-                   //console.log("startYext");                  
+                   //console.log("startYext");
                 }
             } else {
                 if (handlerCookie == false) {
@@ -68,8 +70,6 @@
         ya('pageview');
 
 </script>
-<!--<script src="/util.js"></script>-->
-<!--<script src="/analytics.js"></script>-->
 
 
 <!-- OptanonConsentNoticeEnd -->
