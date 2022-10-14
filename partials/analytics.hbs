@@ -1,31 +1,12 @@
-<script src="/util.js"></script>
-<script src="/analytics.js"></script>
 
-<script>
-    (function(w,d,y){
-        w['YextAnalyticsObject']=y;
-        w[y]=w[y]||function(){
-        (w[y].q=w[y].q||[]).push(arguments)
-        };
-        w[y]('create', '{{businessId}}', '{{siteId}}', isStaging());
-    })(window, document, 'ya');
-    {{#if uid}}
-        ya('set', { id: '{{uid}}' })
-    {{/if}}
-    ya('pageview');
-</script>
-<!--
 <script type="text/javascript">
 
     var head = document.getElementsByTagName('head')[0];
-    var js = document.createElement("script");
-   
-    function OptanonWrapper() {
-        // console.log(document.cookie);
-        //   console.log(document.cookie);
-        window.dataLayer.push({ event: 'OneTrustGroupsUpdated' });
-        // delete_cookie();
+    var analytics = document.createElement("script");
+    var util = document.createElement("script");
 
+    function OptanonWrapper() {
+        window.dataLayer.push({ event: 'OneTrustGroupsUpdated' });
 
         var handlerCookie = false;
 
@@ -35,18 +16,20 @@
         if (banner) {
             banner.addEventListener('change', getCookie("OptanonConsent"));
             console.log("bannerChange");
-        }        
+        }
 
         getCookie("OptanonConsent");
 
         function getCookie(cookieName) {
             var dc = document.cookie;
             if (dc) {
-                js.src = "/analytics.js";
-                head.appendChild(js);
+                analytics.src = "/analytics.js";
+                util.src = "/util.js";
+                head.appendChild(analytics);
+                head.appendChild(util);
                 console.log("si cookie");
-                clearInterval(cookieIfExist); 
-                handledCookie = true;        
+                clearInterval(cookieIfExist);
+                handledCookie = true;
                 var prefix = cookieName + "=";
                 var begin = dc.indexOf("; " + prefix);
                 var cookieString = dc.substring(begin).split("; ").pop();
@@ -60,7 +43,7 @@
 
                 if (cookieTerzi == 1 || cookiePrestazione == 1) {
                     console.log("startYext");
-                   // startYext();                  
+                    // startYext();
                 }
             } else {
                 if (handlerCookie == false) {
@@ -68,17 +51,31 @@
                     console.log("no cookie")
                 }
             }
-             
+
         }
 
-       
+
 
 
     }
 
-    function startYext() {    
-       
-        
-    }
-</script>-->
+    function startYext() {
+         (function(w,d,y){
+        w['YextAnalyticsObject']=y;
+        w[y]=w[y]||function(){
+        (w[y].q=w[y].q||[]).push(arguments)
+        };
+        w[y]('create', '{{businessId}}', '{{siteId}}', isStaging());
+        })(window, document, 'ya');
+        {{#if uid}}
+            ya('set', { id: '{{uid}}' })
+        {{/if}}
+        ya('pageview');
+
+        }
+</script>
+<!--<script src="/util.js"></script>-->
+<!--<script src="/analytics.js"></script>-->
+
+
 <!-- OptanonConsentNoticeEnd -->
