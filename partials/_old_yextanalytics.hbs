@@ -1,0 +1,70 @@
+<script src="/util.js"></script>
+<script src="/analytics.js"></script>
+<script>
+    function OptanonWrapper() {
+        window.dataLayer.push({ event: 'OneTrustGroupsUpdated' });
+
+          var handlerCookie = false;
+            var cookieIfExistInterval = false;
+            const banner = document.getElementById("onetrust-banner-sdk");
+
+            if (banner) {
+                banner.addEventListener('change', getCookie("OptanonConsent"));
+                //console.log("bannerChange");
+            }
+
+            getCookie("OptanonConsent");
+
+            function getCookie(cookieName) {
+               var dc = document.cookie;
+               var cookiePrestazione;
+                var cookieTerzi;
+                if (!dc) {
+                    if (handlerCookie == false) {
+                        cookieIfExistInterval = true;
+                        cookieIfExist = setInterval(function () { getCookie("OptanonConsent"); console.log("no cookieInterval") }, 5000);
+                        // console.log("no cookie")
+                    }
+                }
+               else {
+                   // console.log("si cookie");
+                   if (cookieIfExistInterval == true) {
+                       clearInterval(cookieIfExist);
+                   }
+                   handledCookie = true;
+                   var prefix = cookieName + "=";
+                   var begin = dc.indexOf("; " + prefix);
+                   var cookieString = dc.substring(begin).split("; ").pop();
+                   result = cookieString.indexOf("groups");
+                   cookieString = cookieString.substring(result).split("&");
+                   cookieString = cookieString[0].split("=").pop().split("C0001%3A");
+                   cookieString = cookieString[1].split("%2CC0002%3A");
+                   cookieString = cookieString[1].split("%2CC0004%3A");
+                   cookiePrestazione = parseInt(cookieString[0]);
+                   cookieTerzi = parseInt(cookieString[1]);
+
+                   if (cookieTerzi == 1 || cookiePrestazione == 1) {
+                       //console.log("startYext"); 
+                       f(window, document, 'ya');
+                       '{{#if uid}}'
+                       ya('set', { id: '{{uid}}' })
+                       '{{/if}}'  
+                       ya('pageview');
+                   }
+               } 
+           }
+    }
+
+    var f = (function (w, d, y) {
+        w['YextAnalyticsObject'] = y;
+        w[y] = w[y] || function () {
+            console.log("test");
+            (w[y].q = w[y].q || []).push(arguments)
+        };
+        w[y]('create', '{{businessId}}', '{{siteId}}', isStaging());
+    });
+   
+</script>
+
+
+<!-- OptanonConsentNoticeEnd -->
