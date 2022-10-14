@@ -2,6 +2,55 @@
 <!-- OptanonConsentNoticeStart -->
 <script type="text/javascript" src="https://cookie-cdn.cookiepro.com/consent/f83d6a91-93e1-4d6c-a7c7-562a7f5a9526/OtAutoBlock.js"></script>
 <script src="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="f83d6a91-93e1-4d6c-a7c7-562a7f5a9526"></script>
+<script>
+    function OptanonWrapper() {
+        window.dataLayer.push({ event: 'OneTrustGroupsUpdated' });
+
+    /*  var handlerCookie = false;
+        var cookieIfExistInterval = false;
+        const banner = document.getElementById("onetrust-banner-sdk");
+
+        if (banner) {
+            banner.addEventListener('change', getCookie("OptanonConsent"));
+            //console.log("bannerChange");
+        }
+
+        getCookie("OptanonConsent");
+
+        function getCookie(cookieName) {
+           var dc = document.cookie;
+           var cookiePrestazione;
+           var cookieTerzi;
+           if (dc) {
+               // console.log("si cookie");
+               if (cookieIfExistInterval == true) {
+                   clearInterval(cookieIfExist);
+               }
+               handledCookie = true;
+               var prefix = cookieName + "=";
+               var begin = dc.indexOf("; " + prefix);
+               var cookieString = dc.substring(begin).split("; ").pop();
+               result = cookieString.indexOf("groups");
+               cookieString = cookieString.substring(result).split("&");
+               cookieString = cookieString[0].split("=").pop().split("C0001%3A");
+               cookieString = cookieString[1].split("%2CC0002%3A");
+               cookieString = cookieString[1].split("%2CC0004%3A");
+               cookiePrestazione = parseInt(cookieString[0]);
+               cookieTerzi = parseInt(cookieString[1]);
+   
+               if (cookieTerzi == 1 || cookiePrestazione == 1) {
+                   //console.log("startYext");
+               }
+           } else {
+               if (handlerCookie == false) {
+                   cookieIfExistInterval = true;
+                   cookieIfExist = setInterval(function () { getCookie("OptanonConsent"); console.log("no cookieInterval") }, 5000);
+                   // console.log("no cookie")
+               }
+           }
+       }*/
+    }
+</script>
 
 {{> analytics uid = uid}}
 
