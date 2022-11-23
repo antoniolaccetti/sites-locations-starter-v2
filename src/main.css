@@ -280,7 +280,9 @@ h2.section-header {
     z-index: 100;
 }
 
-
+.container {
+   max-width: 400px;
+}
 
 .header .spacer {
     max-width: 1110px;   
@@ -737,7 +739,7 @@ ul {
 
 
 .box_inevidenza .bg_box {
-    height:150px;
+    height: 52vw;
     width:100%;
     background-size: cover;
     background-position: center center;
@@ -955,11 +957,19 @@ ul {
     height: 32px;
     cursor: pointer;
 }
-.box_inevidenza .bg_box{
+/* .box_inevidenza .bg_box{
     height: 200px;    
+} */
+@media (min-width:400px) {
+.box_inevidenza .bg_box {
+    height: 212px;
+}
 }
 
 @media (min-width:576px){
+    .box_inevidenza .bg_box {
+        height: 290px;
+    }
     .footer-links>div>a {
         margin: .5rem .75rem 0;
     }
@@ -970,6 +980,9 @@ ul {
 }
  
 @media (min-width:768px) {
+    .container {
+        max-width: 775px;
+    }
     .full-width-locator {
         height: calc(85vh - 78px);
     }
@@ -1231,6 +1244,7 @@ ul {
         flex-grow: 1;
     }
     .box_inevidenza .bg_box{
+        height: 197px;
         padding-bottom: 50%;
     }
 
