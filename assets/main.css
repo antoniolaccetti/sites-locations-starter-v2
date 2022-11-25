@@ -1555,6 +1555,14 @@ ul {
     background-position: center center;
 }
 
+.box_inevidenza .bg_box.dentalunit:after {
+    content:"";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url('/images/bordo-dentalunit.png');
+}
+
 .giorno_attivo strong, .giorno_attivo div{
     font-weight: bold !important;
 }
