@@ -1,15 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\assets",
     "\\partials",
-    "\\sites-config",
-    "\\sites-global",
     "\\src",
-    "\\src\\js",
-    "\\src\\js\\custom",
-    "\\src\\locator",
     "\\templates"
   ],
-  "SelectedNode": "\\src\\locator\\map.ts",
+  "SelectedNode": "\\partials\\hours.hbs",
   "PreviewInSolutionExplorer": false
 }
