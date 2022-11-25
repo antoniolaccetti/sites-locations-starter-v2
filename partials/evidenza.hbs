@@ -4,7 +4,7 @@
     </div>
     {{#each c_contenutiInEvidenza}}
     <div class="box_inevidenza box_inevidenza{{@index}}">
-        <div class="bg_box" style="background-image: url('{{dynamicImage this.immagine.url "520x350" true }}'); "></div>
+        <div class="bg_box {{this.classi}}" style="background-image: url('{{dynamicImage this.immagine.url "520x350" true }}'); "></div>
         <div class="content">
             <h3 class="title_inevidenza">{{this.titolo}}</h3>
             <div class="description_inevidenza">{{this.sommario}}</div>
