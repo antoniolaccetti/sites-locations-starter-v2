@@ -56,7 +56,8 @@
              "c_regioneStruttura.name",
             "c_regioneStruttura.id",
             "c_regioneStruttura.slug",
-            "c_uRLStrutturaSitoGVM"
+            "c_uRLStrutturaSitoGVM",
+            "c_bannerTop"
 
         ],
         "localization": {
@@ -83,6 +84,10 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
     {{>header_elogic}}
+
+    {{#if c_bannerTop}}
+        <div class="bannerTop"><p>{{c_bannerTop}}</p></div>
+    {{/if}}
 
     <div class="section section_breadcrumbs" data-ya-scope="SectionBreadcrumbs">
         <div class="container">
