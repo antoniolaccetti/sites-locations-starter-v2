@@ -4,8 +4,12 @@
     "\\assets",
     "\\partials",
     "\\src",
+    "\\src\\analytics",
+    "\\src\\images",
+    "\\src\\js\\custom",
+    "\\src\\locator",
     "\\templates"
   ],
-  "SelectedNode": "\\partials\\hours.hbs",
+  "SelectedNode": "\\partials\\schema.hbs",
   "PreviewInSolutionExplorer": false
 }
