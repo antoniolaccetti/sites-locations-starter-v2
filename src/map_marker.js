@@ -88,7 +88,8 @@ MarkerLabel_.getSharedCross = function (crossURL) {
   var div;
   if (typeof MarkerLabel_.getSharedCross.crossDiv === "undefined") {
     div = document.createElement("img");
-    div.style.cssText = "position: absolute; z-index: 1000002; display: none;";
+      div.style.cssText = "position: absolute; z-index: 1000002; display: none;";
+      div.setAttribute("alt", "map marker");
     // Hopefully Google never changes the standard "X" attributes:
     div.style.marginLeft = "-8px";
     div.style.marginTop = "-9px";

@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://ospedali.gvmnet.it/sitemap.xml
