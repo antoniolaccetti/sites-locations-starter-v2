@@ -28,7 +28,7 @@
         var i;
         for (i = 0; i < a.length; i++) {
             var regioni = "<li data-ya-track='CTAListRegione_" + a[i][0] + "'><a href=" + a[i][1] + " title='Ospedali GVM in " + a[i][0] + "'>" + a[i][0] + "</a></li>";
-            document.getElementsByClassName("regioni-list").innerHTML += regioni;
+            document.getElementsByClassName("regioni-list")[0].innerHTML += regioni;
         }
 
     });
