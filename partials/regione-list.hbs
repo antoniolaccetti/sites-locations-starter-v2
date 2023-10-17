@@ -1,18 +1,36 @@
-<div class="section" data-ya-scope="SectionListRegione">
+﻿<div class="section" data-ya-scope="SectionListRegione">
     <div class="container">
         <div class="lista_regioni">
             <h5 class="title_nearby">Ospedali GVM per Regione</h5>
             <ul class="regioni-list">
-                <li data-ya-track="CTAListRegione_Emilia Romagna"><a href="emilia-romagna" title="Ospedali GVM in Emilia Romagna">Emilia Romagna</a></li>
-                <li data-ya-track="CTAListRegione_Lazio"><a href="lazio" title="Ospedali GVM nel Lazio">Lazio</a></li>
-                <li data-ya-track="CTAListRegione_Liguria"><a href="liguria" title="Ospedali GVM in Liguria">Liguria</a></li>
-                <li data-ya-track="CTAListRegione_Lombardia"><a href="lombardia" title="Ospedali GVM in Lombardia">Lombardia</a></li>
-                <li data-ya-track="CTAListRegione_Piemonte"><a href="piemonte" title="Ospedali GVM in Piemonte">Piemonte</a></li>
-                <li data-ya-track="CTAListRegione_Puglia"><a href="puglia" title="Ospedali GVM in Puglia">Puglia</a></li>
-                <li data-ya-track="CTAListRegione_Sicilia"><a href="sicilia" title="Ospedali GVM in Sicilia">Sicilia</a></li>
-                <li data-ya-track="CTAListRegione_Toscana"><a href="toscana" title="Ospedali GVM in Toscana">Toscana</a></li>
-                <li data-ya-track="CTAListRegione_Veneto"><a href="veneto" title="Ospedali GVM in Veneto">Veneto</a></li>
             </ul>
         </div>
     </div><!-- .container -->
 </div><!-- .section -->
+
+<script>
+    Handlebars.compile("{{#with id}}");
+    var a = new Array;
+    "{{#each dm_directoryChildren}}"
+    a.push([["{{this.name}}"], ["{{this.slug}}"]]);
+    "{{/each}}"
+
+    a.sort(function (a, b) {
+        if (a[0] < b[0]) {
+            return -1;
+        }
+        if (a[0] > b[0]) {
+            return 1;
+        }
+        return 0;
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+        var i;
+        for (i = 0; i < a.length; i++) {
+            var regioni = "<li data-ya-track='CTAListRegione_" + a[i][0] + "'><a href=" + a[i][1] + " title='Ospedali GVM in " + a[i][0] + "'>" + a[i][0] + "</a></li>";
+            document.getElementsByClassName("regioni-list").innerHTML += regioni;
+        }
+
+    });
+    Handlebars.compile("{{/with}}");
+</script>

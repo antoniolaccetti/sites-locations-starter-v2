@@ -1,21 +1,21 @@
----
+﻿---
 {
     "stream": {
-        "$id": "ce_regione",
+        "$id": "ce_region",
         "filter" : {
-            "entityTypes": ["ce_regione"]
+            "entityTypes": ["ce_region"]
         },
         "fields": [
             "id",
             "name",
             "slug",
-            "c_descrizioneBreve",
-            "c_regioneStruttura.c_nomeStruttura",
-            "c_regioneStruttura.name",
-            "c_regioneStruttura.id",
-            "c_regioneStruttura.slug",
-            "c_regioneStruttura.address",
-            "c_regioneStruttura.c_immagineStruttura"           
+            "description",
+            "dm_directoryChildren.c_nomeStruttura",
+            "dm_directoryChildren.name",
+            "dm_directoryChildren.id",
+            "dm_directoryChildren.slug",
+            "dm_directoryChildren.address",
+            "dm_directoryChildren.c_immagineStruttura"
         ],
         "localization": {
             "locales": ["it"]
@@ -25,7 +25,6 @@
 }
 ---
 
-{{#if c_regioneStruttura}}
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -40,14 +39,12 @@
     <!-- End Google Tag Manager (noscript) -->
     {{>nav}}
     {{>regione_page}}
-
+    <div class="w-full">
+        {{>footer}}
+    </div>
 </body>
 </html>
-{{else}}
 
-{{>regione_partial}}
-
-{{/if}}
 
 
 

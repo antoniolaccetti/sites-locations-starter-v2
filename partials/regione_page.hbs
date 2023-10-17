@@ -1,7 +1,7 @@
-
+﻿
 <div class="section section_breadcrumbs">
     <div class="container">
-        <a href="/index.html" class="br_home">Home</a> > <span class="active_page">{{this.name}}</span>
+        <a href="/" class="br_home">Home</a> > <span class="active_page">{{this.name}}</span>
     </div>
 </div>
 <div class="section">
@@ -9,10 +9,10 @@
         <div class="bg-gray-100 container_nearby">
             <h4 class="text-center mb-2 title_nearby">Ospedali GVM in {{name}}</h4>
             <div class="location-data">
-                {{#each c_regioneStruttura}}
+                {{#each dm_directoryChildren}}
                 <a class="location_nearby" href="{{this.slug}}">
                     <div class="grid address-cta-column">
-                        <div class="image" style="background-image: url('{{dynamicImage this.c_immagineStruttura.url "460x200" true }}'); "></div>
+                        <div class="image locationImage"></div>
                         <h5 class="name text-xl font-semibold">{{this.c_nomeStruttura}}</h5>
                         <div class="address">
                             <div><span data-yext-field="address.line1" data-yext-id="{{this.id}}">{{this.address.line1}}</span>, <span data-yext-field="address.postalCode" data-yext-id="{{this.id}}">{{this.address.postalCode}}</span>, <span data-yext-field="address.city" data-yext-id="{{this.id}}">{{this.address.city}}</span>, <span data-yext-field="address.region" data-yext-id="{{this.id}}">{{this.address.region}}</span></div>
@@ -25,12 +25,64 @@
     </div>
 
 
+    <script>
+
+        Handlebars.compile("{{#with id}}");
+        var a = new Array;
+        "{{#each dm_directoryChildren}}"
+        a.push(["{{this.c_immagineStruttura.url}}"]);
+        "{{/each}}"
+        console.log(a);
+        const linkTrasformato = (props, w, h) => {
+            const urlOriginale = props[0];
+            var last = urlOriginale.lastIndexOf("/");
+            last = last == -1 ? urlOriginale.length : last + 1;
+            let cleanUrl = urlOriginale.substring(0, last);
+            let cleanUrlSplittedHTTPS = cleanUrl.split("https://a")[1];
+            let cleanUrlSplittedHTTP = cleanUrl.split("http://a")[1];
+            let linkProtocol = urlOriginale.split("/")[0];
+
+            if (
+                cleanUrlSplittedHTTPS == undefined &&
+                cleanUrlSplittedHTTP == undefined
+            ) {
+                return urlOriginale;
+            } else {
+                if (linkProtocol === "https:") {
+                    cleanUrl = "https://dynl" + cleanUrlSplittedHTTPS;
+                } else if (linkProtocol === "http:") {
+                    cleanUrl = "https://dynl" + cleanUrlSplittedHTTP;
+                }
+                return cleanUrl + w + "x" + h;
+            }
+        };
+       
+        document.addEventListener("DOMContentLoaded", function () {
+            var i;
+            for (i = 0; i < a.length; i++) {
+                var link = '<link rel="preload" fetchpriority="high" as="image" href=' + linkTrasformato(a[i], '400', '200') + ' />';
+                var metaOg = '<meta property="og:image" content=' + linkTrasformato(a[i], '400', '200') + ' />';
+                var metaTw = '<meta name="twitter:image" content=' + linkTrasformato(a[i], '400', '200') + ' />';
+
+                document.head.innerHTML += link;
+                document.head.innerHTML += metaOg;
+                document.head.innerHTML += metaTw;
+                var img = "<img src=" + linkTrasformato(a[i], '400', '200') + " />";     
+         
+                var div = document.getElementsByClassName("locationImage");
+                    div[i].innerHTML += img;           
+              
+            }
+        });
+     
+        Handlebars.compile("{{/with}}");
+      
+    </script>
+
 
 
 </div>
-<div class="w-full">
-    {{>footer}}
-</div>
+
 
 
 

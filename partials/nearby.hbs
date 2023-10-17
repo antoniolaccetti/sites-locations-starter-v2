@@ -1,4 +1,4 @@
-<div class="bg-gray-100 container_nearby">
+﻿<div class="bg-gray-100 container_nearby">
     <h4 class="text-center mb-2 title_nearby">Strutture vicine</h4>
     <div class="location-data"> </div>   
 </div>
@@ -183,8 +183,8 @@
     var baseURL = "https://liveapi.yext.com/v2/accounts/me/entities/geosearch?";
     var api_key = "{{global.liveApiKey}}";
     var vparam = "20181017";
-    var lat = {{latitude}};
-    var lng = {{longitude}};
+    var lat = "{{latitude}}";
+    var lng = "{{longitude}}";
     var location = lat + ", " + lng;
     var limit = 3;
     var radius = 500;
@@ -264,7 +264,7 @@
                 }
             if (location.websiteUrl) {
             locationHTML =
-                '<a data-ya-track="LinkStrutturaVicina" target="_blank" href="' + location.slug + '" class="location_nearby"><div class="grid address-cta-column"><div class="image" style="background-image:url(' + immagine+');"></div><h5 class="name text-xl font-semibold">' +
+                '<a data-ya-track="LinkStrutturaVicina" target="_blank" href="' + location.slug + '" class="location_nearby"><div class="grid address-cta-column"><div class="image locationImage"><img src="' + immagine +'" /></div><h5 class="name text-xl font-semibold">' +
             nomeStruttura +
                 '</h5><div class="address"><div>' +
                 location.address.line1 +
@@ -273,7 +273,7 @@
                 '</div></div></div></a>';
             } else {
             locationHTML =
-                '<a data-ya-track="LinkStrutturaVicina" target="_blank" href="' + location.slug + '" class="location_nearby"><div class="grid address-cta-column"><div class="image" style="background-image:url('+immagine+');"></div><h5 class="name text-xl font-semibold">' +
+                '<a data-ya-track="LinkStrutturaVicina" target="_blank" href="' + location.slug + '" class="location_nearby"><div class="grid address-cta-column"><div class="image locationImage"><img src="' + immagine +'" /></div><h5 class="name text-xl font-semibold">' +
             nomeStruttura +
                 '</h5><div class="address"><div>' +
                 location.address.line1 +

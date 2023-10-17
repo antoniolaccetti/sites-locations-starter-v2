@@ -3,13 +3,13 @@
     "",
     "\\assets",
     "\\partials",
+    "\\public",
     "\\src",
-    "\\src\\analytics",
-    "\\src\\images",
+    "\\src\\js",
     "\\src\\js\\custom",
     "\\src\\locator",
     "\\templates"
   ],
-  "SelectedNode": "\\partials\\schema.hbs",
+  "SelectedNode": "\\partials\\regione-list.hbs",
   "PreviewInSolutionExplorer": false
 }

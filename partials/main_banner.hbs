@@ -1,4 +1,4 @@
-
+﻿
 <div class="container flex flex-col md:flex-row">
 
     <div class="main_banner_info flex flex-col justify-between w-full md:w-2/5">
@@ -32,11 +32,68 @@
     </div>
     <div class="main_banner main_banner_image w-full md:w-3/5">
         <div class="relative z-20 overflow-hidden h-70 md:h-full">
-            <img class=" w-full object-cover h-full"
-                srcset=" {{dynamicImage c_immagineStruttura.url "510x290" true}} 480w,{{dynamicImage c_immagineStruttura.url "650x365" true}} 800w" 
-                sizes="(max-width: 767px) 480px, 800px" src="{{dynamicImage c_immagineStruttura.url "650x365" true}}" width="650" height="365" 
-                alt=" {{#if c_nomeStruttura}}{{c_nomeStruttura}}{{else}}{{name}}{{/if}}" /><!--fixed-->  
+            <picture class="w-full object-cover h-full imgStruttura">
+               
+            </picture>
+            <!--<img class=" w-full object-cover h-full"
+                 srcset=" {{dynamicImage c_immagineStruttura.url "510x290" true}} 480w,{{dynamicImage c_immagineStruttura.url "650x365" true}} 800w"
+                 sizes="(max-width: 767px) 480px, 800px" src="{{dynamicImage c_immagineStruttura.url "650x365" true}}" width="650" height="365"
+                 alt=" {{#if c_nomeStruttura}}{{c_nomeStruttura}}{{else}}{{name}}{{/if}}" />--><!--fixed-->
         </div><!-- .image -->
     </div><!-- .main_banner -->
 </div>
 
+<script>
+
+     Handlebars.compile("{{#with id}}");
+     var a = "{{c_immagineStruttura.url}}";
+     console.log(a);
+     const linkTrasformato = (props, w, h) => {
+         const urlOriginale = props;
+         var last = urlOriginale.lastIndexOf("/");
+         last = last == -1 ? urlOriginale.length : last + 1;
+         let cleanUrl = urlOriginale.substring(0, last);
+         let cleanUrlSplittedHTTPS = cleanUrl.split("https://a")[1];
+         let cleanUrlSplittedHTTP = cleanUrl.split("http://a")[1];
+         let linkProtocol = urlOriginale.split("/")[0];
+
+         if (
+             cleanUrlSplittedHTTPS == undefined &&
+             cleanUrlSplittedHTTP == undefined
+         ) {
+             return urlOriginale;
+         } else {
+             if (linkProtocol === "https:") {
+                 cleanUrl = "https://dynl" + cleanUrlSplittedHTTPS;
+             } else if (linkProtocol === "http:") {
+                 cleanUrl = "https://dynl" + cleanUrlSplittedHTTP;
+             }
+             return cleanUrl + w + "x" + h;
+         }
+     };
+    console.log(a);
+     document.addEventListener("DOMContentLoaded", function () {
+         var i;
+        
+         var source1 = '<source media="(max-width: 550px)" srcSet=' + linkTrasformato(a, "400", "200") + ' />';
+         var source2 = '<source media="(min-width: 551px)" srcSet='+ linkTrasformato(a, "700" , "500" ) +' />';
+         var source3 = '<img width="400" height="200" className="object-cover object-center w-full h-full" src=' + linkTrasformato(a, "700", "500") +' alt="{{c_nomeStruttura}}, {{dm_directoryParents.[1].name}}" alt="{{#if c_nomeStruttura}}{{c_nomeStruttura}}{{else}}{{name}}{{/if}}" />';
+         var link1 = '<link rel="preload" fetchpriority="high" as="image" href=' + linkTrasformato(a, '400', '200') + ' />';
+         var link2 = '<link rel="preload" fetchpriority="high" as="image" href=' + linkTrasformato(a, '700', '500') + ' />';
+         var metaOg = '<meta property="og:image" content=' + linkTrasformato(a, '400', '200') + ' />';
+         var metaTw = '<meta name="twitter:image" content=' + linkTrasformato(a, '400', '200') + ' />';
+
+        var div = document.getElementsByClassName("imgStruttura");
+        div[0].innerHTML += source1
+        div[0].innerHTML += source2
+        div[0].innerHTML += source3
+
+        document.head.innerHTML += link1;
+        document.head.innerHTML += link2;
+        document.head.innerHTML += metaOg;
+        document.head.innerHTML += metaTw;
+     });
+
+     Handlebars.compile("{{/with}}");
+
+</script>

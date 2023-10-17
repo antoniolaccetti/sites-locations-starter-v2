@@ -1,11 +1,11 @@
-<div class="container mt-6">
+﻿<div class="container mt-6">
     <div class="flex items-stretch flex-wrap box_cartina_orari">
         <div class="w-full md:w-3/5">
             {{>staticmap}}            
         </div><!-- .main_banner -->
         <div class="flex box_orari flex-col justify-between w-full md:w-2/5">
             <div>
-                <h2 class="narrow_title">{{c_regione}}</h2>
+                <h2 class="narrow_title">{{r_regione}}</h2>
                 <a id="address" data-ya-track="LinkIndirizzo" class="via_struttura" href="https://www.google.com/maps/dir/?api=1&destination={{address.line1}} {{address.city}} {{address.region}} {{address.postalCode}}" target="_blank">
                     <div><span data-yext-field="address.line1" data-yext-id="{{id}}">{{address.line1}}</span>, <span data-yext-field="address.postalCode" data-yext-id="{{id}}">{{address.postalCode}}</span>, <span data-yext-field="address.city" data-yext-id="{{id}}">{{address.city}}</span>, <span data-yext-field="address.region" data-yext-id="{{id}}">{{address.region}}</span></div>
                 </a>

@@ -9,7 +9,7 @@
   "address":{
     "@type": "PostalAddress",
     "addressLocality": "{{address.city}}",
-    "addressRegion": "{{c_regione}}",
+    "addressRegion": "{{r_regione}}",
     "postalCode": "{{address.postalCode}}",
     "streetAddress": "{{address.line1}}"
   },
@@ -22,7 +22,7 @@
   "image":{
     "@type": "ImageObject",
     "author": "Gruppo Villa Maria",
-    "contentLocation": "{{c_nomeStruttura}}, {{address.city}},{{c_regione}}",
+    "contentLocation": "{{c_nomeStruttura}}, {{address.city}},{{r_regione}}",
     "contentUrl": "{{dynamicImage c_immagineStruttura.url "650x365" true}}",
     "url":"{{dynamicImage c_immagineStruttura.url "650x365" true}}",
     "description": "{{c_immagineStruttura.alternateText}}",

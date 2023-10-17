@@ -1,4 +1,4 @@
----
+﻿---
 {
     "stream": {
         "$id": "locations",
@@ -17,14 +17,13 @@
             "name",
             "c_nomeStruttura",
             "address",
-            "c_regione",
             "mainPhone",
             "description",
-            "c_descrizioneLunga",            
+            "c_descrizioneLunga",
             "hours",
             "photoGallery",
             "slug",
-            "c_immagineStruttura",           
+            "c_immagineStruttura",
             "c_immagineSpecialita",
             "c_immagine_cartina",
             "c_descrizioneBreve",
@@ -53,18 +52,16 @@
             "c_elencoSpecialitaStrutturaGVM",
             "c_elencoServiziStrutturaGVM",
             "c_urlTutteLeSpecialita",
-             "c_regioneStruttura.name",
-            "c_regioneStruttura.id",
-            "c_regioneStruttura.slug",
             "c_uRLStrutturaSitoGVM",
-            "c_bannerTop"
-
+            "c_bannerTop",
+            "dm_directoryParents.name",
+            "dm_directoryParents.id",
+            "dm_directoryParents.slug",
+            "dm_directoryParents.address",
+            "r_regione"
         ],
         "localization": {
             "locales": ["it"]
-        },
-        "transform": {
-             "replaceOptionValuesWithDisplayNames": ["c_regione"]
         }
     },
     "urlFormat": "{{slug}}"
@@ -73,7 +70,7 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    {{>head }}
+    {{>head}}
     {{>schema}}
 </head>
 <body class="relative">
@@ -86,12 +83,13 @@
     {{>header_elogic}}
 
     {{#if c_bannerTop}}
-        <div class="bannerTop"><p>{{c_bannerTop}}</p></div>
+    <div class="bannerTop"><p>{{c_bannerTop}}</p></div>
     {{/if}}
-
+    
+    
     <div class="section section_breadcrumbs" data-ya-scope="SectionBreadcrumbs">
         <div class="container">
-            <a class="br_home" data-ya-track="LinkHome" href="/index.html">Home</a> > {{#with c_regioneStruttura}}<a class="br_regione" data-ya-track="LinkRegione" href="{{this.slug}}">{{this.name}}</a>{{/with}} > <span class="active_page br_ospedale">
+            <a class="br_home" data-ya-track="LinkHome" href="/">Home</a> > <a class="br_regione" data-ya-track="LinkRegione" href="/{{dm_directoryParents.[1].slug}}">{{dm_directoryParents.[1].name}}</a> > <span class="active_page br_ospedale">
                 {{#if c_nomeStruttura}}{{c_nomeStruttura}}{{else}}{{name}}{{/if}}
             </span>
         </div>

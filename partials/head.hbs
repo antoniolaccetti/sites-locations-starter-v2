@@ -1,32 +1,27 @@
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+﻿<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>
     {{#if c_nomeStruttura}}
     {{c_nomeStruttura}}
     {{else}}
-    {{#if c_regioneStruttura}}Ospedali nella regione {{name}}{{else}}{{name}}{{/if}}
+    Ospedali nella regione {{name}}
     {{/if}} {{#if address.city}}
     - {{address.city}}
     {{/if}} - GVM
 </title>
+{{#if c_descrizioneBreve}}
 <meta name="description" content="{{c_descrizioneBreve}}">
+{{else}}
+<meta name="description" content="{{description}}">
+{{/if}}
 <meta name="author" content="Gruppo Villa Maria">
 <link rel="preload" href="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js" as="script" />
 <link rel="canonical" href="https://ospedali.gvmnet.it{{slug}}" />
-<!-- <link rel="preload" href="https://cookie-cdn.cookiepro.com/consent/c54082c8-37c1-441f-99c2-972f4ecddf88-test/OtAutoBlock.js" as="script" />
-<link rel="preload" href="https://cookie-cdn.cookiepro.com/scripttemplates/otSDKStub.js" as="script" /> -->
 <link rel="preload" href="/main.css" as="style" />
 <link rel="preload" href="https://use.typekit.net/yfq1avx.css" as="style">
 <link rel="preload" href="/main.js" as="script" />
 <link rel="preload" as="image" href="/images/gruppovillamaria_logo.png">
-{{#if c_regioneStruttura}}
-{{#each c_regioneStruttura}}
-<link rel="preload" fetchpriority="high" as="image" href="{{dynamicImage this.c_immagineStruttura.url "460x200" true }}" />
-{{/each}}
-{{else}}
-<link rel="preload" fetchpriority="high" as="image" href="{{dynamicImage c_immagineStruttura.url "650x365" true}}" />
-{{/if}}
 <link rel="stylesheet" href="https://use.typekit.net/yfq1avx.css">
 <link rel="stylesheet" href="/main.css" />
 <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
@@ -38,42 +33,31 @@
 <meta property="og:title" content="{{#if c_nomeStruttura}}
             {{c_nomeStruttura}}
         {{else}}
-            {{name}}
+            {{name}} - Ospedali in {{name}}
           {{/if}}
       {{#if address.city}}
-            - {{address.city}}{{#if c_regione}}Ospedali in {{c_regione}} {{/if}}
-         {{/if}}
+            - {{address.city}}{{/if}}
       - GVM" />
-<meta property="og:description" content="{{c_descrizioneBreve}}" />
-{{#if c_regioneStruttura}}
-{{#each c_regioneStruttura}}
-<meta property="og:image" content="{{dynamicImage this.c_immagineStruttura.url "460x200" true }}" />
-{{/each}}
+{{#if c_descrizioneBreve}}
+<meta property="og:description" content="{{c_descrizioneBreve}}">
 {{else}}
-<meta property="og:image" content="{{dynamicImage c_immagineStruttura.url "650x365" true}}" />
+<meta property="og:description" content="{{description}}">
 {{/if}}
-
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@GVMCareResearch">
 <meta name="twitter:creator" content="@GVMCareResearch">
 <meta name="twitter:title" content="{{#if c_nomeStruttura}}
             {{c_nomeStruttura}}
         {{else}}
-            {{name}}
-         {{/if}} {{#if address.city}}
-            - {{address.city}} 
-            {{#if c_regione}} Ospedali in {{c_regione}} {{/if}}
-         {{/if}} - GVM ">
+            {{name}} - Ospedali in {{name}}
+          {{/if}}
+      {{#if address.city}}
+            - {{address.city}}{{/if}}
+      - GVM" />
+{{#if c_descrizioneBreve}}
 <meta name="twitter:description" content="{{c_descrizioneBreve}}">
-{{#if c_regioneStruttura}}
-{{#each c_regioneStruttura}}
-<meta name="twitter:image" content="{{dynamicImage this.c_immagineStruttura.url "460x200" true }}" />
-{{/each}}
 {{else}}
-<meta name="twitter:image" content="{{dynamicImage c_immagineStruttura.url "650x365" true}}" />
+<meta name="twitter:description" content="{{description}}">
 {{/if}}
-
-
-
 {{>scripts}}
 
