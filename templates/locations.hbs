@@ -71,6 +71,7 @@
 <html lang="it">
 <head>
     {{>head}}
+    
 </head>
 <body class="relative">
     <!-- Google Tag Manager (noscript) -->
@@ -78,14 +79,15 @@
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVQ4R5G"
                 height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
+    {{>schema}}
     <!-- End Google Tag Manager (noscript) -->
     {{>header_elogic}}
 
     {{#if c_bannerTop}}
     <div class="bannerTop"><p>{{c_bannerTop}}</p></div>
     {{/if}}
-    
-    
+
+
     <div class="section section_breadcrumbs" data-ya-scope="SectionBreadcrumbs">
         <div class="container">
             <a class="br_home" data-ya-track="LinkHome" href="/">Home</a> > <a class="br_regione" data-ya-track="LinkRegione" href="/{{dm_directoryParents.[1].slug}}">{{dm_directoryParents.[1].name}}</a> > <span class="active_page br_ospedale">

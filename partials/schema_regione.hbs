@@ -3,31 +3,17 @@
 {
   "@context": "https://schema.org",
   "@id": "{{id}}",
-  "@type": "MedicalClinic",
-  "name": "{{c_nomeStruttura}}",
+  "@type": "MedicalOrganization",
+  "name": "Ospedali GVM in {{name}}",
   "telephone": "{{mainPhone}}",
   "address":{
     "@type": "PostalAddress",
-    "addressLocality": "{{address.city}}",
-    "addressRegion": "{{r_regione}}",
-    "postalCode": "{{address.postalCode}}",
-    "streetAddress": "{{address.line1}}"
+    "addressLocality": "Lugo (RA)",
+    "addressRegion": "Emilia Romagna",
+    "postalCode": "48022",
+    "streetAddress": "c.so Garibaldi, 11"
   },
-  "geo": {{>schemaHelpers-geo geocodedCoordinate}},
-  "openingHoursSpecification": [
-    {{>schemaHelpers-hours hours}}
-  ],
-  "MedicalSpecialty":"{{c_elencoSpecialitaStrutturaGVM}}",
   "logo":"https://www.gvmnet.it/App_Themes/GVMNet/images/gruppovillamaria_logo.png",
-  "image":{
-    "@type": "ImageObject",
-    "author": "Gruppo Villa Maria",
-    "contentLocation": "{{c_nomeStruttura}}, {{address.city}},{{r_regione}}",
-    "contentUrl": "{{dynamicImage c_immagineStruttura.url "650x365" true}}",
-    "url":"{{dynamicImage c_immagineStruttura.url "650x365" true}}",
-    "description": "{{c_immagineStruttura.alternateText}}",
-    "name": "{{c_nomeStruttura}}"
-},
-"url":"{{c_baseURL}}"
+   "url":"https://ospedali.gvmnet.it/{{slug}}"
 }
 </script>

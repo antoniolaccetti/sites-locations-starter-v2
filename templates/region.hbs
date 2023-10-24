@@ -29,6 +29,7 @@
 <html lang="it">
 <head>
     {{>head}}
+ 
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -36,6 +37,25 @@
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVQ4R5G"
                 height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
+    <script type="application/ld+json" class="yext-schema-json" data-yext-id="{{id}}">
+{
+  "@context": "https://schema.org",
+  "@id": "{{id}}",
+  "@type": "MedicalOrganization",
+  "name": "Ospedali GVM in {{name}}",
+  "telephone": "{{mainPhone}}",
+  "address":{
+    "@type": "PostalAddress",
+    "addressLocality": "Lugo (RA)",
+    "addressRegion": "Emilia Romagna",
+    "postalCode": "48022",
+    "streetAddress": "c.so Garibaldi, 11"
+  },
+  "logo":"https://www.gvmnet.it/App_Themes/GVMNet/images/gruppovillamaria_logo.png",
+   "url":"https://ospedali.gvmnet.it/{{slug}}"
+}
+    </script>
+
     <!-- End Google Tag Manager (noscript) -->
     {{>nav}}
     {{>regione_page}}

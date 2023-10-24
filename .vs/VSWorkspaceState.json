@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Local settings (.vs)",
-    "\\localData",
     "\\partials",
     "\\public",
+    "\\sites-config",
+    "\\sites-global",
     "\\src",
     "\\src\\js",
     "\\src\\js\\custom",
     "\\src\\locator",
     "\\templates"
   ],
-  "SelectedNode": "\\localData\\locations__it__ba26b994c837ad315c3934a33aa7f462.json",
+  "SelectedNode": "\\partials\\schemaHelpers-geo.hbs",
   "PreviewInSolutionExplorer": false
 }
