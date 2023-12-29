@@ -58,7 +58,8 @@
             "dm_directoryParents.id",
             "dm_directoryParents.slug",
             "dm_directoryParents.address",
-            "r_regione"
+            "r_regione",
+            "c_banner"
         ],
         "localization": {
             "locales": ["it"]
@@ -108,6 +109,130 @@
             <div class="">{{>aboutmap}} </div>
         </div>
     </div>
+    {{/if}}
+    {{#if c_banner}}
+<div class="container mt-4" id="ctaAnni">
+    <div class="containerBanner50Static">
+        <div class="inner">
+            <div class="firstCol">
+                <img src="https://www.gvmnet.it/admingvm/media/GVM_NET_Immagini/50anniLogo.png">
+                <img class="testo" src="https://www.gvmnet.it/admingvm/media/GVM_NET_Immagini/testo50anni.png">
+            </div><div class="secCol">
+                <a href="https://www.gvmspa.it/it-IT/50-Anni" class="btn btn-lead btn-primary btn50anni">Guarda ora</a>
+
+            </div>
+        </div>
+    </div>
+</div>
+    <style>
+
+            .containerBanner50Static {
+                display: flex;
+                background: rgb(107,101,171);
+                background: linear-gradient(90deg, rgba(107,101,171,1) 0%, rgba(61,139,196,1) 100%);
+                padding: 20px 70px 20px 20px;
+            }
+
+                .containerBanner50Static .inner {
+                    width: 100%;
+                    max-width: 1086px;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: space-between;
+                    -webkit-transition: all 0.5s ease-in-out;
+                    -moz-transition: all 0.5s ease-in-out;
+                    -ms-transition: all 0.5s ease-in-out;
+                    -o-transition: all 0.5s ease-in-out;
+                    transition: all 0.5s ease-in-out;
+                }
+
+            .firstCol {
+                display: flex;
+                gap: 10px;
+            }
+
+                .firstCol img {
+                    width: auto;
+                    height: 70px;
+                }
+
+            .secCol {
+                display: flex;
+                align-items: center;
+            }
+
+                .secCol a.btn50anni {
+                    background-color: #F6CF35 !important;
+                    color: #23475D;
+                    font-weight: 800;
+                    border: none;
+                    font-size: 1.125rem;
+                    padding: .625rem 1.625rem;
+                    line-height: 1.2;
+                    text-transform: uppercase;
+                    border-radius: 2.5rem;
+                }
+
+        @media (max-width:767px) {
+            .containerBanner50Static {
+                padding: 15px 10px;
+            }
+            .firstCol img {
+                width: auto;
+                height: 39px;
+            }
+            .secCol a.btn50anni {
+                font-size: 11px;
+                padding: 8px 10px;
+                line-height: 1;
+                text-transform: uppercase;
+                border-radius: 2.5rem;
+                margin-left: auto;
+            }
+        }
+            @media (max-width:720px) {
+
+                .firstCol img {
+                    height: 39px;
+                }
+            }
+
+            @media (max-width:520px) {
+
+                .containerBanner50Static {
+                    padding: 13px 10px 13px 9px;
+                    scroll-margin-top: 50px;
+                }
+
+                .inner {
+                    gap: 10px;
+                    justify-content: unset;
+                }
+
+                .containerBanner50Static a.btn {
+                    font-size: .8rem;
+                }
+
+                .firstCol img {
+                    height: 35px;
+                }
+
+                .containerBanner50Static {
+                    height: auto;
+                }
+
+                .secCol {
+                    margin-left: auto;
+                    margin-right: 2px;
+                }
+            }
+
+        @media (max-width:358px) {
+            .firstCol img {
+                height: 30px;
+            }
+        }
+    </style>
     {{/if}}
     {{#if c_contenutiInEvidenza}}
     <div class="section background_specialita" data-ya-scope="SectionInEvidenza">

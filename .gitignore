@@ -8,3 +8,8 @@ cli.exe
 .DS_Store
 src/.DS_Store
 src/js/.DS_Store
+/assets/locator.js
+/assets/main.js
+/assets/util.js
+/assets/analytics.js
+/.vs/VSWorkspaceState.json
